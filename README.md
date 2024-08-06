@@ -8,13 +8,13 @@
 
 ## Projet Libre
 
-Vous trouverez ici le lien qui mène au website de notre projet libre: [https://imagepulser.dev.madebyvasilis.site/](https://imagepulser.dev.madebyvasilis.site/)
+Vous trouverez ici le lien qui mène au website de notre projet libre: [https://imagepulser.dev.madebyvasilis.site/](https://imagepulser.dev.madebyvasilis.site/) (documentation)
 
 Le source code est disponible dans le repertoire **`Imagination`**
 
 ## Projet Imposé
 
-Vous trouverez ici le lien qui mène au website de notre projet imposé: [https://impose.dev.madebyvasilis.site](https://impose.dev.madebyvasilis.site)
+Vous trouverez ici le lien qui mène au website de notre projet imposé: [https://impose.dev.madebyvasilis.site](https://impose.dev.madebyvasilis.site) (documentation)
 
 Le source code est disponible dans le repertoire **`Impose`**
 
