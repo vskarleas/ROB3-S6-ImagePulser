@@ -1,0 +1,5 @@
+<map id="Bezier2_" name="Bezier2_">
+<area shape="rect" id="Node000001" title="Profil d&#39;une courbe de Bézier de degré 2." alt="" coords="5,124,78,150"/>
+<area shape="rect" id="Node000002" href="$structPoint__.html" title="Type Point." alt="" coords="12,5,71,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,47,44,123,39,123,39,47"/>
+</map>

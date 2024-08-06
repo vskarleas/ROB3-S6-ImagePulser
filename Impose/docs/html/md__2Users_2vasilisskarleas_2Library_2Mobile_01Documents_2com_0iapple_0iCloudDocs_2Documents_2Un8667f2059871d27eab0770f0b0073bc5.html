@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet Imposé: Suivre une couleur / Documentation utilisateur</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Projet Imposé<span id="projectnumber">&#160;V3.1.2</span>
+   </div>
+   <div id="projectbrief">Suivre une coleur via OpenCV</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">Suivre une couleur / Documentation utilisateur</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md20"></a> </p>
+<h1><a class="anchor" id="autotoc_md21"></a>
+Description</h1>
+<p>Ce projet, développé dans le cadre de l'unité "Projet en langage C" du semestre 6 en robotique, implémente un système de suivi dynamique de couleur à l'aide d'une caméra contrôlée par deux servomoteurs. L'algorithme conçu permet de détecter et de suivre une couleur spécifique, ajustant automatiquement la caméra pour maintenir cette couleur au centre du champ de vision. Le but était de créer un système autonome qui, grâce à des compétences avancées en programmation C et en traitement d'image, illustre notre capacité à développer des applications robotiques interactives et intuitives. Cette structure de README fournit une explication claire de la manière de configurer et utiliser notre code.</p>
+<h1><a class="anchor" id="autotoc_md22"></a>
+Prérequis</h1>
+<p>Assurez-vous d'avoir installé l'Arduino IDE et que vous avez les droits nécessaires pour accéder aux ports USB (dialout)) sur votre machine. De plus, il faut verifier que vous avez OpenCV installé sur votre machine.</p>
+<h1><a class="anchor" id="autotoc_md23"></a>
+Installation</h1>
+<ol type="1">
+<li><p class="startli"><b>Cloner le projet</b> : Clonez ce dépôt sur votre machine locale.</p>
+<div class="fragment"><div class="line">git clone URL_DU_DEPOT</div>
+</div><!-- fragment --></li>
+<li><b>Installation des dépendances</b> : Si nécessaire, installez les librairies requises mentionnées dans un file_input <code>requirements.txt</code> ou un document similaire.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md24"></a>
+Configuration</h1>
+<ol type="1">
+<li><b>Port Arduino</b> : Ouvrez le file_input <code>code_arduino.ino</code> avec l'Arduino IDE.</li>
+<li><b>Paramètres de la caméra</b> : Mettez à jour les paramètres de la caméra dans la fonction principale du file_input code source principal.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md25"></a>
+Démarrage</h1>
+<p>Suivez ces étapes pour lancer le projet :</p>
+<ol type="1">
+<li><b>Ouvrir le programme</b> : Ouvrez <code>code_arduino.ino</code> via l’application Arduino IDE.</li>
+<li><b>Connecter la caméra</b> : Branchez la caméra à un port USB de votre ordinateur.</li>
+<li><b>Préparer Arduino</b> : Connectez la carte Arduino à votre ordinateur et téléchargez le code sur la carte. Assurez-vous de sélectionner la bonne porte et le bon modèle de carte (Arduino UNO) dans les paramètres de l'Arduino IDE.</li>
+<li><b>Configuration du terminal</b> : Dans un terminal, déplacez-vous dans le répertoire du code. <div class="fragment"><div class="line">cd Impose</div>
+</div><!-- fragment --></li>
+<li><b>Mise à jour des paramètres</b> :<ul>
+<li>Mettez à jour la porte USB d'Arduino, par exemple <code>/dev/ttyACMx</code> (remplacez <code>x</code> par le numéro de votre porte).</li>
+<li>Ajustez les paramètres de la caméra nécessaires pour la lecture.</li>
+</ul>
+</li>
+<li><b>Compilation</b> : Compilez le projet avec la commande <code>make</code>. <div class="fragment"><div class="line">make</div>
+</div><!-- fragment --></li>
+<li><b>Exécution</b> : Lancez le programme. <div class="fragment"><div class="line">./main</div>
+</div><!-- fragment --></li>
+<li><b>Visualisation</b> : Les données envoyées au robot peuvent être visualisées via le moniteur série de l'Arduino IDE. Des fenêtres d'images s'ouvriront pour faciliter la visualisation.</li>
+<li><b>Arrêt du programme</b> : Pour arrêter le programme, appuyez sur n'importe quelle touche du clavier lorsque vous êtes sur l'une des fenêtres d'images.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md26"></a>
+Copyright</h1>
+<p>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun | 2023 - 2024 All rights reserved </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+  Copyright (c) 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script><a href="https://dev.madebyvasilis.site/image-pulser.html"> Projet Imposé</a> | All rights reserved 
+</small>
+<br>
+<small>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun</small></address>
+</body>
+</html>

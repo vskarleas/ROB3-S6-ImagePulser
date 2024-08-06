@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ImagePulser: Tâche 5 - Extraction des Contours d’une Image</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ImagePulser<span id="projectnumber">&#160;V5.2.4</span>
+   </div>
+   <div id="projectbrief">Simplification des images prises avec une webcam</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">Tâche 5 - Extraction des Contours d’une Image</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md57"></a> </p>
+<h1><a class="anchor" id="autotoc_md58"></a>
+Contexte</h1>
+<p>Dans la <b>Tâche 3</b>, nous avons abordé l'extraction d'un seul contour dans une image. Cependant, les images plus complexes peuvent présenter plusieurs contours, qui peuvent être disjoints ou imbriqués. Cette tâche vise à détecter tous ces contours.</p>
+<h1><a class="anchor" id="autotoc_md59"></a>
+Méthode</h1>
+<p><b>Principe :</b> Chaque contour fermé passe nécessairement par un point (x, y) dont le pixel voisin au nord-est (NE) est blanc et le pixel voisin au sud-est (SE) est noir. Inversement, tout pixel noir (x, y) avec un voisin au nord (N) blanc est adjacent à un contour qui passe par les points voisins nord-ouest (NW, x-1, y-1) et nord-est (NE, x, y-1).</p>
+<p><b>Processus de détection :</b></p>
+<ul>
+<li><b>Étape 1 : Identification initiale des pixels de contour</b><ul>
+<li>Créer une image auxiliaire ( M ), appelée image-masque, ayant les mêmes dimensions que l'image originale ( I ). <img src="image/tache5/1717436548166.png" alt="1717436548166" class="inline"/></li>
+<li>Chaque pixel (x, y) de ( M ) est coloré en noir si et seulement si le pixel correspondant dans ( I ) est noir et que son voisin direct au nord (N) est blanc.</li>
+</ul>
+</li>
+<li><b>Étape 2 : Recherche et marquage des contours</b><ul>
+<li>Tant qu'il existe un pixel noir dans ( M ), rechercher un nouveau contour à partir du point voisin nord-ouest (NW, x - 1, y - 1) en commençant à se déplacer vers l'est (E) -&gt; <code>trouver_pixel_de_depart</code>.</li>
+<li>Lors du parcours d’un contour, lorsque le "robot" se déplace vers l'est à partir d'un point (x, y), le pixel voisin sud-est (SE, x, y) dans ( M ) est converti en blanc pour éviter les revisites et marquer la progression du contour.</li>
+</ul>
+</li>
+</ul>
+<p><img src="image/tache5/1717436509432.png" alt="1717436509432" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md60"></a>
+Objectif de la méthode</h1>
+<p>Cette méthode permet d'isoler et de suivre chaque contour dans une image complexe en utilisant une approche systématique qui commence par identifier les bords potentiels, puis en suivant ces bords tout en marquant leur progression pour éviter les répétitions et assurer l'exhaustivité de la détection.</p>
+<h1><a class="anchor" id="autotoc_md61"></a>
+Visualisation</h1>
+<p>Les contours détectés peuvent être visualisés en superposant l'image-masque ( M ) sur l'image originale ( I ), ou en les affichant séparément pour analyser les résultats. Cela est essentiel pour des applications nécessitant une précision dans la segmentation des images, telles que dans le traitement médical d'images, la reconnaissance de formes ou les applications de vision par ordinateur.</p>
+<p>Après avoir établi les fondations nécessaires pour l'identification et l'extraction des contours dans des images, nous abordons maintenant la phase de simplification. Cette étape est cruciale pour réduire la complexité des données tout en préservant les aspects essentiels des formes détectées, facilitant ainsi leur manipulation et leur analyse ultérieures.</p>
+<p>Nous avons développé deux méthodes de simplification spécifiques pour notre projet :</p>
+<ol type="1">
+<li>Simplification par segments (tâche 6)</li>
+<li>Simplification par courbes de Bezier (tâche 7) </li>
+</ol>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+  Copyright (c) 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script><a href="https://imagepulser.dev.madebyvasilis.site/"> ImagePulser</a> | All rights reserved 
+</small>
+<br>
+<small>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun</small></address>
+</body>
+</html>

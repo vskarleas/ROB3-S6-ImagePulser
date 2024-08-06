@@ -1,0 +1,425 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ImagePulser: Référence du fichier /Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c-project-rob-3-eleves-gr-2-1/Imagination/ui.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ImagePulser<span id="projectnumber">&#160;V5.2.4</span>
+   </div>
+   <div id="projectbrief">Simplification des images prises avec une webcam</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier /Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c-project-rob-3-eleves-gr-2-1/Imagination/ui.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>L'interface graphique.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;gtk/gtk.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ui.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="ui_8cpp__incl.png" border="0" usemap="#a_2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2ui_8cpp" alt=""/></div>
+<map name="a_2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2ui_8cpp" id="a_2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2ui_8cpp">
+<area shape="rect" title="L&#39;interface graphique." alt="" coords="61,5,294,106"/>
+<area shape="rect" title=" " alt="" coords="5,154,78,180"/>
+<area shape="poly" title=" " alt="" coords="117,109,70,146,67,142,114,104"/>
+<area shape="rect" title=" " alt="" coords="102,154,165,180"/>
+<area shape="poly" title=" " alt="" coords="160,107,147,140,142,138,155,105"/>
+<area shape="rect" title=" " alt="" coords="189,154,254,180"/>
+<area shape="poly" title=" " alt="" coords="200,105,213,138,208,140,195,107"/>
+<area shape="rect" title=" " alt="" coords="278,154,338,180"/>
+<area shape="poly" title=" " alt="" coords="239,104,284,142,280,146,235,109"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMethodData.html">MethodData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a04423ae4f3aa0e5f302f99e014c59db3" id="r_a04423ae4f3aa0e5f302f99e014c59db3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04423ae4f3aa0e5f302f99e014c59db3">segments_clicked</a> (GtkWidget *pButton, gpointer data)</td></tr>
+<tr class="separator:a04423ae4f3aa0e5f302f99e014c59db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cffdf58b7bd550a0122f61805b14a69" id="r_a5cffdf58b7bd550a0122f61805b14a69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cffdf58b7bd550a0122f61805b14a69">bezier2_clicked</a> (GtkWidget *pButton, gpointer data)</td></tr>
+<tr class="separator:a5cffdf58b7bd550a0122f61805b14a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c9bc4d141a27386dad9505059f97b0f" id="r_a1c9bc4d141a27386dad9505059f97b0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c9bc4d141a27386dad9505059f97b0f">bezier3_clicked</a> (GtkWidget *pButton, gpointer data)</td></tr>
+<tr class="separator:a1c9bc4d141a27386dad9505059f97b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaef6218936bb59ed264e0fa1c717eb4" id="r_adaef6218936bb59ed264e0fa1c717eb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adaef6218936bb59ed264e0fa1c717eb4">cartoonize_clicked</a> (GtkWidget *pButton, gpointer data)</td></tr>
+<tr class="separator:adaef6218936bb59ed264e0fa1c717eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d79625899ddae17f8dc6fe55573d774" id="r_a4d79625899ddae17f8dc6fe55573d774"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d79625899ddae17f8dc6fe55573d774">show_image_found_options</a> (GtkWidget *pVBox)</td></tr>
+<tr class="separator:a4d79625899ddae17f8dc6fe55573d774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac7a92285017ec40480cd55da656ba65" id="r_aac7a92285017ec40480cd55da656ba65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac7a92285017ec40480cd55da656ba65">show_no_image_found_options</a> (GtkWidget *pVBox)</td></tr>
+<tr class="separator:aac7a92285017ec40480cd55da656ba65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60131e18a0ca1733e032e108300ecbb9" id="r_a60131e18a0ca1733e032e108300ecbb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60131e18a0ca1733e032e108300ecbb9">show_default_page</a> (GtkWidget *pVBox)</td></tr>
+<tr class="separator:a60131e18a0ca1733e032e108300ecbb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2365a002be2ab295dcff97cd3264dbb4" id="r_a2365a002be2ab295dcff97cd3264dbb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2365a002be2ab295dcff97cd3264dbb4">check_image_and_update_ui</a> (GtkWidget *pVBox)</td></tr>
+<tr class="separator:a2365a002be2ab295dcff97cd3264dbb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d2abda5212d8ca03c921249461006a3" id="r_a2d2abda5212d8ca03c921249461006a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d2abda5212d8ca03c921249461006a3">image_capture_clicked</a> (GtkWidget *pButton, gpointer data)</td></tr>
+<tr class="separator:a2d2abda5212d8ca03c921249461006a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aed544c686a70abf4901dc3fa2f848a" id="r_a2aed544c686a70abf4901dc3fa2f848a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2aed544c686a70abf4901dc3fa2f848a">show_input_dialog</a> (GtkWidget *pWidget, gpointer data)</td></tr>
+<tr class="separator:a2aed544c686a70abf4901dc3fa2f848a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86a453938d90ff3d68046dd98b370b71" id="r_a86a453938d90ff3d68046dd98b370b71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86a453938d90ff3d68046dd98b370b71">execute_command_and_display_output</a> (const char *command, GtkWidget *pVBox)</td></tr>
+<tr class="separator:a86a453938d90ff3d68046dd98b370b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addf3ab8c2a0c00129241215a09bdb6c3" id="r_addf3ab8c2a0c00129241215a09bdb6c3"><td class="memItemLeft" align="right" valign="top">gboolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addf3ab8c2a0c00129241215a09bdb6c3">tmp_image_found</a> (const char *filename)</td></tr>
+<tr class="separator:addf3ab8c2a0c00129241215a09bdb6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>L'interface graphique. </p>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a5cffdf58b7bd550a0122f61805b14a69" name="a5cffdf58b7bd550a0122f61805b14a69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cffdf58b7bd550a0122f61805b14a69">&#9670;&#160;</a></span>bezier2_clicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bezier2_clicked </td>
+          <td>(</td>
+          <td class="paramtype">GtkWidget *</td>          <td class="paramname"><span class="paramname"><em>pButton</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gpointer</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c9bc4d141a27386dad9505059f97b0f" name="a1c9bc4d141a27386dad9505059f97b0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c9bc4d141a27386dad9505059f97b0f">&#9670;&#160;</a></span>bezier3_clicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bezier3_clicked </td>
+          <td>(</td>
+          <td class="paramtype">GtkWidget *</td>          <td class="paramname"><span class="paramname"><em>pButton</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gpointer</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adaef6218936bb59ed264e0fa1c717eb4" name="adaef6218936bb59ed264e0fa1c717eb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaef6218936bb59ed264e0fa1c717eb4">&#9670;&#160;</a></span>cartoonize_clicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cartoonize_clicked </td>
+          <td>(</td>
+          <td class="paramtype">GtkWidget *</td>          <td class="paramname"><span class="paramname"><em>pButton</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gpointer</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2365a002be2ab295dcff97cd3264dbb4" name="a2365a002be2ab295dcff97cd3264dbb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2365a002be2ab295dcff97cd3264dbb4">&#9670;&#160;</a></span>check_image_and_update_ui()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void check_image_and_update_ui </td>
+          <td>(</td>
+          <td class="paramtype">GtkWidget *</td>          <td class="paramname"><span class="paramname"><em>pVBox</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86a453938d90ff3d68046dd98b370b71" name="a86a453938d90ff3d68046dd98b370b71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86a453938d90ff3d68046dd98b370b71">&#9670;&#160;</a></span>execute_command_and_display_output()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void execute_command_and_display_output </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>command</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GtkWidget *</td>          <td class="paramname"><span class="paramname"><em>pVBox</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d2abda5212d8ca03c921249461006a3" name="a2d2abda5212d8ca03c921249461006a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d2abda5212d8ca03c921249461006a3">&#9670;&#160;</a></span>image_capture_clicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void image_capture_clicked </td>
+          <td>(</td>
+          <td class="paramtype">GtkWidget *</td>          <td class="paramname"><span class="paramname"><em>pButton</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gpointer</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>[]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a04423ae4f3aa0e5f302f99e014c59db3" name="a04423ae4f3aa0e5f302f99e014c59db3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04423ae4f3aa0e5f302f99e014c59db3">&#9670;&#160;</a></span>segments_clicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void segments_clicked </td>
+          <td>(</td>
+          <td class="paramtype">GtkWidget *</td>          <td class="paramname"><span class="paramname"><em>pButton</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gpointer</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60131e18a0ca1733e032e108300ecbb9" name="a60131e18a0ca1733e032e108300ecbb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60131e18a0ca1733e032e108300ecbb9">&#9670;&#160;</a></span>show_default_page()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void show_default_page </td>
+          <td>(</td>
+          <td class="paramtype">GtkWidget *</td>          <td class="paramname"><span class="paramname"><em>pVBox</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d79625899ddae17f8dc6fe55573d774" name="a4d79625899ddae17f8dc6fe55573d774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d79625899ddae17f8dc6fe55573d774">&#9670;&#160;</a></span>show_image_found_options()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void show_image_found_options </td>
+          <td>(</td>
+          <td class="paramtype">GtkWidget *</td>          <td class="paramname"><span class="paramname"><em>pVBox</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2aed544c686a70abf4901dc3fa2f848a" name="a2aed544c686a70abf4901dc3fa2f848a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aed544c686a70abf4901dc3fa2f848a">&#9670;&#160;</a></span>show_input_dialog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void show_input_dialog </td>
+          <td>(</td>
+          <td class="paramtype">GtkWidget *</td>          <td class="paramname"><span class="paramname"><em>pWidget</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gpointer</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac7a92285017ec40480cd55da656ba65" name="aac7a92285017ec40480cd55da656ba65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac7a92285017ec40480cd55da656ba65">&#9670;&#160;</a></span>show_no_image_found_options()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void show_no_image_found_options </td>
+          <td>(</td>
+          <td class="paramtype">GtkWidget *</td>          <td class="paramname"><span class="paramname"><em>pVBox</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addf3ab8c2a0c00129241215a09bdb6c3" name="addf3ab8c2a0c00129241215a09bdb6c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addf3ab8c2a0c00129241215a09bdb6c3">&#9670;&#160;</a></span>tmp_image_found()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gboolean tmp_image_found </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+  Copyright (c) 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script><a href="https://imagepulser.dev.madebyvasilis.site/"> ImagePulser</a> | All rights reserved 
+</small>
+<br>
+<small>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun</small></address>
+</body>
+</html>

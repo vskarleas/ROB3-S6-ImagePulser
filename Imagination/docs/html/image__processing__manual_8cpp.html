@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ImagePulser: Référence du fichier /Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c-project-rob-3-eleves-gr-2-1/Imagination/image_processing_manual.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ImagePulser<span id="projectnumber">&#160;V5.2.4</span>
+   </div>
+   <div id="projectbrief">Simplification des images prises avec une webcam</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier /Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c-project-rob-3-eleves-gr-2-1/Imagination/image_processing_manual.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Utilisation de l'image_processing en mode manuel.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &quot;opencv2/highgui.hpp&quot;</code><br />
+<code>#include &quot;opencv2/opencv.hpp&quot;</code><br />
+<code>#include &quot;opencv2/highgui/highgui.hpp&quot;</code><br />
+<code>#include &quot;opencv2/videoio.hpp&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de image_processing_manual.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="image__processing__manual_8cpp__incl.png" border="0" usemap="#a_2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2image__processing__manual_8cpp" alt=""/></div>
+<map name="a_2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2image__processing__manual_8cpp" id="a_2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2image__processing__manual_8cpp">
+<area shape="rect" title="Utilisation de l&#39;image_processing en mode manuel." alt="" coords="278,5,511,121"/>
+<area shape="rect" title=" " alt="" coords="5,169,66,195"/>
+<area shape="poly" title=" " alt="" coords="278,105,81,169,79,163,276,100"/>
+<area shape="rect" title=" " alt="" coords="90,169,154,195"/>
+<area shape="poly" title=" " alt="" coords="278,117,165,165,163,160,276,112"/>
+<area shape="rect" title=" " alt="" coords="179,169,242,195"/>
+<area shape="poly" title=" " alt="" coords="305,124,243,163,240,158,302,119"/>
+<area shape="rect" title=" " alt="" coords="267,169,338,195"/>
+<area shape="poly" title=" " alt="" coords="351,123,323,159,319,155,347,120"/>
+<area shape="rect" title=" " alt="" coords="362,169,427,195"/>
+<area shape="poly" title=" " alt="" coords="397,121,397,153,392,153,392,121"/>
+<area shape="rect" title=" " alt="" coords="451,169,591,195"/>
+<area shape="poly" title=" " alt="" coords="458,120,498,156,495,160,455,123"/>
+<area shape="rect" title=" " alt="" coords="615,169,755,195"/>
+<area shape="poly" title=" " alt="" coords="512,109,642,160,640,165,510,114"/>
+<area shape="rect" title=" " alt="" coords="779,169,964,195"/>
+<area shape="poly" title=" " alt="" coords="512,90,808,162,806,167,510,95"/>
+<area shape="rect" title=" " alt="" coords="988,169,1128,195"/>
+<area shape="poly" title=" " alt="" coords="512,82,975,163,974,168,511,88"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ad55d9d35a3ec700e5f82dec3c0cad848" id="r_ad55d9d35a3ec700e5f82dec3c0cad848"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad55d9d35a3ec700e5f82dec3c0cad848">write_to_PBM</a> (const std::string &amp;input_image_path, const std::string &amp;output_pbm_path)</td></tr>
+<tr class="memdesc:ad55d9d35a3ec700e5f82dec3c0cad848"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> vers PBM en codec P4.  <br /></td></tr>
+<tr class="separator:ad55d9d35a3ec700e5f82dec3c0cad848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627" id="r_a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="memdesc:a3c04138a5bfe5d72780bb7e82a18e627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction principale pour tester l'écriture d'une image en PBM.  <br /></td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Utilisation de l'image_processing en mode manuel. </p>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627" name="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction principale pour tester l'écriture d'une image en PBM. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>Nombre d'arguments </td></tr>
+    <tr><td class="paramname">argv</td><td>Tableau d'arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>int Code de retour </dd></dl>
+
+</div>
+</div>
+<a id="ad55d9d35a3ec700e5f82dec3c0cad848" name="ad55d9d35a3ec700e5f82dec3c0cad848"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad55d9d35a3ec700e5f82dec3c0cad848">&#9670;&#160;</a></span>write_to_PBM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void write_to_PBM </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>input_image_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>output_pbm_path</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> vers PBM en codec P4. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input_image_path</td><td>Le chemin de l'image d'entrée </td></tr>
+    <tr><td class="paramname">output_pbm_path</td><td>Le chemin du fichier PBM de sortie </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+  Copyright (c) 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script><a href="https://imagepulser.dev.madebyvasilis.site/"> ImagePulser</a> | All rights reserved 
+</small>
+<br>
+<small>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun</small></address>
+</body>
+</html>

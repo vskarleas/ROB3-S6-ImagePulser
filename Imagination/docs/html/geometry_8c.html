@@ -1,0 +1,551 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ImagePulser: Référence du fichier /Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c-project-rob-3-eleves-gr-2-1/Imagination/geometry.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ImagePulser<span id="projectnumber">&#160;V5.2.4</span>
+   </div>
+   <div id="projectbrief">Simplification des images prises avec une webcam</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier /Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c-project-rob-3-eleves-gr-2-1/Imagination/geometry.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Déclaration de toutes les fonctions de la géometrie en 2D.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="geometry_8h_source.html">geometry.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de geometry.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="geometry_8c__incl.png" border="0" usemap="#a_2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2geometry_8c" alt=""/></div>
+<map name="a_2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2geometry_8c" id="a_2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2geometry_8c">
+<area shape="rect" title="Déclaration de toutes les fonctions de la géometrie en 2D." alt="" coords="92,5,326,106"/>
+<area shape="rect" title=" " alt="" coords="5,154,66,180"/>
+<area shape="poly" title=" " alt="" coords="131,109,69,148,66,143,128,104"/>
+<area shape="rect" title=" " alt="" coords="89,154,153,180"/>
+<area shape="poly" title=" " alt="" coords="171,108,142,143,138,140,167,104"/>
+<area shape="rect" title=" " alt="" coords="177,154,241,180"/>
+<area shape="poly" title=" " alt="" coords="212,106,212,138,206,138,206,106"/>
+<area shape="rect" title=" " alt="" coords="265,154,326,180"/>
+<area shape="poly" title=" " alt="" coords="250,105,278,140,274,143,246,108"/>
+<area shape="rect" href="geometry_8h.html" title="Déclaration des fonctions pour geometry.c." alt="" coords="351,154,435,180"/>
+<area shape="poly" title=" " alt="" coords="294,104,361,143,358,148,291,109"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ae77bb542e0efa2c15d272026a9733634" id="r_ae77bb542e0efa2c15d272026a9733634"><td class="memItemLeft" align="right" valign="top"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae77bb542e0efa2c15d272026a9733634">set_point</a> (double x, double y)</td></tr>
+<tr class="memdesc:ae77bb542e0efa2c15d272026a9733634"><td class="mdescLeft">&#160;</td><td class="mdescRight">Définir les coordonnées d'un point.  <br /></td></tr>
+<tr class="separator:ae77bb542e0efa2c15d272026a9733634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64aae947fc9dcc8d5d4f551bfa77fee0" id="r_a64aae947fc9dcc8d5d4f551bfa77fee0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64aae947fc9dcc8d5d4f551bfa77fee0">set_vecteur</a> (double x, double y)</td></tr>
+<tr class="memdesc:a64aae947fc9dcc8d5d4f551bfa77fee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Définir les coordonnées d'un vecteur.  <br /></td></tr>
+<tr class="separator:a64aae947fc9dcc8d5d4f551bfa77fee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5d0904ef90346b84cfae5db27829b2d" id="r_ab5d0904ef90346b84cfae5db27829b2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5d0904ef90346b84cfae5db27829b2d">add_point</a> (<a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a> P1, <a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a> P2)</td></tr>
+<tr class="memdesc:ab5d0904ef90346b84cfae5db27829b2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Addition de deux points.  <br /></td></tr>
+<tr class="separator:ab5d0904ef90346b84cfae5db27829b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30fe5944c32247e782d1212cbd738c68" id="r_a30fe5944c32247e782d1212cbd738c68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30fe5944c32247e782d1212cbd738c68">add_vecteur</a> (<a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a> V1, <a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a> V2)</td></tr>
+<tr class="memdesc:a30fe5944c32247e782d1212cbd738c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Addition de deux vecteurs.  <br /></td></tr>
+<tr class="separator:a30fe5944c32247e782d1212cbd738c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af49f91b7244b7500cbc77f8d6a7f8456" id="r_af49f91b7244b7500cbc77f8d6a7f8456"><td class="memItemLeft" align="right" valign="top"><a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af49f91b7244b7500cbc77f8d6a7f8456">vect_bipoint</a> (<a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a> A, <a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a> B)</td></tr>
+<tr class="memdesc:af49f91b7244b7500cbc77f8d6a7f8456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vecteur entre deux points.  <br /></td></tr>
+<tr class="separator:af49f91b7244b7500cbc77f8d6a7f8456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a409e39965d45876e73596914ee64f579" id="r_a409e39965d45876e73596914ee64f579"><td class="memItemLeft" align="right" valign="top"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a409e39965d45876e73596914ee64f579">produit</a> (<a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a> P1, double a)</td></tr>
+<tr class="memdesc:a409e39965d45876e73596914ee64f579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produit d'un point et d'un nombre réel.  <br /></td></tr>
+<tr class="separator:a409e39965d45876e73596914ee64f579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ee42bedaa614b1b9cfe2521271558ce" id="r_a5ee42bedaa614b1b9cfe2521271558ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ee42bedaa614b1b9cfe2521271558ce">produit_vect</a> (<a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a> V1, double a)</td></tr>
+<tr class="memdesc:a5ee42bedaa614b1b9cfe2521271558ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produit d'un vecteur et d'un nombre réel.  <br /></td></tr>
+<tr class="separator:a5ee42bedaa614b1b9cfe2521271558ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70932721501602e1cdb526e5dd145506" id="r_a70932721501602e1cdb526e5dd145506"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70932721501602e1cdb526e5dd145506">produit_scalaire</a> (<a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a> V1, <a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a> V2)</td></tr>
+<tr class="memdesc:a70932721501602e1cdb526e5dd145506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produit scalaire de deux vecteurs.  <br /></td></tr>
+<tr class="separator:a70932721501602e1cdb526e5dd145506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf04177cb1a01352b30410d672427ec4" id="r_adf04177cb1a01352b30410d672427ec4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf04177cb1a01352b30410d672427ec4">norm</a> (<a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a> V1)</td></tr>
+<tr class="memdesc:adf04177cb1a01352b30410d672427ec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Norme d'un vecteur.  <br /></td></tr>
+<tr class="separator:adf04177cb1a01352b30410d672427ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aea27c604e0baea30233f1355561a38" id="r_a9aea27c604e0baea30233f1355561a38"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9aea27c604e0baea30233f1355561a38">distance</a> (<a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a> P1, <a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a> P2)</td></tr>
+<tr class="memdesc:a9aea27c604e0baea30233f1355561a38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distance entre deux points.  <br /></td></tr>
+<tr class="separator:a9aea27c604e0baea30233f1355561a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afec646abf5be458ed147a32126f75b20" id="r_afec646abf5be458ed147a32126f75b20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afec646abf5be458ed147a32126f75b20">vector_creation</a> (<a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a> P1, <a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a> P2)</td></tr>
+<tr class="memdesc:afec646abf5be458ed147a32126f75b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création d'un vecteur à partir de deux points.  <br /></td></tr>
+<tr class="separator:afec646abf5be458ed147a32126f75b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cdf6c906364392c8d2d4f0fc69db5ba" id="r_a0cdf6c906364392c8d2d4f0fc69db5ba"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cdf6c906364392c8d2d4f0fc69db5ba">distance_point_segment</a> (<a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a> P1, <a class="el" href="geometry_8h.html#a524984e1f04b170f57bcbc69485f5f1e">Segment</a> S1)</td></tr>
+<tr class="memdesc:a0cdf6c906364392c8d2d4f0fc69db5ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distance entre un point et un segment.  <br /></td></tr>
+<tr class="separator:a0cdf6c906364392c8d2d4f0fc69db5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Déclaration de toutes les fonctions de la géometrie en 2D. </p>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ab5d0904ef90346b84cfae5db27829b2d" name="ab5d0904ef90346b84cfae5db27829b2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5d0904ef90346b84cfae5db27829b2d">&#9670;&#160;</a></span>add_point()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a> add_point </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a></td>          <td class="paramname"><span class="paramname"><em>P1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a></td>          <td class="paramname"><span class="paramname"><em>P2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Addition de deux points. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P1</td><td>Premier point </td></tr>
+    <tr><td class="paramname">P2</td><td>Deuxième point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Point Le point résultant de l'addition des deux points </dd></dl>
+
+</div>
+</div>
+<a id="a30fe5944c32247e782d1212cbd738c68" name="a30fe5944c32247e782d1212cbd738c68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30fe5944c32247e782d1212cbd738c68">&#9670;&#160;</a></span>add_vecteur()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a> add_vecteur </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a></td>          <td class="paramname"><span class="paramname"><em>V1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a></td>          <td class="paramname"><span class="paramname"><em>V2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Addition de deux vecteurs. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">V1</td><td>Premier vecteur </td></tr>
+    <tr><td class="paramname">V2</td><td>Deuxième vecteur </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Vecteur Le vecteur résultant de l'addition des deux vecteurs </dd></dl>
+
+</div>
+</div>
+<a id="a9aea27c604e0baea30233f1355561a38" name="a9aea27c604e0baea30233f1355561a38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aea27c604e0baea30233f1355561a38">&#9670;&#160;</a></span>distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double distance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a></td>          <td class="paramname"><span class="paramname"><em>P1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a></td>          <td class="paramname"><span class="paramname"><em>P2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Distance entre deux points. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P1</td><td>Premier point </td></tr>
+    <tr><td class="paramname">P2</td><td>Deuxième point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>double La distance entre les deux points </dd></dl>
+
+</div>
+</div>
+<a id="a0cdf6c906364392c8d2d4f0fc69db5ba" name="a0cdf6c906364392c8d2d4f0fc69db5ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cdf6c906364392c8d2d4f0fc69db5ba">&#9670;&#160;</a></span>distance_point_segment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double distance_point_segment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a></td>          <td class="paramname"><span class="paramname"><em>P1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#a524984e1f04b170f57bcbc69485f5f1e">Segment</a></td>          <td class="paramname"><span class="paramname"><em>S1</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Distance entre un point et un segment. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P1</td><td>Un point </td></tr>
+    <tr><td class="paramname">S1</td><td>Un segment </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>double La distance entre le point et le segment </dd></dl>
+
+</div>
+</div>
+<a id="adf04177cb1a01352b30410d672427ec4" name="adf04177cb1a01352b30410d672427ec4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf04177cb1a01352b30410d672427ec4">&#9670;&#160;</a></span>norm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double norm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a></td>          <td class="paramname"><span class="paramname"><em>V1</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Norme d'un vecteur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">V1</td><td>Un vecteur </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>double La norme du vecteur </dd></dl>
+
+</div>
+</div>
+<a id="a409e39965d45876e73596914ee64f579" name="a409e39965d45876e73596914ee64f579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a409e39965d45876e73596914ee64f579">&#9670;&#160;</a></span>produit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a> produit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a></td>          <td class="paramname"><span class="paramname"><em>P1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>a</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Produit d'un point et d'un nombre réel. </p>
+<p>Produit d'un point avec un nombre réel.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P1</td><td>Un point </td></tr>
+    <tr><td class="paramname">a</td><td>Un nombre réel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Point Le point résultant du produit scalaire </dd></dl>
+
+</div>
+</div>
+<a id="a70932721501602e1cdb526e5dd145506" name="a70932721501602e1cdb526e5dd145506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70932721501602e1cdb526e5dd145506">&#9670;&#160;</a></span>produit_scalaire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double produit_scalaire </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a></td>          <td class="paramname"><span class="paramname"><em>V1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a></td>          <td class="paramname"><span class="paramname"><em>V2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Produit scalaire de deux vecteurs. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">V1</td><td>Premier vecteur </td></tr>
+    <tr><td class="paramname">V2</td><td>Deuxième vecteur </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>double Le produit scalaire des deux vecteurs </dd></dl>
+
+</div>
+</div>
+<a id="a5ee42bedaa614b1b9cfe2521271558ce" name="a5ee42bedaa614b1b9cfe2521271558ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ee42bedaa614b1b9cfe2521271558ce">&#9670;&#160;</a></span>produit_vect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a> produit_vect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a></td>          <td class="paramname"><span class="paramname"><em>V1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>a</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Produit d'un vecteur et d'un nombre réel. </p>
+<p>Produit d'un vecteur avec un nombre réel.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">V1</td><td>Un vecteur </td></tr>
+    <tr><td class="paramname">a</td><td>Un nombre réel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Vecteur Le vecteur résultant du produit scalaire </dd></dl>
+
+</div>
+</div>
+<a id="ae77bb542e0efa2c15d272026a9733634" name="ae77bb542e0efa2c15d272026a9733634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae77bb542e0efa2c15d272026a9733634">&#9670;&#160;</a></span>set_point()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a> set_point </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définir les coordonnées d'un point. </p>
+<p>Initialisation d'un point.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Coordonnée sur l'axe x </td></tr>
+    <tr><td class="paramname">y</td><td>Coordonnée sur l'axe y </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Point Un point avec les coordonnées (x, y) </dd></dl>
+
+</div>
+</div>
+<a id="a64aae947fc9dcc8d5d4f551bfa77fee0" name="a64aae947fc9dcc8d5d4f551bfa77fee0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64aae947fc9dcc8d5d4f551bfa77fee0">&#9670;&#160;</a></span>set_vecteur()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a> set_vecteur </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définir les coordonnées d'un vecteur. </p>
+<p>Initialisation d'un vecteur.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Coordonnée sur l'axe x </td></tr>
+    <tr><td class="paramname">y</td><td>Coordonnée sur l'axe y </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Vecteur Un vecteur avec les coordonnées (x, y) </dd></dl>
+
+</div>
+</div>
+<a id="af49f91b7244b7500cbc77f8d6a7f8456" name="af49f91b7244b7500cbc77f8d6a7f8456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af49f91b7244b7500cbc77f8d6a7f8456">&#9670;&#160;</a></span>vect_bipoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a> vect_bipoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a></td>          <td class="paramname"><span class="paramname"><em>A</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a></td>          <td class="paramname"><span class="paramname"><em>B</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vecteur entre deux points. </p>
+<p>Création d'un vecteur à partir de deux points.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>Premier point </td></tr>
+    <tr><td class="paramname">B</td><td>Deuxième point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Vecteur Le vecteur allant de A à B </dd></dl>
+
+</div>
+</div>
+<a id="afec646abf5be458ed147a32126f75b20" name="afec646abf5be458ed147a32126f75b20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afec646abf5be458ed147a32126f75b20">&#9670;&#160;</a></span>vector_creation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geometry_8h.html#aa97a82b3db3309595cacb09b7b97b228">Vecteur</a> vector_creation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a></td>          <td class="paramname"><span class="paramname"><em>P1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a></td>          <td class="paramname"><span class="paramname"><em>P2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Création d'un vecteur à partir de deux points. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P1</td><td>Premier point </td></tr>
+    <tr><td class="paramname">P2</td><td>Deuxième point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Vecteur Le vecteur créé à partir des deux points </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+  Copyright (c) 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script><a href="https://imagepulser.dev.madebyvasilis.site/"> ImagePulser</a> | All rights reserved 
+</small>
+<br>
+<small>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun</small></address>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ImagePulser: Référence du fichier /Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c-project-rob-3-eleves-gr-2-1/Imagination/test_ev.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ImagePulser<span id="projectnumber">&#160;V5.2.4</span>
+   </div>
+   <div id="projectbrief">Simplification des images prises avec une webcam</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier /Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c-project-rob-3-eleves-gr-2-1/Imagination/test_ev.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Test pour l'ouverture du port serie d'Arduino.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;opencv2/opencv.hpp&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;fcntl.h&gt;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
+<code>#include &lt;termios.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de test_ev.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="test__ev_8cpp__incl.png" border="0" usemap="#a_2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2test__ev_8cpp" alt=""/></div>
+<map name="a_2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2test__ev_8cpp" id="a_2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2test__ev_8cpp">
+<area shape="rect" title="Test pour l&#39;ouverture du port serie d&#39;Arduino." alt="" coords="432,5,665,106"/>
+<area shape="rect" title=" " alt="" coords="5,154,145,180"/>
+<area shape="poly" title=" " alt="" coords="432,86,143,153,142,147,431,81"/>
+<area shape="rect" title=" " alt="" coords="169,154,240,180"/>
+<area shape="poly" title=" " alt="" coords="432,96,255,152,254,147,431,91"/>
+<area shape="rect" title=" " alt="" coords="264,154,329,180"/>
+<area shape="poly" title=" " alt="" coords="434,109,339,150,337,145,432,104"/>
+<area shape="rect" title=" " alt="" coords="353,154,432,180"/>
+<area shape="poly" title=" " alt="" coords="479,109,424,147,421,143,476,104"/>
+<area shape="rect" title=" " alt="" coords="456,154,545,180"/>
+<area shape="poly" title=" " alt="" coords="529,107,514,141,509,138,524,105"/>
+<area shape="rect" title=" " alt="" coords="569,154,626,180"/>
+<area shape="poly" title=" " alt="" coords="573,105,588,138,583,141,568,107"/>
+<area shape="rect" title=" " alt="" coords="651,154,712,180"/>
+<area shape="poly" title=" " alt="" coords="611,104,657,142,654,146,607,109"/>
+<area shape="rect" title=" " alt="" coords="736,154,811,180"/>
+<area shape="poly" title=" " alt="" coords="652,104,736,145,734,149,650,109"/>
+<area shape="rect" title=" " alt="" coords="836,154,903,180"/>
+<area shape="poly" title=" " alt="" coords="666,94,822,147,820,152,664,99"/>
+<area shape="rect" title=" " alt="" coords="928,154,988,180"/>
+<area shape="poly" title=" " alt="" coords="666,85,913,151,912,156,665,90"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:afdada12de2b74f0888961f67e4383d36" id="r_afdada12de2b74f0888961f67e4383d36"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdada12de2b74f0888961f67e4383d36">open_serial</a> (const char *device)</td></tr>
+<tr class="separator:afdada12de2b74f0888961f67e4383d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96adc6c102c5a1f1a96334aa88c13de3" id="r_a96adc6c102c5a1f1a96334aa88c13de3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96adc6c102c5a1f1a96334aa88c13de3">send_coordinates</a> (int x, int y)</td></tr>
+<tr class="separator:a96adc6c102c5a1f1a96334aa88c13de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a899383371b9339cec03cf7c20e63c48b" id="r_a899383371b9339cec03cf7c20e63c48b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a899383371b9339cec03cf7c20e63c48b">on_decision_mouse</a> (int event, int x, int y, int, void *)</td></tr>
+<tr class="memdesc:a899383371b9339cec03cf7c20e63c48b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles mouse events in the "Decision" window.  <br /></td></tr>
+<tr class="separator:a899383371b9339cec03cf7c20e63c48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab35daff8c2213dfa86532f46aa5d4d04" id="r_ab35daff8c2213dfa86532f46aa5d4d04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab35daff8c2213dfa86532f46aa5d4d04">on_mouse</a> (int event, int x, int y, int, void *userdata)</td></tr>
+<tr class="memdesc:ab35daff8c2213dfa86532f46aa5d4d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Captures the image if mouse is on the designated area.  <br /></td></tr>
+<tr class="separator:ab35daff8c2213dfa86532f46aa5d4d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a0a2e45aa47ea33b95b142bd95d496a17" id="r_a0a2e45aa47ea33b95b142bd95d496a17"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a2e45aa47ea33b95b142bd95d496a17">capturedFrame</a></td></tr>
+<tr class="separator:a0a2e45aa47ea33b95b142bd95d496a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0001cad5b3db8bcadd0e6bc3ef7c074" id="r_ae0001cad5b3db8bcadd0e6bc3ef7c074"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0001cad5b3db8bcadd0e6bc3ef7c074">imageCaptured</a> = false</td></tr>
+<tr class="separator:ae0001cad5b3db8bcadd0e6bc3ef7c074"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee7beb659bc99e0a1c044b3e7feb4755" id="r_aee7beb659bc99e0a1c044b3e7feb4755"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee7beb659bc99e0a1c044b3e7feb4755">programShouldFinish</a> = false</td></tr>
+<tr class="separator:aee7beb659bc99e0a1c044b3e7feb4755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a602fbf108f43ef640b45e1c038c5b1dd" id="r_a602fbf108f43ef640b45e1c038c5b1dd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a602fbf108f43ef640b45e1c038c5b1dd">time_id</a> = 0</td></tr>
+<tr class="separator:a602fbf108f43ef640b45e1c038c5b1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addcb98513aef11efa7de8ef1a8db7006" id="r_addcb98513aef11efa7de8ef1a8db7006"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addcb98513aef11efa7de8ef1a8db7006">STEP_SIZE</a> = 5</td></tr>
+<tr class="separator:addcb98513aef11efa7de8ef1a8db7006"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab34f89ef94db9dd6d3a04425dd6d9c9d" id="r_ab34f89ef94db9dd6d3a04425dd6d9c9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab34f89ef94db9dd6d3a04425dd6d9c9d">posX</a> = 120</td></tr>
+<tr class="separator:ab34f89ef94db9dd6d3a04425dd6d9c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65ab2de052c17234c8a1db3fd3b868a9" id="r_a65ab2de052c17234c8a1db3fd3b868a9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65ab2de052c17234c8a1db3fd3b868a9">posY</a> = 120</td></tr>
+<tr class="separator:a65ab2de052c17234c8a1db3fd3b868a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Test pour l'ouverture du port serie d'Arduino. </p>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a899383371b9339cec03cf7c20e63c48b" name="a899383371b9339cec03cf7c20e63c48b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a899383371b9339cec03cf7c20e63c48b">&#9670;&#160;</a></span>on_decision_mouse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void on_decision_mouse </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>event</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handles mouse events in the "Decision" window. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td></td></tr>
+    <tr><td class="paramname">x</td><td></td></tr>
+    <tr><td class="paramname">y</td><td></td></tr>
+    <tr><td class="paramname">userdata</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab35daff8c2213dfa86532f46aa5d4d04" name="ab35daff8c2213dfa86532f46aa5d4d04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab35daff8c2213dfa86532f46aa5d4d04">&#9670;&#160;</a></span>on_mouse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void on_mouse </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>event</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>userdata</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Captures the image if mouse is on the designated area. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td></td></tr>
+    <tr><td class="paramname">x</td><td></td></tr>
+    <tr><td class="paramname">y</td><td></td></tr>
+    <tr><td class="paramname">userdata</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afdada12de2b74f0888961f67e4383d36" name="afdada12de2b74f0888961f67e4383d36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdada12de2b74f0888961f67e4383d36">&#9670;&#160;</a></span>open_serial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open_serial </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>device</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a96adc6c102c5a1f1a96334aa88c13de3" name="a96adc6c102c5a1f1a96334aa88c13de3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96adc6c102c5a1f1a96334aa88c13de3">&#9670;&#160;</a></span>send_coordinates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void send_coordinates </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sends the coordinates to the serial Port </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="a0a2e45aa47ea33b95b142bd95d496a17" name="a0a2e45aa47ea33b95b142bd95d496a17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a2e45aa47ea33b95b142bd95d496a17">&#9670;&#160;</a></span>capturedFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cv::Mat capturedFrame</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0001cad5b3db8bcadd0e6bc3ef7c074" name="ae0001cad5b3db8bcadd0e6bc3ef7c074"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0001cad5b3db8bcadd0e6bc3ef7c074">&#9670;&#160;</a></span>imageCaptured</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool imageCaptured = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab34f89ef94db9dd6d3a04425dd6d9c9d" name="ab34f89ef94db9dd6d3a04425dd6d9c9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab34f89ef94db9dd6d3a04425dd6d9c9d">&#9670;&#160;</a></span>posX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int posX = 120</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65ab2de052c17234c8a1db3fd3b868a9" name="a65ab2de052c17234c8a1db3fd3b868a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65ab2de052c17234c8a1db3fd3b868a9">&#9670;&#160;</a></span>posY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int posY = 120</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee7beb659bc99e0a1c044b3e7feb4755" name="aee7beb659bc99e0a1c044b3e7feb4755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee7beb659bc99e0a1c044b3e7feb4755">&#9670;&#160;</a></span>programShouldFinish</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool programShouldFinish = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addcb98513aef11efa7de8ef1a8db7006" name="addcb98513aef11efa7de8ef1a8db7006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addcb98513aef11efa7de8ef1a8db7006">&#9670;&#160;</a></span>STEP_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int STEP_SIZE = 5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a602fbf108f43ef640b45e1c038c5b1dd" name="a602fbf108f43ef640b45e1c038c5b1dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a602fbf108f43ef640b45e1c038c5b1dd">&#9670;&#160;</a></span>time_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int time_id = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+  Copyright (c) 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script><a href="https://imagepulser.dev.madebyvasilis.site/"> ImagePulser</a> | All rights reserved 
+</small>
+<br>
+<small>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun</small></address>
+</body>
+</html>

@@ -1,0 +1,640 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ImagePulser: Référence du fichier /Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c-project-rob-3-eleves-gr-2-1/Imagination/image.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ImagePulser<span id="projectnumber">&#160;V5.2.4</span>
+   </div>
+   <div id="projectbrief">Simplification des images prises avec une webcam</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier /Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c-project-rob-3-eleves-gr-2-1/Imagination/image.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Déclarations de fonctions pour le module <a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a>.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="error_8h_source.html">error.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="image_8h_source.html">image.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de image.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="image_8c__incl.png" border="0" usemap="#a_2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2image_8c" alt=""/></div>
+<map name="a_2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2image_8c" id="a_2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2image_8c">
+<area shape="rect" title="Déclarations de fonctions pour le module Image." alt="" coords="91,5,324,106"/>
+<area shape="rect" title=" " alt="" coords="5,301,66,327"/>
+<area shape="poly" title=" " alt="" coords="92,98,56,123,28,155,17,188,15,223,20,257,28,286,23,288,15,258,10,223,12,187,24,153,53,119,89,94"/>
+<area shape="rect" title=" " alt="" coords="219,301,282,327"/>
+<area shape="poly" title=" " alt="" coords="289,105,311,127,327,153,333,172,333,192,322,230,300,264,276,292,272,288,296,261,317,228,328,191,328,173,322,155,306,130,285,108"/>
+<area shape="rect" title=" " alt="" coords="129,154,193,180"/>
+<area shape="poly" title=" " alt="" coords="189,107,174,141,170,138,184,105"/>
+<area shape="rect" title=" " alt="" coords="217,154,291,180"/>
+<area shape="poly" title=" " alt="" coords="231,105,245,138,241,141,226,107"/>
+<area shape="rect" href="error_8h.html" title="UINT et FATAL_ERROR déclaration." alt="" coords="132,228,190,253"/>
+<area shape="poly" title=" " alt="" coords="283,105,299,122,310,141,313,161,306,181,285,203,260,219,232,230,205,236,204,231,230,225,257,214,282,199,301,178,308,161,305,143,295,125,279,108"/>
+<area shape="rect" href="image_8h.html" title="Déclaration des fonctions pour image.c." alt="" coords="38,154,105,180"/>
+<area shape="poly" title=" " alt="" coords="147,109,100,146,97,142,144,104"/>
+<area shape="poly" title=" " alt="" coords="141,256,71,296,69,291,138,252"/>
+<area shape="poly" title=" " alt="" coords="178,252,225,289,222,294,174,256"/>
+<area shape="poly" title=" " alt="" coords="88,178,136,216,132,220,85,182"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a90817cdccab7ca4eab03208daf3f287e" id="r_a90817cdccab7ca4eab03208daf3f287e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90817cdccab7ca4eab03208daf3f287e">PIXEL_INDEX</a>(_I,  _x,  _y)&#160;&#160;&#160;((_x) - 1) + (_I).the_height_of_the_image *((_y) - 1)</td></tr>
+<tr class="memdesc:a90817cdccab7ca4eab03208daf3f287e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule l'indice d'un pixel dans une image PBM à partir de ses coordonnées.  <br /></td></tr>
+<tr class="separator:a90817cdccab7ca4eab03208daf3f287e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:acaf6a5095af3a86a65913469c4c3d547" id="r_acaf6a5095af3a86a65913469c4c3d547"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structImage.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acaf6a5095af3a86a65913469c4c3d547">create_image</a> (<a class="el" href="error_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec">UINT</a> L, <a class="el" href="error_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec">UINT</a> H)</td></tr>
+<tr class="memdesc:acaf6a5095af3a86a65913469c4c3d547"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée une image PBM vide avec les dimensions spécifiées.  <br /></td></tr>
+<tr class="separator:acaf6a5095af3a86a65913469c4c3d547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef3b7179f976b01ab0236959fb7afb36" id="r_aef3b7179f976b01ab0236959fb7afb36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef3b7179f976b01ab0236959fb7afb36">delete_image</a> (<a class="el" href="structImage.html">Image</a> *p_I)</td></tr>
+<tr class="memdesc:aef3b7179f976b01ab0236959fb7afb36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supprime l'image spécifiée.  <br /></td></tr>
+<tr class="separator:aef3b7179f976b01ab0236959fb7afb36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae12b0f90723df2df51f296fca9cfd581" id="r_ae12b0f90723df2df51f296fca9cfd581"><td class="memItemLeft" align="right" valign="top"><a class="el" href="image_8h.html#a535e59456e3e633842529cfa8ea103c4">Pixel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae12b0f90723df2df51f296fca9cfd581">get_pixel_image</a> (<a class="el" href="structImage.html">Image</a> I, int x, int y)</td></tr>
+<tr class="memdesc:ae12b0f90723df2df51f296fca9cfd581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtient la valeur du pixel aux coordonnées spécifiées dans l'image.  <br /></td></tr>
+<tr class="separator:ae12b0f90723df2df51f296fca9cfd581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50f135491e59a1f5fa20c1a4dd919032" id="r_a50f135491e59a1f5fa20c1a4dd919032"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50f135491e59a1f5fa20c1a4dd919032">set_pixel_image</a> (<a class="el" href="structImage.html">Image</a> I, int x, int y, <a class="el" href="image_8h.html#a535e59456e3e633842529cfa8ea103c4">Pixel</a> v)</td></tr>
+<tr class="memdesc:a50f135491e59a1f5fa20c1a4dd919032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Définit la valeur du pixel aux coordonnées spécifiées dans l'image.  <br /></td></tr>
+<tr class="separator:a50f135491e59a1f5fa20c1a4dd919032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f44f0854e24e488c430eeb8b47ae868" id="r_a1f44f0854e24e488c430eeb8b47ae868"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec">UINT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f44f0854e24e488c430eeb8b47ae868">image_width</a> (<a class="el" href="structImage.html">Image</a> I)</td></tr>
+<tr class="memdesc:a1f44f0854e24e488c430eeb8b47ae868"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtient la largeur de l'image spécifiée.  <br /></td></tr>
+<tr class="separator:a1f44f0854e24e488c430eeb8b47ae868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a578bdbd89b5e5001766caafa2642bf73" id="r_a578bdbd89b5e5001766caafa2642bf73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="error_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec">UINT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a578bdbd89b5e5001766caafa2642bf73">image_height</a> (<a class="el" href="structImage.html">Image</a> I)</td></tr>
+<tr class="memdesc:a578bdbd89b5e5001766caafa2642bf73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la hauteur de l'image spécifiée.  <br /></td></tr>
+<tr class="separator:a578bdbd89b5e5001766caafa2642bf73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9071395d6f8c1e854adfd0a01f059e5" id="r_ad9071395d6f8c1e854adfd0a01f059e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9071395d6f8c1e854adfd0a01f059e5">header_file_pbm_P1</a> (FILE *f)</td></tr>
+<tr class="memdesc:ad9071395d6f8c1e854adfd0a01f059e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie l'en-tête d'un file_input image PBM codé au format P1.  <br /></td></tr>
+<tr class="separator:ad9071395d6f8c1e854adfd0a01f059e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58b0732b51ab37f102a0b74b1b5b6261" id="r_a58b0732b51ab37f102a0b74b1b5b6261"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58b0732b51ab37f102a0b74b1b5b6261">header_file_pbm_generic</a> (FILE *f)</td></tr>
+<tr class="memdesc:a58b0732b51ab37f102a0b74b1b5b6261"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valide l'en-tête d'un file_input image PBM.  <br /></td></tr>
+<tr class="separator:a58b0732b51ab37f102a0b74b1b5b6261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa445f0fd52d4ec6a82a3c1b7f9cfe879" id="r_aa445f0fd52d4ec6a82a3c1b7f9cfe879"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structImage.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa445f0fd52d4ec6a82a3c1b7f9cfe879">read_image_file</a> (char *name_f)</td></tr>
+<tr class="memdesc:aa445f0fd52d4ec6a82a3c1b7f9cfe879"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lit une image PBM à partir du file_input spécifié ou arrête l'opération en cas d'erreur.  <br /></td></tr>
+<tr class="separator:aa445f0fd52d4ec6a82a3c1b7f9cfe879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb123184b0ba058e7ed900611687eb5e" id="r_adb123184b0ba058e7ed900611687eb5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structImage.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb123184b0ba058e7ed900611687eb5e">read_image_file_P1</a> (char *name_f)</td></tr>
+<tr class="memdesc:adb123184b0ba058e7ed900611687eb5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lit une image PBM à partir du file_input spécifié qui est codé sous le codec P1.  <br /></td></tr>
+<tr class="separator:adb123184b0ba058e7ed900611687eb5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a162c4d010136dd8de0e27d4724bc5cfe" id="r_a162c4d010136dd8de0e27d4724bc5cfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structImage.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a162c4d010136dd8de0e27d4724bc5cfe">read_image_file_P4</a> (char *name_f)</td></tr>
+<tr class="memdesc:a162c4d010136dd8de0e27d4724bc5cfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lit une image PBM à partir du file_input spécifié qui est codée sous le codec P1.  <br /></td></tr>
+<tr class="separator:a162c4d010136dd8de0e27d4724bc5cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76f6a9af2e7141c36775678e8b2238f6" id="r_a76f6a9af2e7141c36775678e8b2238f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76f6a9af2e7141c36775678e8b2238f6">image_to_terminal</a> (<a class="el" href="structImage.html">Image</a> I)</td></tr>
+<tr class="memdesc:a76f6a9af2e7141c36775678e8b2238f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Écrit une image PBM sur le terminal.  <br /></td></tr>
+<tr class="separator:a76f6a9af2e7141c36775678e8b2238f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2d4d00513d96f70c0e51a8db809a9ec" id="r_ab2d4d00513d96f70c0e51a8db809a9ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structImage.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2d4d00513d96f70c0e51a8db809a9ec">negative_image</a> (<a class="el" href="structImage.html">Image</a> I)</td></tr>
+<tr class="memdesc:ab2d4d00513d96f70c0e51a8db809a9ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule le négatif de l'image spécifiée.  <br /></td></tr>
+<tr class="separator:ab2d4d00513d96f70c0e51a8db809a9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Déclarations de fonctions pour le module <a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a>. </p>
+</div><h2 class="groupheader">Documentation des macros</h2>
+<a id="a90817cdccab7ca4eab03208daf3f287e" name="a90817cdccab7ca4eab03208daf3f287e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90817cdccab7ca4eab03208daf3f287e">&#9670;&#160;</a></span>PIXEL_INDEX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIXEL_INDEX</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_I</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>_y</em></span>&#160;)&#160;&#160;&#160;((_x) - 1) + (_I).the_height_of_the_image *((_y) - 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcule l'indice d'un pixel dans une image PBM à partir de ses coordonnées. </p>
+<p>Cette macro calcule l'indice d'un pixel dans le tableau de pixels de l'image en fonction de ses coordonnées x et y.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_I</td><td>L'objet <a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> représentant l'image PBM. </td></tr>
+    <tr><td class="paramname">_x</td><td>La coordonnée x du pixel (basée sur 1). </td></tr>
+    <tr><td class="paramname">_y</td><td>La coordonnée y du pixel (basée sur 1). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>L'index du pixel dans le tableau de pixels de l'image.</dd></dl>
+<p>Cette macro est utile pour accéder efficacement aux valeurs de pixels individuels dans l'image. Il considère l'indexation basée sur 0 pour le tableau de pixels et ajuste les coordonnées en conséquence. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="acaf6a5095af3a86a65913469c4c3d547" name="acaf6a5095af3a86a65913469c4c3d547"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaf6a5095af3a86a65913469c4c3d547">&#9670;&#160;</a></span>create_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structImage.html">Image</a> create_image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="error_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec">UINT</a></td>          <td class="paramname"><span class="paramname"><em>L</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="error_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec">UINT</a></td>          <td class="paramname"><span class="paramname"><em>H</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crée une image PBM vide avec les dimensions spécifiées. </p>
+<p>Crée une image PBM de dimensions L x H avec tous les pixels blancs.</p>
+<p>Cette macro calcule l'indice d'un pixel dans le tableau de pixels de l'image en fonction de ses coordonnées x et y.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">L</td><td>Largeur de l'image. </td></tr>
+    <tr><td class="paramname">H</td><td>Hauteur de l'image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Objet <a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> représentant l'image créée (tous les pixels en blanc). </dd></dl>
+
+</div>
+</div>
+<a id="aef3b7179f976b01ab0236959fb7afb36" name="aef3b7179f976b01ab0236959fb7afb36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef3b7179f976b01ab0236959fb7afb36">&#9670;&#160;</a></span>delete_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void delete_image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structImage.html">Image</a> *</td>          <td class="paramname"><span class="paramname"><em>p_I</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Supprime l'image spécifiée. </p>
+<p>Cette fonction libère la mémoire allouée au tableau de pixels de l'image spécifiée.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_I</td><td>Pointeur vers l'objet <a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> représentant l'image à supprimer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae12b0f90723df2df51f296fca9cfd581" name="ae12b0f90723df2df51f296fca9cfd581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae12b0f90723df2df51f296fca9cfd581">&#9670;&#160;</a></span>get_pixel_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="image_8h.html#a535e59456e3e633842529cfa8ea103c4">Pixel</a> get_pixel_image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structImage.html">Image</a></td>          <td class="paramname"><span class="paramname"><em>I</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtient la valeur du pixel aux coordonnées spécifiées dans l'image. </p>
+<p>Renvoie la valeur du pixel aux coordonnées spécifiées dans l'image.</p>
+<p>Cette fonction récupère la valeur du pixel aux coordonnées spécifiées dans l'image.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">I</td><td>Objet <a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> représentant l'image. </td></tr>
+    <tr><td class="paramname">x</td><td>La coordonnée x du pixel (basée sur 1). </td></tr>
+    <tr><td class="paramname">y</td><td>La coordonnée y du pixel (basée sur 1). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La valeur du pixel aux coordonnées spécifiées.</dd></dl>
+<p>Si les coordonnées spécifiées sont en dehors des limites de l'image, la fonction renvoie la valeur d'un pixel blanc. </p>
+
+</div>
+</div>
+<a id="a58b0732b51ab37f102a0b74b1b5b6261" name="a58b0732b51ab37f102a0b74b1b5b6261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58b0732b51ab37f102a0b74b1b5b6261">&#9670;&#160;</a></span>header_file_pbm_generic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void header_file_pbm_generic </td>
+          <td>(</td>
+          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valide l'en-tête d'un file_input image PBM. </p>
+<p>Cette fonction effectue des vérifications génériques sur l'en-tête d'un file_input image PBM. Il est généralement utilisé pour les formats comme P1 et P4. La vérification du format spécifique peut être effectuée par des fonctions telles que <code>header_file_pbm_P1</code> spécialement conçu pour P1. Ici, nous utilisons le formulaire générique pour tout.</p>
+<p>Les éléments d'en-tête suivants sont vérifiés :</p><ul>
+<li>Numéro magique "P1" ou "P4" (sensible à la casse) sur la première ligne.</li>
+<li>Zéro ou plusieurs lignes de commentaires commençant par '#'.</li>
+</ul>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>Pointeur vers le descripteur de file_input ouvert pour l'image PBM. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad9071395d6f8c1e854adfd0a01f059e5" name="ad9071395d6f8c1e854adfd0a01f059e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9071395d6f8c1e854adfd0a01f059e5">&#9670;&#160;</a></span>header_file_pbm_P1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void header_file_pbm_P1 </td>
+          <td>(</td>
+          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérifie l'en-tête d'un file_input image PBM codé au format P1. </p>
+<p>Cette fonction valide l'en-tête d'un file_input image PBM supposé être au format P1. Il vérifie les éléments suivants :</p><ul>
+<li>Numéro magique "P1" (sensible à la casse) sur la première ligne.</li>
+<li>Zéro ou plusieurs lignes de commentaires commençant par '#'.</li>
+</ul>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>Pointeur vers le descripteur de file_input ouvert pour l'image PBM.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Voir également</dt><dd><a class="el" href="#a58b0732b51ab37f102a0b74b1b5b6261" title="Valide l&#39;en-tête d&#39;un file_input image PBM.">header_file_pbm_generic</a> </dd></dl>
+
+</div>
+</div>
+<a id="a578bdbd89b5e5001766caafa2642bf73" name="a578bdbd89b5e5001766caafa2642bf73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a578bdbd89b5e5001766caafa2642bf73">&#9670;&#160;</a></span>image_height()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="error_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec">UINT</a> image_height </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structImage.html">Image</a></td>          <td class="paramname"><span class="paramname"><em>I</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renvoie la hauteur de l'image spécifiée. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">I</td><td>Objet <a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> représentant l'image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Hauteur de l'image. </dd></dl>
+
+</div>
+</div>
+<a id="a76f6a9af2e7141c36775678e8b2238f6" name="a76f6a9af2e7141c36775678e8b2238f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76f6a9af2e7141c36775678e8b2238f6">&#9670;&#160;</a></span>image_to_terminal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void image_to_terminal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structImage.html">Image</a></td>          <td class="paramname"><span class="paramname"><em>I</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Écrit une image PBM sur le terminal. </p>
+<p>Affiche l'image spécifiée à l'écran.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">I</td><td>Objet <a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> représentant l'image à écrire. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1f44f0854e24e488c430eeb8b47ae868" name="a1f44f0854e24e488c430eeb8b47ae868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f44f0854e24e488c430eeb8b47ae868">&#9670;&#160;</a></span>image_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="error_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec">UINT</a> image_width </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structImage.html">Image</a></td>          <td class="paramname"><span class="paramname"><em>I</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtient la largeur de l'image spécifiée. </p>
+<p>Renvoie la largeur de l'image spécifiée.</p>
+<p>Cette fonction récupère la largeur de l'image spécifiée.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">I</td><td>Objet <a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> représentant l'image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La largeur de l'image. </dd></dl>
+
+</div>
+</div>
+<a id="ab2d4d00513d96f70c0e51a8db809a9ec" name="ab2d4d00513d96f70c0e51a8db809a9ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2d4d00513d96f70c0e51a8db809a9ec">&#9670;&#160;</a></span>negative_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structImage.html">Image</a> negative_image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structImage.html">Image</a></td>          <td class="paramname"><span class="paramname"><em>I</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcule le négatif de l'image spécifiée. </p>
+<p>Calcule l'image négative de l'image spécifiée.</p>
+<p>Cette fonction calcule le négatif de l'image spécifiée. Cela ne modifie pas l'existant</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">I</td><td>Objet <a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> représentant l'image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Objet <a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> représentant le négatif de l'image. </dd></dl>
+
+</div>
+</div>
+<a id="aa445f0fd52d4ec6a82a3c1b7f9cfe879" name="aa445f0fd52d4ec6a82a3c1b7f9cfe879"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa445f0fd52d4ec6a82a3c1b7f9cfe879">&#9670;&#160;</a></span>read_image_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structImage.html">Image</a> read_image_file </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>name_f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lit une image PBM à partir du file_input spécifié ou arrête l'opération en cas d'erreur. </p>
+<p>Lit une image PBM à partir du file_input spécifié.</p>
+<p>Cette fonction lit une image PBM à partir du file_input spécifié et la renvoie en tant qu'objet <a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name_f</td><td>Le nom du file_input contenant l'image PBM. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Objet <a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> représentant l'image lue.</dd></dl>
+<p>Si une erreur se produit lors de la lecture du file_input, le programme s'arrête avec un message d'erreur. version acceptant les file_inputs avec</p><ul>
+<li>ligne 1 : P1 ou P4</li>
+<li>zéro, une ou plusieurs lignes commençant toutes par #</li>
+<li>zéro, un ou plusieurs séparateurs</li>
+<li>la largeur</li>
+<li>un ou plusieurs séparateurs</li>
+<li>la hauteur</li>
+<li>un ou plusieurs séparateurs</li>
+<li>les pixels de l'image </li>
+</ul>
+
+</div>
+</div>
+<a id="adb123184b0ba058e7ed900611687eb5e" name="adb123184b0ba058e7ed900611687eb5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb123184b0ba058e7ed900611687eb5e">&#9670;&#160;</a></span>read_image_file_P1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structImage.html">Image</a> read_image_file_P1 </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>name_f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lit une image PBM à partir du file_input spécifié qui est codé sous le codec P1. </p>
+<p>Cette fonction lit une image PBM à partir du file_input spécifié et la renvoie en tant qu'objet <a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name_f</td><td>Le nom du file_input contenant l'image PBM. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Objet <a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> représentant l'image lue. </dd></dl>
+
+</div>
+</div>
+<a id="a162c4d010136dd8de0e27d4724bc5cfe" name="a162c4d010136dd8de0e27d4724bc5cfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a162c4d010136dd8de0e27d4724bc5cfe">&#9670;&#160;</a></span>read_image_file_P4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structImage.html">Image</a> read_image_file_P4 </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>name_f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lit une image PBM à partir du file_input spécifié qui est codée sous le codec P1. </p>
+<p>Lit une image PBM à partir du file_input spécifié qui est codé sous le codec P4.</p>
+<p>Cette fonction lit une image PBM à partir du file_input spécifié et la renvoie en tant qu'objet <a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a>.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name_f</td><td>Le nom du file_input contenant l'image PBM. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Objet <a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> représentant l'image lue. </dd></dl>
+
+</div>
+</div>
+<a id="a50f135491e59a1f5fa20c1a4dd919032" name="a50f135491e59a1f5fa20c1a4dd919032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50f135491e59a1f5fa20c1a4dd919032">&#9670;&#160;</a></span>set_pixel_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_pixel_image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structImage.html">Image</a></td>          <td class="paramname"><span class="paramname"><em>I</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="image_8h.html#a535e59456e3e633842529cfa8ea103c4">Pixel</a></td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définit la valeur du pixel aux coordonnées spécifiées dans l'image. </p>
+<p>Change la valeur du pixel aux coordonnées spécifiées dans l'image.</p>
+<p>Cette fonction modifie la valeur du pixel aux coordonnées spécifiées dans l'image à la valeur spécifiée.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">I</td><td>Objet <a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> représentant l'image. </td></tr>
+    <tr><td class="paramname">x</td><td>La coordonnée x du pixel (basée sur 1). </td></tr>
+    <tr><td class="paramname">y</td><td>La coordonnée y du pixel (basée sur 1). </td></tr>
+    <tr><td class="paramname">v</td><td>La valeur à laquelle définir le pixel.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Si les coordonnées spécifiées sont en dehors des limites de l'image, la fonction ne fait rien. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+  Copyright (c) 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script><a href="https://imagepulser.dev.madebyvasilis.site/"> ImagePulser</a> | All rights reserved 
+</small>
+<br>
+<small>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun</small></address>
+</body>
+</html>

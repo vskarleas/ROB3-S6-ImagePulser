@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ImagePulser: Tâche 6 : Simplification de Contour par Segment</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ImagePulser<span id="projectnumber">&#160;V5.2.4</span>
+   </div>
+   <div id="projectbrief">Simplification des images prises avec une webcam</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">Tâche 6 : Simplification de Contour par Segment</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md62"></a> </p>
+<h1><a class="anchor" id="autotoc_md63"></a>
+6.1 - Présentation</h1>
+<p>La vectorisation d'images produit un ou plusieurs contours, chacun formé d'une séquence de points. Ces contours peuvent être ensuite simplifiés pour réduire leur complexité tout en conservant les caractéristiques essentielles de l'image. Cette simplification est basée sur un critère géométrique simple et utilise une distance-seuil pour mesurer l'écart admissible entre la séquence initiale et la séquence simplifiée.</p>
+<h1><a class="anchor" id="autotoc_md64"></a>
+Principe de la Simplification par une Distance-Seuil</h1>
+<h2><a class="anchor" id="autotoc_md65"></a>
+Approche pour un Contour Polygonal</h2>
+<p>Pour un contour polygonal C constitué des points {P_j1, ..., P_j2} avec j1 &lt; j2, l'approche consiste à examiner la zone située à une distance inférieure ou égale à une distance-seuil d du segment S formé par [P_j1, P_j2]. On identifie alors le point P_k qui est le plus éloigné de ce segment. Cette méthode repose sur le calcul de la distance entre un point et un segment.</p>
+<p><img src="image/tache6/1717437009412.png" alt="1717437009412" class="inline"/></p>
+<blockquote class="doxtable">
+<p>&zwj;Distance seuil: c'est la distance autour du segment en question </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md66"></a>
+6.3 - Algorithme de Douglas-Peucker</h1>
+<p>L'algorithme de Douglas-Peucker est une méthode récursive de simplification de contours basée sur un critère de distance. Voici les étapes clés de l'algorithme :</p>
+<ol type="1">
+<li><b>Initialisation</b> : Déterminer le segment initial qui joint les deux extrémités du contour (ou de la partie du contour à simplifier).</li>
+<li><b>Recherche du point le plus éloigné</b> : Trouver le point du contour qui est le plus éloigné du segment initial, et calculer cette distance maximale.</li>
+<li><b>Décision de simplification</b> :<ul>
+<li><b>Si la distance maximale est inférieure à la distance-seuil</b> : Le segment est considéré comme une représentation adéquate de cette partie du contour.</li>
+<li><b>Si la distance maximale est supérieure à la distance-seuil</b> : Le contour est divisé en deux au point le plus éloigné, et l'algorithme est appliqué récursivement à chaque moitié.</li>
+</ul>
+</li>
+<li><b>Concaténation</b> : Les segments obtenus des récursions sont ensuite concaténés pour former le contour simplifié final.</li>
+</ol>
+<p>Ce processus permet de réduire considérablement le nombre de points d'un contour tout en conservant sa forme générale, ce qui est essentiel pour les applications nécessitant une représentation simplifiée mais précise des formes.</p>
+<blockquote class="doxtable">
+<p>&zwj;Dans le cas de distance maximale supérieure à la distance-seuil, l'agorithme utilise une approche diviser pour régner. </p>
+</blockquote>
+<div class="fragment"><div class="line"><a class="code hl_struct" href="structListe__Point__.html">Contour</a> <a class="code hl_function" href="contour_8c.html#aba7758ffe43ebb6fc09f93e011219213">simplification_douglas_peucker</a>(<a class="code hl_struct" href="structTableau__Point__.html">Tableau_Point</a> T, <span class="keywordtype">int</span> j1, <span class="keywordtype">int</span> j2, <span class="keywordtype">double</span> d)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// Création du segment</span></div>
+<div class="line">    <a class="code hl_struct" href="structSegment__.html">Segment</a> S;</div>
+<div class="line">    S.<a class="code hl_variable" href="structSegment__.html#ae6edef0738011906a8abaf1e1d77ba97">A</a> = T.<a class="code hl_variable" href="structTableau__Point__.html#aff7b56ae5437a2fa0f86bace011bba52">tab</a>[j1];</div>
+<div class="line">    S.<a class="code hl_variable" href="structSegment__.html#a61bc8f5f7b427f2b2fa8e38814656528">B</a> = T.<a class="code hl_variable" href="structTableau__Point__.html#aff7b56ae5437a2fa0f86bace011bba52">tab</a>[j2];</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Initialisation des variables</span></div>
+<div class="line">    <span class="keywordtype">double</span> <a class="code hl_function" href="geometry_8c.html#a9aea27c604e0baea30233f1355561a38">distance</a>;</div>
+<div class="line">    <span class="keywordtype">double</span> max_distance = 0;</div>
+<div class="line">    <span class="keywordtype">int</span> far_away;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Algorithme de Douglas Peucker</span></div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = j1 + 1; i &lt; j2; i++)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_function" href="geometry_8c.html#a9aea27c604e0baea30233f1355561a38">distance</a> = <a class="code hl_function" href="geometry_8c.html#a0cdf6c906364392c8d2d4f0fc69db5ba">distance_point_segment</a>(T.<a class="code hl_variable" href="structTableau__Point__.html#aff7b56ae5437a2fa0f86bace011bba52">tab</a>[i], S);</div>
+<div class="line">        <span class="keywordflow">if</span> (max_distance &lt; <a class="code hl_function" href="geometry_8c.html#a9aea27c604e0baea30233f1355561a38">distance</a>) <span class="comment">// objectif : trouver le point le plus eloigné du segment en question qui est [j1,j2]</span></div>
+<div class="line">        {</div>
+<div class="line">            max_distance = <a class="code hl_function" href="geometry_8c.html#a9aea27c604e0baea30233f1355561a38">distance</a>;</div>
+<div class="line">            far_away = i;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Condition d&#39;arrêt selon le seuil declaré</span></div>
+<div class="line">    <span class="keywordflow">if</span> (max_distance &lt;= d)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_struct" href="structListe__Point__.html">Contour</a> L;</div>
+<div class="line">        L = <a class="code hl_function" href="sequence__point_8c.html#a0e907ca073ebd8f97ae69dd50e9fd8b6">creer_liste_Point_vide</a>();</div>
+<div class="line">        <a class="code hl_function" href="sequence__point_8c.html#a7bc19b94f69851836520018bc1557321">ajouter_element_liste_Point</a>(&amp;L, S.<a class="code hl_variable" href="structSegment__.html#ae6edef0738011906a8abaf1e1d77ba97">A</a>);</div>
+<div class="line">        <a class="code hl_function" href="sequence__point_8c.html#a7bc19b94f69851836520018bc1557321">ajouter_element_liste_Point</a>(&amp;L, S.<a class="code hl_variable" href="structSegment__.html#a61bc8f5f7b427f2b2fa8e38814656528">B</a>);</div>
+<div class="line">        <span class="keywordflow">return</span> L;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Récursivité [méthode diviser pour régner]</span></div>
+<div class="line">        <a class="code hl_struct" href="structListe__Point__.html">Contour</a> L1;</div>
+<div class="line">        L1 = <a class="code hl_function" href="sequence__point_8c.html#a0e907ca073ebd8f97ae69dd50e9fd8b6">creer_liste_Point_vide</a>();</div>
+<div class="line">        L1 = <a class="code hl_function" href="contour_8c.html#aba7758ffe43ebb6fc09f93e011219213">simplification_douglas_peucker</a>(T, j1, far_away, d);</div>
+<div class="line"> </div>
+<div class="line">        <a class="code hl_struct" href="structListe__Point__.html">Contour</a> L2;</div>
+<div class="line">        L2 = <a class="code hl_function" href="sequence__point_8c.html#a0e907ca073ebd8f97ae69dd50e9fd8b6">creer_liste_Point_vide</a>();</div>
+<div class="line">        L2 = <a class="code hl_function" href="contour_8c.html#aba7758ffe43ebb6fc09f93e011219213">simplification_douglas_peucker</a>(T, far_away, j2, d);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">return</span> <a class="code hl_function" href="sequence__point_8c.html#a64f27c3934b048635a84d621111b29dd">concatener_liste_Point</a>(L1, L2);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="acontour_8c_html_aba7758ffe43ebb6fc09f93e011219213"><div class="ttname"><a href="contour_8c.html#aba7758ffe43ebb6fc09f93e011219213">simplification_douglas_peucker</a></div><div class="ttdeci">Contour simplification_douglas_peucker(Tableau_Point T, int j1, int j2, double d)</div><div class="ttdoc">Simplifie de manière récursive un contour en utilisant l'algorithme de Douglas Peucker.</div><div class="ttdef"><b>Definition</b> contour.c:965</div></div>
+<div class="ttc" id="ageometry_8c_html_a0cdf6c906364392c8d2d4f0fc69db5ba"><div class="ttname"><a href="geometry_8c.html#a0cdf6c906364392c8d2d4f0fc69db5ba">distance_point_segment</a></div><div class="ttdeci">double distance_point_segment(Point P1, Segment S1)</div><div class="ttdoc">Distance entre un point et un segment.</div><div class="ttdef"><b>Definition</b> geometry.c:171</div></div>
+<div class="ttc" id="ageometry_8c_html_a9aea27c604e0baea30233f1355561a38"><div class="ttname"><a href="geometry_8c.html#a9aea27c604e0baea30233f1355561a38">distance</a></div><div class="ttdeci">double distance(Point P1, Point P2)</div><div class="ttdoc">Distance entre deux points.</div><div class="ttdef"><b>Definition</b> geometry.c:142</div></div>
+<div class="ttc" id="asequence__point_8c_html_a0e907ca073ebd8f97ae69dd50e9fd8b6"><div class="ttname"><a href="sequence__point_8c.html#a0e907ca073ebd8f97ae69dd50e9fd8b6">creer_liste_Point_vide</a></div><div class="ttdeci">Liste_Point creer_liste_Point_vide()</div><div class="ttdoc">Crée une liste de points vide.</div><div class="ttdef"><b>Definition</b> sequence_point.c:66</div></div>
+<div class="ttc" id="asequence__point_8c_html_a64f27c3934b048635a84d621111b29dd"><div class="ttname"><a href="sequence__point_8c.html#a64f27c3934b048635a84d621111b29dd">concatener_liste_Point</a></div><div class="ttdeci">Liste_Point concatener_liste_Point(Liste_Point L1, Liste_Point L2)</div><div class="ttdoc">Concatène la liste L2 à la suite de la liste L1 et renvoie la liste L1 modifiée.</div><div class="ttdef"><b>Definition</b> sequence_point.c:157</div></div>
+<div class="ttc" id="asequence__point_8c_html_a7bc19b94f69851836520018bc1557321"><div class="ttname"><a href="sequence__point_8c.html#a7bc19b94f69851836520018bc1557321">ajouter_element_liste_Point</a></div><div class="ttdeci">void ajouter_element_liste_Point(Liste_Point *L, Point e)</div><div class="ttdoc">Ajoute l'élément e à la fin de la liste de points L.</div><div class="ttdef"><b>Definition</b> sequence_point.c:89</div></div>
+<div class="ttc" id="astructListe__Point___html"><div class="ttname"><a href="structListe__Point__.html">Liste_Point_</a></div><div class="ttdef"><b>Definition</b> sequence_point.h:27</div></div>
+<div class="ttc" id="astructSegment___html"><div class="ttname"><a href="structSegment__.html">Segment_</a></div><div class="ttdoc">Profil d'un segment.</div><div class="ttdef"><b>Definition</b> geometry.h:44</div></div>
+<div class="ttc" id="astructSegment___html_a61bc8f5f7b427f2b2fa8e38814656528"><div class="ttname"><a href="structSegment__.html#a61bc8f5f7b427f2b2fa8e38814656528">Segment_::B</a></div><div class="ttdeci">Point B</div><div class="ttdef"><b>Definition</b> geometry.h:45</div></div>
+<div class="ttc" id="astructSegment___html_ae6edef0738011906a8abaf1e1d77ba97"><div class="ttname"><a href="structSegment__.html#ae6edef0738011906a8abaf1e1d77ba97">Segment_::A</a></div><div class="ttdeci">Point A</div><div class="ttdef"><b>Definition</b> geometry.h:45</div></div>
+<div class="ttc" id="astructTableau__Point___html"><div class="ttname"><a href="structTableau__Point__.html">Tableau_Point_</a></div><div class="ttdef"><b>Definition</b> sequence_point.h:55</div></div>
+<div class="ttc" id="astructTableau__Point___html_aff7b56ae5437a2fa0f86bace011bba52"><div class="ttname"><a href="structTableau__Point__.html#aff7b56ae5437a2fa0f86bace011bba52">Tableau_Point_::tab</a></div><div class="ttdeci">Point * tab</div><div class="ttdef"><b>Definition</b> sequence_point.h:57</div></div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+  Copyright (c) 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script><a href="https://imagepulser.dev.madebyvasilis.site/"> ImagePulser</a> | All rights reserved 
+</small>
+<br>
+<small>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun</small></address>
+</body>
+</html>

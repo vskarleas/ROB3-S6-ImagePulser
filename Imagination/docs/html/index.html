@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ImagePulser: Simplification des images prises avec une webcam</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ImagePulser<span id="projectnumber">&#160;V5.2.4</span>
+   </div>
+   <div id="projectbrief">Simplification des images prises avec une webcam</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Simplification des images prises avec une webcam </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2README"></a> </p>
+<h1><a class="anchor" id="autotoc_md10"></a>
+Objectif</h1>
+<p>Le but principal de ce projet est de vectoriser et de simplifier des images obtenues via webcam en utilisant des méthodes dynamiques, incluant notamment la simplification par segments. Ce processus trouve des applications variées dans la vie réelle telles que :</p>
+<ul>
+<li>La détection de contours pour l'analyse d'images.</li>
+<li>La compression de données géométriques et la représentation de contours à différentes échelles, utiles en cartographie et dans les systèmes d'information géographique.</li>
+<li>etc...</li>
+</ul>
+<p>Nous souhaitons apporter une dimension interactive à ce projet. À cette fin, nous proposons la capture d'images via une webcam. Ces images sont ensuite converties en niveaux de gris avant d’être simplifiées grâce à différentes techniques de vectorisation et de simplification (décrites plus en détail dans la section sur les méthodes de simplification).</p>
+<h1><a class="anchor" id="autotoc_md11"></a>
+Inspiration</h1>
+<p>Notre projet, <b>ImagePulser</b>, s'inspire des avancées présentées lors de la conférence Google IO 2023, notamment en matière de détection d'objets dans les images. Les experts de Google ont détaillé une méthode selon laquelle les images sont d'abord filtrées et simplifiées en retirant les couleurs et les détails superflus, résultant en une image binaire composée uniquement de 0 et de 1, représentant respectivement le noir et le blanc. Cette simplification aide à préserver les informations essentielles tout en rendant les images plus accessibles pour l'analyse par un réseau neuronal, qui recherche ensuite des correspondances dans une base de données. Inspirés par cette technique de conservation d'information, nous avons développé <b>ImagePulser</b> pour exploiter ce principe de simplification et optimiser le traitement d'images.</p>
+<h1><a class="anchor" id="autotoc_md12"></a>
+Interface Graphique</h1>
+<p>Notre projet, ImagePulser, bénéficie d'une interface graphique conviviale développée pour simplifier la navigation et l'utilisation par les utilisateurs. Cette interface permet une interaction fluide et directe avec les fonctionnalités du logiciel, enrichissant l'expérience utilisateur.</p>
+<p>L'interface a été développée en utilisant la bibliothèque GTK. Voici les étapes clés de sa mise en œuvre :</p>
+<ol type="1">
+<li><b>Initialisation des Widgets :</b> Configuration de différents widgets comme des étiquettes (labels), des zones de texte (entry), des boutons (buttons) et des espaces d'affichage d'image (image displays).</li>
+<li><b>Agencement des Widgets :</b> Organisation de ces éléments dans la fenêtre principale (pWindow) de manière ordonnée.</li>
+<li><b>Définition des Callbacks :</b> Attribution de fonctions de rappel aux boutons pour gérer les interactions utilisateur.</li>
+<li><b>Création de Fonctions Spécifiques :</b> Développement des fonctions décrivant les actions à exécuter pour chaque bouton, facilitant l'interconnexion entre les différentes parties du logiciel.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md13"></a>
+Interconnexion des Programmes</h1>
+<p>Notre système est composé de plusieurs programmes principaux qui partagent une base de code commune tout en fonctionnant de manière indépendante. Certains demandent des arguments lors de leur exécution tandis que d'autres non. Nous exploitons la fonctionnalité de sous-processus sur l'ordinateur pour activer plusieurs sous-programmes alors qu’un programme principal est déjà en cours d'exécution. Ainsi, les callbacks de l'interface graphique peuvent déclencher des processus en arrière-plan selon les besoins.</p>
+<blockquote class="doxtable">
+<p>&zwj;Plutôt que d'intégrer directement la logique de ces sous-programmes dans les fonctions de l'interface graphique, nous avons choisi de les maintenir séparés. Cette approche a significativement accéléré le développement en nous permettant de concentrer sur l'efficacité et la modularité du projet. </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md14"></a>
+Procédure</h1>
+<p>Pour atteindre les objectifs de notre projet, nous suivons les étapes ci-dessous :</p>
+<ol type="1">
+<li><b>Capture d'image</b> : Utilisation d'une webcam pour capturer l'image désirée.</li>
+<li><b>Binarisation de l'image</b> : Conversion de l'image capturée en format binaire sans altérer l'image originale, ce qui permet de préparer l'image pour les étapes de simplification.</li>
+<li><b>Sauvegarde au format PBM</b> : L'image binaire est ensuite enregistrée au format PBM utilisant la propriété P4, plutôt que le format basique P1, afin de bénéficier d'une meilleure efficacité de stockage.</li>
+<li><b>Simplification de l'image</b> : Application de deux techniques de simplification différentes :<ol type="a">
+<li><b>Simplification par segments</b> : Cette méthode décompose l'image en plusieurs segments linéaires, réduisant ainsi sa complexité tout en conservant les détails pertinents.</li>
+<li><b>Simplification par courbes de Bézier</b> : Transformation de l'image en un ensemble de courbes de Bézier, et sauvegarde au format EPS (Adobe PostScript) pour une précision accrue et une manipulation aisée.</li>
+</ol>
+</li>
+</ol>
+<p>Ces étapes constituent notre protocole pour transformer des images brutes en représentations simplifiées et facilement manipulables, adaptées à diverses utilisations techniques.</p>
+<h1><a class="anchor" id="autotoc_md15"></a>
+Spécifications de Simplification</h1>
+<p>Pour développer notre solution de simplification d'images, nous avons décomposé le problème en sept tâches distinctes. Chaque tâche aborde un aspect spécifique du processus de simplification et de vectorisation des images. Les tâches sont organisées comme suit :</p>
+<ol type="1">
+<li><b><a href="md__2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2Un7b9ad0e83b5fef2240f50c36899d100f.html">Tâche 1 : Vectorisation d&amp;#39;image bitmap (PBM)</a></b> Transformation d'images bitmap en un format vectoriel initial pour faciliter les manipulations géométriques ultérieures.</li>
+<li><b><a href="md__2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2Un8ea8474aa6ed85fc9ee1e43275f989f7.html">Tâche 2 : Intégration des fonctions de base de la géométrie en 2D</a></b> Développement et intégration d'un ensemble de fonctions essentielles pour le traitement géométrique des images, y compris les calculs de distance, les transformations de points, et autres opérations primaires en géométrie.</li>
+<li><a href="md__2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2Unb34d69c434e61114350b57d8b128efbe.html">Tâche 3 : Extraction d&amp;#39;un contour d&amp;#39;une image</a> Identification et extraction du premier contour visible dans une image, servant de base pour les simplifications subséquentes.</li>
+<li><b><a href="md__2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2Un49afce17d9025abe9b61e4fc8befe8ab.html">Tâche 4 : Sortie au format PostScript encapsulé</a></b> Génération de file_inputs au format EPS (Encapsulated PostScript) pour chaque image traitée, permettant une visualisation et une édition de haute qualité.</li>
+<li><b><a href="md__2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2Un77f2ca93f9576125fb5f6057429c35ee.html">Tâche 5 : Extraction des contours multiples d’une image</a></b> Répétition de l'extraction de contours sur une seule image pour obtenir plusieurs tracés, augmentant ainsi la profondeur de l'analyse visuelle.</li>
+<li><b><a href="md__2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2Una3b374ea236d85fc9a076b91fb278e66.html">Tâche 6 : Simplification de contour par segment</a></b> Application d'algorithmes de simplification pour réduire le nombre de points définissant un contour tout en conservant la forme générale de l'objet analysé.</li>
+<li><b><a href="md__2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2Un68b49c6466e6acb98108c9ced4eb80bc.html">Tâche 7 : Simplification par courbes de Bézier de degré 1 ou 2 (selon le choix de l&amp;#39;utilisateur)</a></b> Transformation des contours en courbes de Bézier, offrant un contrôle précis sur le degré de simplification et la fluidité des lignes.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md16"></a>
+Problèmes Rencontrés et Solutions Apportées</h1>
+<h2><a class="anchor" id="autotoc_md17"></a>
+1. Adaptation de la Résolution de la Webcam</h2>
+<p><b>Problème :</b> La webcam de notre ordinateur était de très haute qualité (beaucoup de pixels), ce qui a entraîné des difficultés lors de la manipulation des images capturées en raison de leur grande taille.</p>
+<p><b>Solution :</b> Nous avons réduit la résolution à 1080 pixels pour faciliter le traitement des images. Lors de l'implémentation du code sur un autre ordinateur équipé d'une webcam de moindre qualité, nous avons rencontré des erreurs de type "Call Dumped" dues à des ouvertures et fermetures répétitives de la caméra. Pour résoudre ce problème, nous avons encore diminué la résolution à 640 pixels, ce qui a permis une compatibilité avec la webcam du robot utilisé dans notre projet.</p>
+<h2><a class="anchor" id="autotoc_md18"></a>
+2. Gestion de l'Asynchronisme dans les Interactions UI</h2>
+<p><b>Problème :</b> Les interactions avec l'interface graphique nécessitaient une communication efficace entre différentes tâches sans bloquer l'interface utilisateur.</p>
+<p><b>Solution :</b> Nous avons opté pour la création de différents exécutables, permettant de gérer des processus asynchrones. Cette approche a assuré une fluidité dans les interactions avec l'interface graphique, améliorant l'expérience utilisateur.</p>
+<h2><a class="anchor" id="autotoc_md19"></a>
+3. Compilation sur Différentes Configurations</h2>
+<p><b>Problème :</b> Compiler le même programme sur différents ordinateurs était un défi en raison des diverses versions de compilateurs disponibles.</p>
+<p><b>Solution :</b> Nous avons découvert que l'option <code>-std=c++17</code> permettait de standardiser le processus de compilation en spécifiant la version du compilateur C++ à utiliser. De plus, l'intégration de file_inputs C dans notre code C++ posait problème.</p>
+<p><b>Solution Complémentaire :</b> Un Makefile a été créé pour compiler correctement les file_inputs avec gcc pour le C et g++ pour le C++, garantissant ainsi que les bonnes pratiques de compilation soient respectées pour chaque type de file_input.</p>
+<h2><a class="anchor" id="autotoc_md20"></a>
+4. Gestion des Formats de file_inputs Images</h2>
+<p><b>Problème :</b> La transformation des images capturées en format PBM était complexe, surtout pour des images de haute résolution qui exigeaient une gestion optimale de la mémoire.</p>
+<p><b>Solution :</b> Initialement, nous utilisions le codec P1 pour les images PBM, qui s'est avéré inadéquat pour des images de haute qualité. Après quelques tests, nous avons opté pour le codec P4, qui s'est révélé beaucoup plus efficace pour gérer des images à haute résolution sans surcharger la mémoire.</p>
+<h2><a class="anchor" id="autotoc_md21"></a>
+5. PostScript pourrait accepter au moins 4 points pour la declaration des courbes</h2>
+<p><b>Problème :</b> Les courbes de bezier de degré 2 sont parametrés de 3 points de control. D'autre côtè, PostScript syntax attendait au moins 4 points pour une courbe qui n'etait pas le cas pour les courbes de bezier de degré 4.</p>
+<p><b>Solution :</b> On a fait une recherche, et on adecouverte que c'est possible de convertir une courbe de bezier de degré 2 vers une courbe de bezier de degré 3. C'est bien la fonction <code>conversion_bezier2_to_bezier3</code></p>
+<h1><a class="anchor" id="autotoc_md22"></a>
+Tests</h1>
+<p>Voici quelques tests qu'on a effectué pendant le development du projet.</p>
+<h2><a class="anchor" id="autotoc_md23"></a>
+test_image.c</h2>
+<p>Ce test permet de vérifier si la fonction de visualisation d'une image PBM sur le terminal fonctionne correctement, ainsi que de voir si la création d'une image négative de l'image originale est correcte. Pour l'appeler, on utilise la commande suivante :</p>
+<div class="fragment"><div class="line">./test_image pbms/tache5.pbm</div>
+</div><!-- fragment --><div class="image">
+<img src="1717493327660.png" alt=""/>
+<div class="caption">
+1717493327660</div></div>
+    <h2><a class="anchor" id="autotoc_md24"></a>
+apply_geometry.c</h2>
+<p>Vérification des fonctions de géométrie 2D. Appel :</p>
+<div class="fragment"><div class="line">./apply_geometry</div>
+</div><!-- fragment --><p>Voici les resultats:</p>
+<div class="fragment"><div class="line">Test des fonctions de géométrie dans le plan à deux dimensions</div>
+<div class="line">Points utilisés dans ce test :</div>
+<div class="line">A : (1.000000, -3.000000)</div>
+<div class="line">B : (4.000000, 1.000000)</div>
+<div class="line">==========</div>
+<div class="line">Test de l&#39;addition de points</div>
+<div class="line">5.000000 -2.000000 </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">----------</div>
+<div class="line">Vecteurs utilisés dans ce test :</div>
+<div class="line">Vecteur V : (1.000000 -&gt; 2.000000)</div>
+<div class="line">Vecteur I : (0.000000 -&gt; 5.000000)</div>
+<div class="line">==========</div>
+<div class="line">Test de l&#39;addition de vecteurs</div>
+<div class="line">1.000000 7.000000 </div>
+<div class="line"> </div>
+<div class="line">Test de la multiplication d&#39;un vecteur par un scalaire</div>
+<div class="line">3.000000 6.000000 </div>
+<div class="line"> </div>
+<div class="line">Test de la multiplication d&#39;un point par un scalaire</div>
+<div class="line">3.000000 -9.000000 </div>
+<div class="line"> </div>
+<div class="line">Test du produit scalaire</div>
+<div class="line">10.000000 </div>
+<div class="line"> </div>
+<div class="line">Test de la norme d&#39;un vecteur</div>
+<div class="line">5.000000 </div>
+<div class="line"> </div>
+<div class="line">Test de la distance entre deux points</div>
+<div class="line">5.000000 </div>
+<div class="line"> </div>
+<div class="line">Test de la distance point-segment pour la Tâche 6</div>
+<div class="line">Points utilisés dans ce test :</div>
+<div class="line">A : (0.000000, 6.000000)</div>
+<div class="line">B : (0.000000, 6.000000)</div>
+<div class="line">==========</div>
+<div class="line">0.000000 distance point-segment</div>
+</div><!-- fragment --><p>On peut remarquer qu'effectivement le calcul est correct.</p>
+<h2><a class="anchor" id="autotoc_md25"></a>
+test_postscript.c</h2>
+<p>Vérification de la création des fichiers PostScript valides suivant deux méthodes de remplissage : "stroke" et "fill". Voici les résultats :</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">PBM Originale   </th><th class="markdownTableHeadNone">EPS Stroke    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><img src="1717493900670.png" alt="" class="inline" title="1717493900670"/>       </td><td class="markdownTableBodyNone"><img src="1717493905197.png" alt="" class="inline" title="1717493905197"/>       </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md26"></a>
+test_approx.c</h2>
+<p>Vérification de l'approximation d'un segment par une courbe de Bézier de degré 2. Étant donné les points d'un segment :</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">i   </th><th class="markdownTableHeadNone">0   </th><th class="markdownTableHeadNone">1   </th><th class="markdownTableHeadNone">2   </th><th class="markdownTableHeadNone">3   </th><th class="markdownTableHeadNone">4   </th><th class="markdownTableHeadNone">5   </th><th class="markdownTableHeadNone">6   </th><th class="markdownTableHeadNone">7   </th><th class="markdownTableHeadNone">8    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Pi   </td><td class="markdownTableBodyNone">(0,0)   </td><td class="markdownTableBodyNone">(1,0)   </td><td class="markdownTableBodyNone">(1,1)   </td><td class="markdownTableBodyNone">(1,2)   </td><td class="markdownTableBodyNone">(2,2)   </td><td class="markdownTableBodyNone">(3,2)   </td><td class="markdownTableBodyNone">(3,3)   </td><td class="markdownTableBodyNone">(4,3)   </td><td class="markdownTableBodyNone">(5,3)   </td></tr>
+</table>
+<p>Le traitement en logiciel Mathematica est le suivant :</p>
+<div class="image">
+<img src="1717494302675.png" alt=""/>
+<div class="caption">
+1717494302675</div></div>
+    <p>Et les resultats obtenus sont:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">i   </th><th class="markdownTableHeadNone">Ci,1   </th><th class="markdownTableHeadNone">ωi    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">(7080, −360)/1680   </td><td class="markdownTableBodyNone">14/64 = 0.21875    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">(3080, 3639)/1680   </td><td class="markdownTableBodyNone">24/64 = 0.375    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">(1064, 5656)/1680   </td><td class="markdownTableBodyNone">30/64 = 0.46875    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">(2520, 4200)/1680   </td><td class="markdownTableBodyNone">32/64 = 0.5    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">5   </td><td class="markdownTableBodyNone">(3752, 2968)/1680   </td><td class="markdownTableBodyNone">30/64 = 0.46875    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">6   </td><td class="markdownTableBodyNone">(840, 5880)/1680   </td><td class="markdownTableBodyNone">24/64 = 0.375    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">7   </td><td class="markdownTableBodyNone">(1320, 5400)/1680   </td><td class="markdownTableBodyNone">14/64 = 0.21875   </td></tr>
+</table>
+<p>Donc, le point de controle C1 obtenu est = (2600, 4120)/1680 ≃ (1.547619, 2.452381)</p>
+<h2><a class="anchor" id="autotoc_md27"></a>
+test_approx3.c</h2>
+<p>Ce test réalise la même chose que <a class="el" href="test__approx_8c.html" title="Test pour l&#39;approximation d&#39;un segment pour une courbe de Bézier de degré 2.">test_approx.c</a> sauf qu'il est pour les courbes de Bézier de degré 3. Pour le même exemple on a:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">i   </th><th class="markdownTableHeadNone">0   </th><th class="markdownTableHeadNone">1   </th><th class="markdownTableHeadNone">2   </th><th class="markdownTableHeadNone">3   </th><th class="markdownTableHeadNone">4   </th><th class="markdownTableHeadNone">5   </th><th class="markdownTableHeadNone">6   </th><th class="markdownTableHeadNone">7   </th><th class="markdownTableHeadNone">8    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Pi   </td><td class="markdownTableBodyNone">(0,0)   </td><td class="markdownTableBodyNone">(1,0)   </td><td class="markdownTableBodyNone">(1,1)   </td><td class="markdownTableBodyNone">(1,2)   </td><td class="markdownTableBodyNone">(2,2)   </td><td class="markdownTableBodyNone">(3,2)   </td><td class="markdownTableBodyNone">(3,3)   </td><td class="markdownTableBodyNone">(4,3)   </td><td class="markdownTableBodyNone">(5,3)   </td></tr>
+</table>
+<p>Le traitement en logiciel Mathematica est le suivant :</p>
+<div class="image">
+<img src="1717494701682.png" alt=""/>
+<div class="caption">
+1717494701682</div></div>
+    <p>et le programme fournit les données suivantes:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Indice i   </th><th class="markdownTableHeadNone">1   </th><th class="markdownTableHeadNone">2   </th><th class="markdownTableHeadNone">3   </th><th class="markdownTableHeadNone">4   </th><th class="markdownTableHeadNone">5   </th><th class="markdownTableHeadNone">6   </th><th class="markdownTableHeadNone">7    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">d(Pi, Ci(t))   </td><td class="markdownTableBodyNone">0.588   </td><td class="markdownTableBodyNone">0.100   </td><td class="markdownTableBodyNone">0.726   </td><td class="markdownTableBodyNone">0.045   </td><td class="markdownTableBodyNone">0.722   </td><td class="markdownTableBodyNone">0.186   </td><td class="markdownTableBodyNone">0.070   </td></tr>
+</table>
+<blockquote class="doxtable">
+<p>&zwj;À noter que Ci(t) est le calcul du point courant pour l'indice i de l'algorithme. </p>
+</blockquote>
+<p>Le point P3 est le point le plus éloigné de la courbe de Bézier, et dmax ≃ 0, 726.</p>
+<h1><a class="anchor" id="autotoc_md28"></a>
+Pour aller plus loin...</h1>
+<p>Comme dans tout projet, nous avons rencontré des défis techniques en cours de route. Cependant, ces obstacles nous ont également ouvert de nouvelles perspectives pour l'avenir de notre projet. Voici quelques pistes pour aller plus loin :</p>
+<ul>
+<li><b>Développer un réseau de neurones</b> : Créer un réseau de neurones capable de détecter des objets de manière similaire à celle présentée par les développeurs de Google IO 2023 pour l'application Google Photos, en utilisant nos propres techniques de simplification.</li>
+<li><b>Améliorer la complexité algorithmique</b> : Travailler sur l'optimisation de nos algorithmes pour permettre la simplification et la vectorisation d'images de très grande taille de manière plus efficace.</li>
+<li><b>Intégration et automatisation</b> : Explorer des moyens d'intégrer ces techniques dans des systèmes automatisés, comme des robots ou des drones, pour des applications en temps réel.</li>
+<li>Detecter un erreur qui ne permet pas aux certaines images d'être simplifiés</li>
+</ul>
+<p>Ces développements futurs nous permettraient d'améliorer la performance et l'applicabilité de notre projet de recherche , ouvrant ainsi la voie à des innovations encore plus significatives dans le domaine de la simplification et de la vectorisation des images.</p>
+<h1><a class="anchor" id="autotoc_md29"></a>
+Rapports personnels</h1>
+<ol type="1">
+<li><a href="md__2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2Unc910271b7433a6b7d6b8408396287478.html">Yanis Sadoun</a></li>
+<li><a href="md__2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2Un70179f5e4467f655c1d7a1f343246bec.html">Evanthia Virginia Anastasopoulou</a></li>
+<li><a href="md__2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2Un0c0414fab66fc0670d50fc7cc0f86f00.html">Vasileios Filippos Skarleas</a> </li>
+</ol>
+</div></div><!-- PageDoc -->
+<a href="doxygen_crawl.html"/>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+  Copyright (c) 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script><a href="https://imagepulser.dev.madebyvasilis.site/"> ImagePulser</a> | All rights reserved 
+</small>
+<br>
+<small>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun</small></address>
+</body>
+</html>

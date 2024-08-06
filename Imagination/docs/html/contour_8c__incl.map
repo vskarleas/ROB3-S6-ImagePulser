@@ -1,0 +1,29 @@
+<map id="/Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c&#45;project&#45;rob&#45;3&#45;eleves&#45;gr&#45;2&#45;1/Imagination/contour.c" name="/Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c&#45;project&#45;rob&#45;3&#45;eleves&#45;gr&#45;2&#45;1/Imagination/contour.c">
+<area shape="rect" id="Node000001" title="Implémentation des fonctions de gestion d&#39;un robot pour le tracé de contours dans une image." alt="" coords="234,5,467,106"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="27,375,87,401"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,85,173,106,113,137,57,177,34,202,14,229,10,243,8,265,11,294,20,326,39,361,35,364,15,328,6,295,3,266,4,242,9,226,30,198,54,173,110,132,171,101,232,80"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="145,375,209,401"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="401,105,416,128,428,153,434,200,432,229,425,254,408,281,386,305,360,324,333,341,276,365,225,380,223,375,274,360,330,336,357,320,382,301,403,278,420,252,427,228,429,200,423,155,411,131,396,108"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="513,154,577,180"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="440,104,512,144,509,148,438,109"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="313,228,388,253"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="353,106,353,212,348,212,348,106"/>
+<area shape="rect" id="Node000006" href="$geometry_8h.html" title="Déclaration des fonctions pour geometry.c." alt="" coords="234,301,318,327"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="385,105,402,140,413,178,415,218,411,237,402,255,388,271,371,285,334,303,331,298,369,280,385,267,397,252,406,235,410,217,408,179,397,142,380,107"/>
+<area shape="rect" id="Node000007" href="$contour_8h.html" title="Déclaration des fonctions pour contour.c." alt="" coords="239,154,313,180"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="319,108,295,142,290,139,314,105"/>
+<area shape="rect" id="Node000008" href="$image_8h.html" title="Déclaration des fonctions pour image.c." alt="" coords="23,228,91,253"/>
+<area shape="poly" id="edge17_Node000001_Node000008" title=" " alt="" coords="272,109,91,222,88,217,269,104"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="290,178,329,215,325,219,287,182"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="278,180,278,286,273,286,273,180"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="239,183,106,226,105,221,238,178"/>
+<area shape="rect" id="Node000010" href="$sequence__point_8h.html" title="Déclaration des fonctions pour sequence_point.c." alt="" coords="115,228,239,253"/>
+<area shape="poly" id="edge13_Node000007_Node000010" title=" " alt="" coords="261,182,207,221,204,216,257,178"/>
+<area shape="rect" id="Node000009" href="$error_8h.html" title="UINT et FATAL_ERROR déclaration." alt="" coords="28,301,86,327"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="60,254,60,286,54,286,54,254"/>
+<area shape="poly" id="edge11_Node000009_Node000002" title=" " alt="" coords="60,327,60,359,54,359,54,327"/>
+<area shape="poly" id="edge12_Node000009_Node000003" title=" " alt="" coords="79,325,145,364,142,369,76,330"/>
+<area shape="poly" id="edge14_Node000010_Node000002" title=" " alt="" coords="169,255,79,365,75,361,165,252"/>
+<area shape="poly" id="edge15_Node000010_Node000003" title=" " alt="" coords="180,254,180,360,174,360,174,254"/>
+<area shape="poly" id="edge16_Node000010_Node000006" title=" " alt="" coords="195,252,249,290,245,294,192,256"/>
+</map>

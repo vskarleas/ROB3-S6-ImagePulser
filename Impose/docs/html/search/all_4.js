@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['démarrage_0',['Démarrage',['../md__2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2Un8667f2059871d27eab0770f0b0073bc5.html#autotoc_md25',1,'']]],
+  ['d_20amélioration_1',['Perspectives d&apos;amélioration',['../index.html#autotoc_md18',1,'']]],
+  ['d_20un_20point_20du_20plan_20virtuel_20au_20plan_20de_20la_20réalité_2',['Projection d&apos;un point du plan virtuel au plan de la réalité',['../index.html#autotoc_md8',1,'']]],
+  ['de_20communication_3',['Protocole de Communication',['../index.html#autotoc_md2',1,'']]],
+  ['de_20dead_5fzone_4',['La notion de dead_zone',['../index.html#autotoc_md12',1,'']]],
+  ['de_20l_20échelle_20de_20l_20erreur_5',['Ajustement de l&apos;échelle de l&apos;erreur',['../index.html#autotoc_md10',1,'']]],
+  ['de_20l_20erreur_6',['Ajustement de l&apos;échelle de l&apos;erreur',['../index.html#autotoc_md10',1,'']]],
+  ['de_20l_20image_20binarisée_7',['Thresholding de l&apos;image binarisée',['../index.html#autotoc_md17',1,'']]],
+  ['de_20l_20image_20et_20processing_8',['Filtrage de l&apos;image et processing',['../index.html#autotoc_md15',1,'']]],
+  ['de_20la_20dead_5fzone_9',['Implémentation du test de la dead_zone',['../index.html#autotoc_md13',1,'']]],
+  ['de_20la_20position_10',['Calcul de la position',['../index.html#autotoc_md5',1,'']]],
+  ['de_20la_20position_20initiale_20des_20moteurs_11',['Prise en compte de la position initiale des moteurs',['../index.html#autotoc_md6',1,'']]],
+  ['de_20la_20réalité_12',['Projection d&apos;un point du plan virtuel au plan de la réalité',['../index.html#autotoc_md8',1,'']]],
+  ['dead_5fzone_13',['dead_zone',['../index.html#autotoc_md13',1,'Implémentation du test de la dead_zone'],['../index.html#autotoc_md12',1,'La notion de dead_zone']]],
+  ['delay_14',['delay',['../main_8cpp.html#a99c33298086963ead09bae5807f96313',1,'main.cpp']]],
+  ['des_20coordonnées_20correctes_15',['Mapping des coordonnées correctes',['../index.html#autotoc_md9',1,'']]],
+  ['des_20moteurs_16',['Prise en compte de la position initiale des moteurs',['../index.html#autotoc_md6',1,'']]],
+  ['des_20pixels_20colorisés_17',['Calcul du centre des pixels colorisés',['../index.html#autotoc_md16',1,'']]],
+  ['des_20valeurs_20acceptables_20pour_20les_20moteurs_18',['Limitation des valeurs acceptables pour les moteurs',['../index.html#autotoc_md11',1,'']]],
+  ['description_19',['Description',['../md__2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2Un8667f2059871d27eab0770f0b0073bc5.html#autotoc_md21',1,'']]],
+  ['documentation_20utilisateur_20',['Suivre une couleur / Documentation utilisateur',['../md__2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2Un8667f2059871d27eab0770f0b0073bc5.html',1,'']]],
+  ['draw_5fcircle_21',['draw_circle',['../main_8cpp.html#a505c53daa0e92a47c3f48ea47dd66cd6',1,'main.cpp']]],
+  ['du_20centre_20des_20pixels_20colorisés_22',['Calcul du centre des pixels colorisés',['../index.html#autotoc_md16',1,'']]],
+  ['du_20plan_20virtuel_20au_20plan_20de_20la_20réalité_23',['Projection d&apos;un point du plan virtuel au plan de la réalité',['../index.html#autotoc_md8',1,'']]],
+  ['du_20test_20de_20la_20dead_5fzone_24',['Implémentation du test de la dead_zone',['../index.html#autotoc_md13',1,'']]]
+];

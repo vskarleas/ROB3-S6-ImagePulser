@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ImagePulser:  Fichier source de /Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c-project-rob-3-eleves-gr-2-1/Imagination/image.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ImagePulser<span id="projectnumber">&#160;V5.2.4</span>
+   </div>
+   <div id="projectbrief">Simplification des images prises avec une webcam</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">/Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c-project-rob-3-eleves-gr-2-1/Imagination/image.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="image_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// #############################################################################</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// # File image.h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// # Project in C - Polytech Sorbonne - 2023/2024 - S6</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// # Authors: Evinia Anastasopoulou, Yanis Sadoun, Vasileios Filippos Skarleas - All rights reserved.</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// #############################################################################</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#ifndef _IMAGE_H_</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define _IMAGE_H_</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="error_8h.html">error.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="image_8h.html#a535e59456e3e633842529cfa8ea103c4a35653913ced93d8199f0378ec538a0c7">   24</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> {<a class="code hl_enumvalue" href="image_8h.html#a535e59456e3e633842529cfa8ea103c4a35653913ced93d8199f0378ec538a0c7">BLANC</a>=0, <a class="code hl_enumvalue" href="image_8h.html#a535e59456e3e633842529cfa8ea103c4a59e3323a198f0162330111165caaf367">NOIR</a>=1} <a class="code hl_enumeration" href="image_8h.html#a535e59456e3e633842529cfa8ea103c4">Pixel</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structImage__.html">   32</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structImage__.html">Image_</a></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structImage__.html#a4bc99b5059255dcf234ba3c78a3ec87f">   34</a></span>    <a class="code hl_typedef" href="error_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec">UINT</a> <a class="code hl_variable" href="structImage__.html#a4bc99b5059255dcf234ba3c78a3ec87f">the_height_of_the_image</a>; </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structImage__.html#a100b4cb44d7bb981ed9d5da499b9718d">   35</a></span>    <a class="code hl_typedef" href="error_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec">UINT</a> <a class="code hl_variable" href="structImage__.html#a100b4cb44d7bb981ed9d5da499b9718d">the_width_of_the_image</a>;  </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structImage__.html#a1b36114bfd3bb31d15dc4090967dded0">   36</a></span>    <a class="code hl_enumeration" href="image_8h.html#a535e59456e3e633842529cfa8ea103c4">Pixel</a>* <a class="code hl_variable" href="structImage__.html#a1b36114bfd3bb31d15dc4090967dded0">pointer_to_pixel_array</a>; </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="image_8h.html#a5b1da0495b6504545d03bd459b44cd82">   37</a></span>} <a class="code hl_typedef" href="image_8h.html#a5b1da0495b6504545d03bd459b44cd82">Image</a>;</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><a class="code hl_struct" href="structImage.html">Image</a> <a class="code hl_function" href="image_8h.html#acaf6a5095af3a86a65913469c4c3d547">create_image</a>(<a class="code hl_typedef" href="error_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec">UINT</a> L, <a class="code hl_typedef" href="error_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec">UINT</a> H);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> <a class="code hl_function" href="image_8h.html#aef3b7179f976b01ab0236959fb7afb36">delete_image</a>(<a class="code hl_struct" href="structImage.html">Image</a> *p_I);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><a class="code hl_enumeration" href="image_8h.html#a535e59456e3e633842529cfa8ea103c4">Pixel</a> <a class="code hl_function" href="image_8h.html#ae12b0f90723df2df51f296fca9cfd581">get_pixel_image</a>(<a class="code hl_struct" href="structImage.html">Image</a> I, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keywordtype">void</span> <a class="code hl_function" href="image_8h.html#a50f135491e59a1f5fa20c1a4dd919032">set_pixel_image</a>(<a class="code hl_struct" href="structImage.html">Image</a> I, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <a class="code hl_enumeration" href="image_8h.html#a535e59456e3e633842529cfa8ea103c4">Pixel</a> v);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><a class="code hl_typedef" href="error_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec">UINT</a> <a class="code hl_function" href="image_8h.html#a1f44f0854e24e488c430eeb8b47ae868">image_width</a>(<a class="code hl_struct" href="structImage.html">Image</a> I);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><a class="code hl_typedef" href="error_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec">UINT</a> <a class="code hl_function" href="image_8h.html#a578bdbd89b5e5001766caafa2642bf73">image_height</a>(<a class="code hl_struct" href="structImage.html">Image</a> I);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><a class="code hl_struct" href="structImage.html">Image</a> <a class="code hl_function" href="image_8h.html#aa445f0fd52d4ec6a82a3c1b7f9cfe879">read_image_file</a>(<span class="keywordtype">char</span> *name_f);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><a class="code hl_struct" href="structImage.html">Image</a> <a class="code hl_function" href="image_8h.html#adb123184b0ba058e7ed900611687eb5e">read_image_file_P1</a>(<span class="keywordtype">char</span> *name_f);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><a class="code hl_struct" href="structImage.html">Image</a> <a class="code hl_function" href="image_8h.html#a162c4d010136dd8de0e27d4724bc5cfe">read_image_file_P4</a>(<span class="keywordtype">char</span> *name_f);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="keywordtype">void</span> <a class="code hl_function" href="image_8h.html#a76f6a9af2e7141c36775678e8b2238f6">image_to_terminal</a>(<a class="code hl_struct" href="structImage.html">Image</a> I);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><a class="code hl_struct" href="structImage.html">Image</a> <a class="code hl_function" href="image_8h.html#ab2d4d00513d96f70c0e51a8db809a9ec">negative_image</a>(<a class="code hl_struct" href="structImage.html">Image</a> I);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="preprocessor">#endif </span><span class="comment">/* _IMAGE_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="ttc" id="aerror_8h_html"><div class="ttname"><a href="error_8h.html">error.h</a></div><div class="ttdoc">UINT et FATAL_ERROR déclaration.</div></div>
+<div class="ttc" id="aerror_8h_html_a36cb3b01d81ffd844bbbfb54003e06ec"><div class="ttname"><a href="error_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec">UINT</a></div><div class="ttdeci">unsigned int UINT</div><div class="ttdef"><b>Definition</b> error.h:20</div></div>
+<div class="ttc" id="aimage_8h_html_a162c4d010136dd8de0e27d4724bc5cfe"><div class="ttname"><a href="image_8h.html#a162c4d010136dd8de0e27d4724bc5cfe">read_image_file_P4</a></div><div class="ttdeci">Image read_image_file_P4(char *name_f)</div><div class="ttdoc">Lit une image PBM à partir du file_input spécifié qui est codé sous le codec P4.</div><div class="ttdef"><b>Definition</b> image.c:422</div></div>
+<div class="ttc" id="aimage_8h_html_a1f44f0854e24e488c430eeb8b47ae868"><div class="ttname"><a href="image_8h.html#a1f44f0854e24e488c430eeb8b47ae868">image_width</a></div><div class="ttdeci">UINT image_width(Image I)</div><div class="ttdoc">Renvoie la largeur de l'image spécifiée.</div><div class="ttdef"><b>Definition</b> image.c:130</div></div>
+<div class="ttc" id="aimage_8h_html_a50f135491e59a1f5fa20c1a4dd919032"><div class="ttname"><a href="image_8h.html#a50f135491e59a1f5fa20c1a4dd919032">set_pixel_image</a></div><div class="ttdeci">void set_pixel_image(Image I, int x, int y, Pixel v)</div><div class="ttdoc">Change la valeur du pixel aux coordonnées spécifiées dans l'image.</div><div class="ttdef"><b>Definition</b> image.c:115</div></div>
+<div class="ttc" id="aimage_8h_html_a535e59456e3e633842529cfa8ea103c4"><div class="ttname"><a href="image_8h.html#a535e59456e3e633842529cfa8ea103c4">Pixel</a></div><div class="ttdeci">Pixel</div><div class="ttdoc">Type énuméré représentant la couleur d'un pixel.</div><div class="ttdef"><b>Definition</b> image.h:24</div></div>
+<div class="ttc" id="aimage_8h_html_a535e59456e3e633842529cfa8ea103c4a35653913ced93d8199f0378ec538a0c7"><div class="ttname"><a href="image_8h.html#a535e59456e3e633842529cfa8ea103c4a35653913ced93d8199f0378ec538a0c7">BLANC</a></div><div class="ttdeci">@ BLANC</div><div class="ttdef"><b>Definition</b> image.h:24</div></div>
+<div class="ttc" id="aimage_8h_html_a535e59456e3e633842529cfa8ea103c4a59e3323a198f0162330111165caaf367"><div class="ttname"><a href="image_8h.html#a535e59456e3e633842529cfa8ea103c4a59e3323a198f0162330111165caaf367">NOIR</a></div><div class="ttdeci">@ NOIR</div><div class="ttdef"><b>Definition</b> image.h:24</div></div>
+<div class="ttc" id="aimage_8h_html_a578bdbd89b5e5001766caafa2642bf73"><div class="ttname"><a href="image_8h.html#a578bdbd89b5e5001766caafa2642bf73">image_height</a></div><div class="ttdeci">UINT image_height(Image I)</div><div class="ttdoc">Renvoie la hauteur de l'image spécifiée.</div><div class="ttdef"><b>Definition</b> image.c:144</div></div>
+<div class="ttc" id="aimage_8h_html_a5b1da0495b6504545d03bd459b44cd82"><div class="ttname"><a href="image_8h.html#a5b1da0495b6504545d03bd459b44cd82">Image</a></div><div class="ttdeci">struct Image_ Image</div></div>
+<div class="ttc" id="aimage_8h_html_a76f6a9af2e7141c36775678e8b2238f6"><div class="ttname"><a href="image_8h.html#a76f6a9af2e7141c36775678e8b2238f6">image_to_terminal</a></div><div class="ttdeci">void image_to_terminal(Image I)</div><div class="ttdoc">Affiche l'image spécifiée à l'écran.</div><div class="ttdef"><b>Definition</b> image.c:481</div></div>
+<div class="ttc" id="aimage_8h_html_aa445f0fd52d4ec6a82a3c1b7f9cfe879"><div class="ttname"><a href="image_8h.html#aa445f0fd52d4ec6a82a3c1b7f9cfe879">read_image_file</a></div><div class="ttdeci">Image read_image_file(char *name_f)</div><div class="ttdoc">Lit une image PBM à partir du file_input spécifié.</div><div class="ttdef"><b>Definition</b> image.c:299</div></div>
+<div class="ttc" id="aimage_8h_html_ab2d4d00513d96f70c0e51a8db809a9ec"><div class="ttname"><a href="image_8h.html#ab2d4d00513d96f70c0e51a8db809a9ec">negative_image</a></div><div class="ttdeci">Image negative_image(Image I)</div><div class="ttdoc">Calcule l'image négative de l'image spécifiée.</div><div class="ttdef"><b>Definition</b> image.c:514</div></div>
+<div class="ttc" id="aimage_8h_html_acaf6a5095af3a86a65913469c4c3d547"><div class="ttname"><a href="image_8h.html#acaf6a5095af3a86a65913469c4c3d547">create_image</a></div><div class="ttdeci">Image create_image(UINT L, UINT H)</div><div class="ttdoc">Crée une image PBM de dimensions L x H avec tous les pixels blancs.</div><div class="ttdef"><b>Definition</b> image.c:46</div></div>
+<div class="ttc" id="aimage_8h_html_adb123184b0ba058e7ed900611687eb5e"><div class="ttname"><a href="image_8h.html#adb123184b0ba058e7ed900611687eb5e">read_image_file_P1</a></div><div class="ttdeci">Image read_image_file_P1(char *name_f)</div><div class="ttdoc">Lit une image PBM à partir du file_input spécifié qui est codé sous le codec P1.</div><div class="ttdef"><b>Definition</b> image.c:339</div></div>
+<div class="ttc" id="aimage_8h_html_ae12b0f90723df2df51f296fca9cfd581"><div class="ttname"><a href="image_8h.html#ae12b0f90723df2df51f296fca9cfd581">get_pixel_image</a></div><div class="ttdeci">Pixel get_pixel_image(Image I, int x, int y)</div><div class="ttdoc">Renvoie la valeur du pixel aux coordonnées spécifiées dans l'image.</div><div class="ttdef"><b>Definition</b> image.c:96</div></div>
+<div class="ttc" id="aimage_8h_html_aef3b7179f976b01ab0236959fb7afb36"><div class="ttname"><a href="image_8h.html#aef3b7179f976b01ab0236959fb7afb36">delete_image</a></div><div class="ttdeci">void delete_image(Image *p_I)</div><div class="ttdoc">Supprime l'image spécifiée.</div><div class="ttdef"><b>Definition</b> image.c:77</div></div>
+<div class="ttc" id="astructImage___html"><div class="ttname"><a href="structImage__.html">Image_</a></div><div class="ttdef"><b>Definition</b> image.h:33</div></div>
+<div class="ttc" id="astructImage___html_a100b4cb44d7bb981ed9d5da499b9718d"><div class="ttname"><a href="structImage__.html#a100b4cb44d7bb981ed9d5da499b9718d">Image_::the_width_of_the_image</a></div><div class="ttdeci">UINT the_width_of_the_image</div><div class="ttdef"><b>Definition</b> image.h:35</div></div>
+<div class="ttc" id="astructImage___html_a1b36114bfd3bb31d15dc4090967dded0"><div class="ttname"><a href="structImage__.html#a1b36114bfd3bb31d15dc4090967dded0">Image_::pointer_to_pixel_array</a></div><div class="ttdeci">Pixel * pointer_to_pixel_array</div><div class="ttdef"><b>Definition</b> image.h:36</div></div>
+<div class="ttc" id="astructImage___html_a4bc99b5059255dcf234ba3c78a3ec87f"><div class="ttname"><a href="structImage__.html#a4bc99b5059255dcf234ba3c78a3ec87f">Image_::the_height_of_the_image</a></div><div class="ttdeci">UINT the_height_of_the_image</div><div class="ttdef"><b>Definition</b> image.h:34</div></div>
+<div class="ttc" id="astructImage_html"><div class="ttname"><a href="structImage.html">Image</a></div><div class="ttdoc">Structure représentant une image PBM.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+  Copyright (c) 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script><a href="https://imagepulser.dev.madebyvasilis.site/"> ImagePulser</a> | All rights reserved 
+</small>
+<br>
+<small>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun</small></address>
+</body>
+</html>

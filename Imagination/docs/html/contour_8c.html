@@ -1,0 +1,1504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ImagePulser: Référence du fichier /Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c-project-rob-3-eleves-gr-2-1/Imagination/contour.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ImagePulser<span id="projectnumber">&#160;V5.2.4</span>
+   </div>
+   <div id="projectbrief">Simplification des images prises avec une webcam</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier /Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c-project-rob-3-eleves-gr-2-1/Imagination/contour.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implémentation des fonctions de gestion d'un robot pour le tracé de contours dans une image.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="geometry_8h_source.html">geometry.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="contour_8h_source.html">contour.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="image_8h_source.html">image.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de contour.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="contour_8c__incl.png" border="0" usemap="#a_2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2contour_8c" alt=""/></div>
+<map name="a_2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2contour_8c" id="a_2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Imagination_2contour_8c">
+<area shape="rect" title="Implémentation des fonctions de gestion d&#39;un robot pour le tracé de contours dans une image." alt="" coords="234,5,467,106"/>
+<area shape="rect" title=" " alt="" coords="27,375,87,401"/>
+<area shape="poly" title=" " alt="" coords="234,85,173,106,113,137,57,177,34,202,14,229,10,243,8,265,11,294,20,326,39,361,35,364,15,328,6,295,3,266,4,242,9,226,30,198,54,173,110,132,171,101,232,80"/>
+<area shape="rect" title=" " alt="" coords="145,375,209,401"/>
+<area shape="poly" title=" " alt="" coords="401,105,416,128,428,153,434,200,432,229,425,254,408,281,386,305,360,324,333,341,276,365,225,380,223,375,274,360,330,336,357,320,382,301,403,278,420,252,427,228,429,200,423,155,411,131,396,108"/>
+<area shape="rect" title=" " alt="" coords="513,154,577,180"/>
+<area shape="poly" title=" " alt="" coords="440,104,512,144,509,148,438,109"/>
+<area shape="rect" title=" " alt="" coords="313,228,388,253"/>
+<area shape="poly" title=" " alt="" coords="353,106,353,212,348,212,348,106"/>
+<area shape="rect" href="geometry_8h.html" title="Déclaration des fonctions pour geometry.c." alt="" coords="234,301,318,327"/>
+<area shape="poly" title=" " alt="" coords="385,105,402,140,413,178,415,218,411,237,402,255,388,271,371,285,334,303,331,298,369,280,385,267,397,252,406,235,410,217,408,179,397,142,380,107"/>
+<area shape="rect" href="contour_8h.html" title="Déclaration des fonctions pour contour.c." alt="" coords="239,154,313,180"/>
+<area shape="poly" title=" " alt="" coords="319,108,295,142,290,139,314,105"/>
+<area shape="rect" href="image_8h.html" title="Déclaration des fonctions pour image.c." alt="" coords="23,228,91,253"/>
+<area shape="poly" title=" " alt="" coords="272,109,91,222,88,217,269,104"/>
+<area shape="poly" title=" " alt="" coords="290,178,329,215,325,219,287,182"/>
+<area shape="poly" title=" " alt="" coords="278,180,278,286,273,286,273,180"/>
+<area shape="poly" title=" " alt="" coords="239,183,106,226,105,221,238,178"/>
+<area shape="rect" href="sequence__point_8h.html" title="Déclaration des fonctions pour sequence_point.c." alt="" coords="115,228,239,253"/>
+<area shape="poly" title=" " alt="" coords="261,182,207,221,204,216,257,178"/>
+<area shape="rect" href="error_8h.html" title="UINT et FATAL_ERROR déclaration." alt="" coords="28,301,86,327"/>
+<area shape="poly" title=" " alt="" coords="60,254,60,286,54,286,54,254"/>
+<area shape="poly" title=" " alt="" coords="60,327,60,359,54,359,54,327"/>
+<area shape="poly" title=" " alt="" coords="79,325,145,364,142,369,76,330"/>
+<area shape="poly" title=" " alt="" coords="169,255,79,365,75,361,165,252"/>
+<area shape="poly" title=" " alt="" coords="180,254,180,360,174,360,174,254"/>
+<area shape="poly" title=" " alt="" coords="195,252,249,290,245,294,192,256"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a39e974836157aad9361600cdcb62786b" id="r_a39e974836157aad9361600cdcb62786b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39e974836157aad9361600cdcb62786b">init_robot</a> (<a class="el" href="structRobot.html">Robot</a> *r, int x, int y, <a class="el" href="contour_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> o)</td></tr>
+<tr class="memdesc:a39e974836157aad9361600cdcb62786b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise un robot avec les coordonnées et l'orientation spécifiées.  <br /></td></tr>
+<tr class="separator:a39e974836157aad9361600cdcb62786b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4f1c478ceb81827937dbf690c75e078" id="r_af4f1c478ceb81827937dbf690c75e078"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4f1c478ceb81827937dbf690c75e078">move_forward</a> (<a class="el" href="structRobot.html">Robot</a> *r)</td></tr>
+<tr class="memdesc:af4f1c478ceb81827937dbf690c75e078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déplace le robot d'une position en avant selon son orientation.  <br /></td></tr>
+<tr class="separator:af4f1c478ceb81827937dbf690c75e078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07cb3b22afe6054b122d1d81acbb9bc2" id="r_a07cb3b22afe6054b122d1d81acbb9bc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07cb3b22afe6054b122d1d81acbb9bc2">turn_left</a> (<a class="el" href="structRobot.html">Robot</a> *r)</td></tr>
+<tr class="memdesc:a07cb3b22afe6054b122d1d81acbb9bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oriente le robot de 90 degrés vers la gauche par rapport à sa direction actuelle.  <br /></td></tr>
+<tr class="separator:a07cb3b22afe6054b122d1d81acbb9bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61c1aff701461831af486a4b51843115" id="r_a61c1aff701461831af486a4b51843115"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61c1aff701461831af486a4b51843115">turn_right</a> (<a class="el" href="structRobot.html">Robot</a> *r)</td></tr>
+<tr class="memdesc:a61c1aff701461831af486a4b51843115"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oriente le robot de 90 degrés vers la droite par rapport à sa direction actuelle.  <br /></td></tr>
+<tr class="separator:a61c1aff701461831af486a4b51843115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4885237c59db191095ba7676514ae63e" id="r_a4885237c59db191095ba7676514ae63e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4885237c59db191095ba7676514ae63e">position</a> (<a class="el" href="structRobot.html">Robot</a> *r, int *x, int *y)</td></tr>
+<tr class="memdesc:a4885237c59db191095ba7676514ae63e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Récupère et renvoie la position actuelle du robot.  <br /></td></tr>
+<tr class="separator:a4885237c59db191095ba7676514ae63e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f044740d03dce5c19218db663b040ed" id="r_a9f044740d03dce5c19218db663b040ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f044740d03dce5c19218db663b040ed">abscissa</a> (<a class="el" href="structRobot.html">Robot</a> *r)</td></tr>
+<tr class="memdesc:a9f044740d03dce5c19218db663b040ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la coordonnée x de la position actuelle du robot.  <br /></td></tr>
+<tr class="separator:a9f044740d03dce5c19218db663b040ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b21183db8bc4ec90deaa2741b8f5e08" id="r_a6b21183db8bc4ec90deaa2741b8f5e08"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b21183db8bc4ec90deaa2741b8f5e08">ordinate</a> (<a class="el" href="structRobot.html">Robot</a> *r)</td></tr>
+<tr class="memdesc:a6b21183db8bc4ec90deaa2741b8f5e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la coordonnée y de la position actuelle du robot.  <br /></td></tr>
+<tr class="separator:a6b21183db8bc4ec90deaa2741b8f5e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4df750409c6216a080f859603e276eea" id="r_a4df750409c6216a080f859603e276eea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="contour_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4df750409c6216a080f859603e276eea">orient</a> (<a class="el" href="structRobot.html">Robot</a> *r)</td></tr>
+<tr class="memdesc:a4df750409c6216a080f859603e276eea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie l'orientation actuelle du robot.  <br /></td></tr>
+<tr class="separator:a4df750409c6216a080f859603e276eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ad18dec5e76d10cfeb74407fc31189a" id="r_a8ad18dec5e76d10cfeb74407fc31189a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ad18dec5e76d10cfeb74407fc31189a">position_forward</a> (<a class="el" href="structRobot.html">Robot</a> *r, int *x, int *y)</td></tr>
+<tr class="memdesc:a8ad18dec5e76d10cfeb74407fc31189a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule la position du pixel situé directement devant le robot.  <br /></td></tr>
+<tr class="separator:a8ad18dec5e76d10cfeb74407fc31189a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bd06db7d4c8d0545ce091a8b9521a2e" id="r_a1bd06db7d4c8d0545ce091a8b9521a2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bd06db7d4c8d0545ce091a8b9521a2e">new_orientation</a> (<a class="el" href="structRobot.html">Robot</a> *r, int x, int y, <a class="el" href="structImage.html">Image</a> I)</td></tr>
+<tr class="memdesc:a1bd06db7d4c8d0545ce091a8b9521a2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détermine la nouvelle orientation du robot basée sur les pixels voisins.  <br /></td></tr>
+<tr class="separator:a1bd06db7d4c8d0545ce091a8b9521a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840e6150e16fc1fe5dab4cc3f00ecc1e" id="r_a840e6150e16fc1fe5dab4cc3f00ecc1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a840e6150e16fc1fe5dab4cc3f00ecc1e">find_departure_pixel</a> (<a class="el" href="structImage.html">Image</a> I)</td></tr>
+<tr class="memdesc:a840e6150e16fc1fe5dab4cc3f00ecc1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifie le pixel de départ pour le tracé de contours dans une image.  <br /></td></tr>
+<tr class="separator:a840e6150e16fc1fe5dab4cc3f00ecc1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e7d5dec007dbc17bdd569f4a17d4ead" id="r_a6e7d5dec007dbc17bdd569f4a17d4ead"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structImage.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e7d5dec007dbc17bdd569f4a17d4ead">mask_image</a> (<a class="el" href="structImage.html">Image</a> I)</td></tr>
+<tr class="memdesc:a6e7d5dec007dbc17bdd569f4a17d4ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée un masque de l'image identifiant le début des contours.  <br /></td></tr>
+<tr class="separator:a6e7d5dec007dbc17bdd569f4a17d4ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96b033099b3af99dbd298ac3a60c0d89" id="r_a96b033099b3af99dbd298ac3a60c0d89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96b033099b3af99dbd298ac3a60c0d89">image_white</a> (<a class="el" href="structImage.html">Image</a> I)</td></tr>
+<tr class="memdesc:a96b033099b3af99dbd298ac3a60c0d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si une image est entièrement blanche.  <br /></td></tr>
+<tr class="separator:a96b033099b3af99dbd298ac3a60c0d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61d45d9cf91f4307ca496ad2d092c4e8" id="r_a61d45d9cf91f4307ca496ad2d092c4e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61d45d9cf91f4307ca496ad2d092c4e8">algo_contour</a> (<a class="el" href="structImage.html">Image</a> I, char *file_name, char *repository)</td></tr>
+<tr class="memdesc:a61d45d9cf91f4307ca496ad2d092c4e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Génère un contour à partir de l'image donnée et enregistre les points du contour dans un file_input texte.  <br /></td></tr>
+<tr class="separator:a61d45d9cf91f4307ca496ad2d092c4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada92ca1fb788212ac210f30db0511a09" id="r_ada92ca1fb788212ac210f30db0511a09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sequence__point_8h.html#ac8d33cc5d31ba48098c4a44c074de20a">Liste_Contours</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada92ca1fb788212ac210f30db0511a09">algo_contours</a> (<a class="el" href="structImage.html">Image</a> I)</td></tr>
+<tr class="memdesc:ada92ca1fb788212ac210f30db0511a09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la liste de tous les contours détectés dans une image.  <br /></td></tr>
+<tr class="separator:ada92ca1fb788212ac210f30db0511a09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a756e1432f2f14bbb1e44d13ecf268" id="r_a64a756e1432f2f14bbb1e44d13ecf268"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64a756e1432f2f14bbb1e44d13ecf268">pbm_contour_to_txt</a> (<a class="el" href="sequence__point_8h.html#ac8d33cc5d31ba48098c4a44c074de20a">Liste_Contours</a> c, char *file_name, char *repository)</td></tr>
+<tr class="memdesc:a64a756e1432f2f14bbb1e44d13ecf268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enregistre les points de contour d'une image PBM dans un file_input texte.  <br /></td></tr>
+<tr class="separator:a64a756e1432f2f14bbb1e44d13ecf268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea207697a681f91d6c26b525bea3e778" id="r_aea207697a681f91d6c26b525bea3e778"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea207697a681f91d6c26b525bea3e778">contours_data</a> (<a class="el" href="sequence__point_8h.html#ac8d33cc5d31ba48098c4a44c074de20a">Liste_Contours</a> c)</td></tr>
+<tr class="memdesc:aea207697a681f91d6c26b525bea3e778"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche le nombre total de segments et de contours d'une liste de contours.  <br /></td></tr>
+<tr class="separator:aea207697a681f91d6c26b525bea3e778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46f086ad07f1ef7975ee6aa48b37b8c0" id="r_a46f086ad07f1ef7975ee6aa48b37b8c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46f086ad07f1ef7975ee6aa48b37b8c0">contours_data_simplification</a> (<a class="el" href="sequence__point_8h.html#ac8d33cc5d31ba48098c4a44c074de20a">Liste_Contours</a> c)</td></tr>
+<tr class="memdesc:a46f086ad07f1ef7975ee6aa48b37b8c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simplifie les données de contours pour l'affichage ou l'analyse.  <br /></td></tr>
+<tr class="separator:a46f086ad07f1ef7975ee6aa48b37b8c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f502801351a75710377c916beba2771" id="r_a5f502801351a75710377c916beba2771"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f502801351a75710377c916beba2771">contours_data_bezier</a> (<a class="el" href="sequence__point_8h.html#ac8d33cc5d31ba48098c4a44c074de20a">Liste_Contours</a> c)</td></tr>
+<tr class="memdesc:a5f502801351a75710377c916beba2771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche le nombre de courbes de Bézier de degré 2 pour chaque contour.  <br /></td></tr>
+<tr class="separator:a5f502801351a75710377c916beba2771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee0be2a0dbaf123f2d5210dc320ca1f4" id="r_aee0be2a0dbaf123f2d5210dc320ca1f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee0be2a0dbaf123f2d5210dc320ca1f4">contours_data_bezier3</a> (<a class="el" href="sequence__point_8h.html#ac8d33cc5d31ba48098c4a44c074de20a">Liste_Contours</a> c)</td></tr>
+<tr class="memdesc:aee0be2a0dbaf123f2d5210dc320ca1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche le nombre de courbes de Bézier de degré 3 pour chaque contour.  <br /></td></tr>
+<tr class="separator:aee0be2a0dbaf123f2d5210dc320ca1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08f01839e37553dc10c64dcea21d65d2" id="r_a08f01839e37553dc10c64dcea21d65d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08f01839e37553dc10c64dcea21d65d2">create_postscript</a> (<a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a> c, char *file_name, int height, int width)</td></tr>
+<tr class="memdesc:a08f01839e37553dc10c64dcea21d65d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée un file_input .eps représentant le contour donné en utilisant la méthode de simplification par segment (trait).  <br /></td></tr>
+<tr class="separator:a08f01839e37553dc10c64dcea21d65d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a431881000c50fe81a0cc2f019583e416" id="r_a431881000c50fe81a0cc2f019583e416"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a431881000c50fe81a0cc2f019583e416">create_postscript_fill</a> (<a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a> c, char *file_name, int height, int width)</td></tr>
+<tr class="memdesc:a431881000c50fe81a0cc2f019583e416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée un file_input .eps avec remplissage pour le contour donné.  <br /></td></tr>
+<tr class="separator:a431881000c50fe81a0cc2f019583e416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18990f44eafc19b8e75e51c01d000b93" id="r_a18990f44eafc19b8e75e51c01d000b93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18990f44eafc19b8e75e51c01d000b93">create_postscript_contours</a> (<a class="el" href="sequence__point_8h.html#ac8d33cc5d31ba48098c4a44c074de20a">Liste_Contours</a> c, char *file_name, int height, int width, char *repository)</td></tr>
+<tr class="memdesc:a18990f44eafc19b8e75e51c01d000b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Génère un file_input .eps pour chaque contour de la liste, en utilisant la méthode de remplissage.  <br /></td></tr>
+<tr class="separator:a18990f44eafc19b8e75e51c01d000b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba7758ffe43ebb6fc09f93e011219213" id="r_aba7758ffe43ebb6fc09f93e011219213"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba7758ffe43ebb6fc09f93e011219213">simplification_douglas_peucker</a> (<a class="el" href="sequence__point_8h.html#a9601594024dc9df56c0d60b189fc36c1">Tableau_Point</a> T, int j1, int j2, double d)</td></tr>
+<tr class="memdesc:aba7758ffe43ebb6fc09f93e011219213"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simplifie de manière récursive un contour en utilisant l'algorithme de Douglas Peucker.  <br /></td></tr>
+<tr class="separator:aba7758ffe43ebb6fc09f93e011219213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab241ecb4aa0df630ab06a6cdd4ab04d" id="r_aab241ecb4aa0df630ab06a6cdd4ab04d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab241ecb4aa0df630ab06a6cdd4ab04d">calcul_ct_bezier2</a> (<a class="el" href="geometry_8h.html#a3feaa413238c7586ca3c2ee0b320fc34">Bezier2</a> b2, double t)</td></tr>
+<tr class="memdesc:aab241ecb4aa0df630ab06a6cdd4ab04d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule un point sur une courbe de Bézier de degré 2.  <br /></td></tr>
+<tr class="separator:aab241ecb4aa0df630ab06a6cdd4ab04d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ef7f6eba4ce21636c85ca1c55ea1430" id="r_a6ef7f6eba4ce21636c85ca1c55ea1430"><td class="memItemLeft" align="right" valign="top"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ef7f6eba4ce21636c85ca1c55ea1430">calcul_ct_bezier3</a> (<a class="el" href="geometry_8h.html#a717d96a288caab330ebd020b0eee1b27">Bezier3</a> b3, double t)</td></tr>
+<tr class="memdesc:a6ef7f6eba4ce21636c85ca1c55ea1430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule un point sur une courbe de Bézier de degré 3.  <br /></td></tr>
+<tr class="separator:a6ef7f6eba4ce21636c85ca1c55ea1430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b84b15b223c5b2850cf7cbe0f424bb2" id="r_a4b84b15b223c5b2850cf7cbe0f424bb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="geometry_8h.html#a717d96a288caab330ebd020b0eee1b27">Bezier3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b84b15b223c5b2850cf7cbe0f424bb2">conversion_bezier2_to_bezier3</a> (<a class="el" href="geometry_8h.html#a3feaa413238c7586ca3c2ee0b320fc34">Bezier2</a> b2)</td></tr>
+<tr class="memdesc:a4b84b15b223c5b2850cf7cbe0f424bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convertit une courbe de Bézier de degré 2 en une courbe de Bézier de degré 3.  <br /></td></tr>
+<tr class="separator:a4b84b15b223c5b2850cf7cbe0f424bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f8e68fca165550b8b81f0dda9b949dd" id="r_a9f8e68fca165550b8b81f0dda9b949dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="geometry_8h.html#a3feaa413238c7586ca3c2ee0b320fc34">Bezier2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f8e68fca165550b8b81f0dda9b949dd">bezier2_approximation</a> (<a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a> c, int j1, int j2)</td></tr>
+<tr class="memdesc:a9f8e68fca165550b8b81f0dda9b949dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Approxime un contour par une courbe de Bézier de degré 2. La fonction calcule les points de contrôle optimaux pour la courbe.  <br /></td></tr>
+<tr class="separator:a9f8e68fca165550b8b81f0dda9b949dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91c1819c503f3659cd72d637c40e268e" id="r_a91c1819c503f3659cd72d637c40e268e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91c1819c503f3659cd72d637c40e268e">distance_point_bezier2</a> (<a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a> P1, <a class="el" href="geometry_8h.html#a3feaa413238c7586ca3c2ee0b320fc34">Bezier2</a> b2, double ti)</td></tr>
+<tr class="memdesc:a91c1819c503f3659cd72d637c40e268e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule la distance entre un point et une courbe de Bézier de degré 2 à un paramètre t spécifique.  <br /></td></tr>
+<tr class="separator:a91c1819c503f3659cd72d637c40e268e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f6447f9abb5f077dafb02f22ba60a74" id="r_a1f6447f9abb5f077dafb02f22ba60a74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f6447f9abb5f077dafb02f22ba60a74">simplification_douglas_peucker_bezier2</a> (<a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a> C, int j1, int j2, double d)</td></tr>
+<tr class="memdesc:a1f6447f9abb5f077dafb02f22ba60a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applique la méthode de simplification de Douglas-Peucker à une approximation de Bézier de degré 2.  <br /></td></tr>
+<tr class="separator:a1f6447f9abb5f077dafb02f22ba60a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a074348205e5bab0502f838d3769cf5c2" id="r_a074348205e5bab0502f838d3769cf5c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a074348205e5bab0502f838d3769cf5c2">create_postscript_contours_bezier2</a> (<a class="el" href="sequence__point_8h.html#ac8d33cc5d31ba48098c4a44c074de20a">Liste_Contours</a> c, char *file_name, int height, int width, char *repository)</td></tr>
+<tr class="memdesc:a074348205e5bab0502f838d3769cf5c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création d'un file_input PostScript pour les contours représentés par des courbes de Bézier de degré 2. Cette fonction génère un file_input .eps qui contient les instructions pour dessiner les contours avec des courbes de Bézier.  <br /></td></tr>
+<tr class="separator:a074348205e5bab0502f838d3769cf5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaafa3603f4f6bc1b19e213c7ef647718" id="r_aaafa3603f4f6bc1b19e213c7ef647718"><td class="memItemLeft" align="right" valign="top"><a class="el" href="geometry_8h.html#a717d96a288caab330ebd020b0eee1b27">Bezier3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaafa3603f4f6bc1b19e213c7ef647718">bezier3_approximation</a> (<a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a> c, int j1, int j2)</td></tr>
+<tr class="memdesc:aaafa3603f4f6bc1b19e213c7ef647718"><td class="mdescLeft">&#160;</td><td class="mdescRight">Approximation d'un contour par une courbe de Bézier de degré 3. Cette fonction calcule les points de contrôle pour une courbe de Bézier de degré 3 basée sur les points du contour donné.  <br /></td></tr>
+<tr class="separator:aaafa3603f4f6bc1b19e213c7ef647718"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70db6a06f6866e1fde24b8a57bd96fa6" id="r_a70db6a06f6866e1fde24b8a57bd96fa6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70db6a06f6866e1fde24b8a57bd96fa6">distance_point_bezier3</a> (<a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a> P1, <a class="el" href="geometry_8h.html#a717d96a288caab330ebd020b0eee1b27">Bezier3</a> b3, double ti)</td></tr>
+<tr class="memdesc:a70db6a06f6866e1fde24b8a57bd96fa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule la distance entre un point donné et une courbe de Bézier de degré 3 à un paramètre t spécifique.  <br /></td></tr>
+<tr class="separator:a70db6a06f6866e1fde24b8a57bd96fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a989bb3161971a5db6a24d47501c81063" id="r_a989bb3161971a5db6a24d47501c81063"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a989bb3161971a5db6a24d47501c81063">simplification_douglas_peucker_bezier3</a> (<a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a> C, int j1, int j2, double d)</td></tr>
+<tr class="memdesc:a989bb3161971a5db6a24d47501c81063"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simplification directe par approximation des contours vers courbes de Bézier de degré 3.  <br /></td></tr>
+<tr class="separator:a989bb3161971a5db6a24d47501c81063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2942355386bc54eca8a9900650546955" id="r_a2942355386bc54eca8a9900650546955"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2942355386bc54eca8a9900650546955">create_postscript_contours_bezier3</a> (<a class="el" href="sequence__point_8h.html#ac8d33cc5d31ba48098c4a44c074de20a">Liste_Contours</a> c, char *file_name, int height, int width, char *repository)</td></tr>
+<tr class="memdesc:a2942355386bc54eca8a9900650546955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création du file_input EPS pour liste des contours simplifiés par la méthode des courbes de Bézier de degré 3.  <br /></td></tr>
+<tr class="separator:a2942355386bc54eca8a9900650546955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Implémentation des fonctions de gestion d'un robot pour le tracé de contours dans une image. </p>
+<p>Ce file_input contient les définitions des fonctions nécessaires pour initialiser et manipuler un robot chargé de lire et suivre les contours dans une image de type PBM (Portable Bitmap). </p>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a9f044740d03dce5c19218db663b040ed" name="a9f044740d03dce5c19218db663b040ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f044740d03dce5c19218db663b040ed">&#9670;&#160;</a></span>abscissa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int abscissa </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structRobot.html">Robot</a> *</td>          <td class="paramname"><span class="paramname"><em>r</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renvoie la coordonnée x de la position actuelle du robot. </p>
+<p>Récupère la coordonnée x de la position actuelle du robot.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>Pointeur vers la structure <a class="el" href="structRobot.html">Robot</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La position x actuelle du robot. </dd></dl>
+
+</div>
+</div>
+<a id="a61d45d9cf91f4307ca496ad2d092c4e8" name="a61d45d9cf91f4307ca496ad2d092c4e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61d45d9cf91f4307ca496ad2d092c4e8">&#9670;&#160;</a></span>algo_contour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a> algo_contour </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structImage.html">Image</a></td>          <td class="paramname"><span class="paramname"><em>I</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>file_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>repository</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Génère un contour à partir de l'image donnée et enregistre les points du contour dans un file_input texte. </p>
+<p>Calcule et extrait les contours d'une image.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">I</td><td><a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> à partir de laquelle le contour est généré. </td></tr>
+    <tr><td class="paramname">file_name</td><td>Nom du file_input où les points du contour seront sauvegardés. </td></tr>
+    <tr><td class="paramname">repository</td><td>Chemin du répertoire où le file_input sera stocké. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Contour Liste des points formant le contour.</dd></dl>
+<p>Identifie le pixel de départ pour le contour, initialise un robot à cette position et trace le contour en suivant les changements d'orientation du robot. </p>
+
+</div>
+</div>
+<a id="ada92ca1fb788212ac210f30db0511a09" name="ada92ca1fb788212ac210f30db0511a09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada92ca1fb788212ac210f30db0511a09">&#9670;&#160;</a></span>algo_contours()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sequence__point_8h.html#ac8d33cc5d31ba48098c4a44c074de20a">Liste_Contours</a> algo_contours </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structImage.html">Image</a></td>          <td class="paramname"><span class="paramname"><em>I</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renvoie la liste de tous les contours détectés dans une image. </p>
+<p>Extrait tous les contours d'une image.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">I</td><td><a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> à analyser. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Liste_Contours Liste de tous les contours trouvés.</dd></dl>
+<p>Cette fonction applique un masque pour isoler les contours dans l'image et les trace en utilisant un robot suivant un algorithme de suivi de bordure. </p>
+
+</div>
+</div>
+<a id="a9f8e68fca165550b8b81f0dda9b949dd" name="a9f8e68fca165550b8b81f0dda9b949dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f8e68fca165550b8b81f0dda9b949dd">&#9670;&#160;</a></span>bezier2_approximation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geometry_8h.html#a3feaa413238c7586ca3c2ee0b320fc34">Bezier2</a> bezier2_approximation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>j1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>j2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Approxime un contour par une courbe de Bézier de degré 2. La fonction calcule les points de contrôle optimaux pour la courbe. </p>
+<p>Approxime un contour par une courbe de Bézier de degré 2.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Contour initial. </td></tr>
+    <tr><td class="paramname">j1</td><td>Index de début du segment du contour. </td></tr>
+    <tr><td class="paramname">j2</td><td>Index de fin du segment du contour. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Bezier2 Courbe de Bézier de degré 2 approchée. </dd></dl>
+
+</div>
+</div>
+<a id="aaafa3603f4f6bc1b19e213c7ef647718" name="aaafa3603f4f6bc1b19e213c7ef647718"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaafa3603f4f6bc1b19e213c7ef647718">&#9670;&#160;</a></span>bezier3_approximation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geometry_8h.html#a717d96a288caab330ebd020b0eee1b27">Bezier3</a> bezier3_approximation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>j1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>j2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Approximation d'un contour par une courbe de Bézier de degré 3. Cette fonction calcule les points de contrôle pour une courbe de Bézier de degré 3 basée sur les points du contour donné. </p>
+<p>Approxime un contour par une courbe de Bézier de degré 3.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Contour à approximer. </td></tr>
+    <tr><td class="paramname">j1</td><td>Index de début du segment du contour. </td></tr>
+    <tr><td class="paramname">j2</td><td>Index de fin du segment du contour. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Bezier3 Courbe de Bézier de degré 3 résultante. </dd></dl>
+
+</div>
+</div>
+<a id="aab241ecb4aa0df630ab06a6cdd4ab04d" name="aab241ecb4aa0df630ab06a6cdd4ab04d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab241ecb4aa0df630ab06a6cdd4ab04d">&#9670;&#160;</a></span>calcul_ct_bezier2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a> calcul_ct_bezier2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#a3feaa413238c7586ca3c2ee0b320fc34">Bezier2</a></td>          <td class="paramname"><span class="paramname"><em>b2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcule un point sur une courbe de Bézier de degré 2. </p>
+<p>Calcule le point sur une courbe de Bézier de degré 2.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b2</td><td>Courbe de Bézier de degré 2. </td></tr>
+    <tr><td class="paramname">t</td><td>Paramètre de la courbe (0 &lt;= t &lt;= 1). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Point sur la courbe de Bézier au paramètre t. </dd></dl>
+
+</div>
+</div>
+<a id="a6ef7f6eba4ce21636c85ca1c55ea1430" name="a6ef7f6eba4ce21636c85ca1c55ea1430"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ef7f6eba4ce21636c85ca1c55ea1430">&#9670;&#160;</a></span>calcul_ct_bezier3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a> calcul_ct_bezier3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#a717d96a288caab330ebd020b0eee1b27">Bezier3</a></td>          <td class="paramname"><span class="paramname"><em>b3</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>t</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcule un point sur une courbe de Bézier de degré 3. </p>
+<p>Calcule le point sur une courbe de Bézier de degré 3.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b3</td><td>Courbe de Bézier de degré 3. </td></tr>
+    <tr><td class="paramname">t</td><td>Paramètre de la courbe (0 &lt;= t &lt;= 1). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Point sur la courbe de Bézier au paramètre t. </dd></dl>
+
+</div>
+</div>
+<a id="aea207697a681f91d6c26b525bea3e778" name="aea207697a681f91d6c26b525bea3e778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea207697a681f91d6c26b525bea3e778">&#9670;&#160;</a></span>contours_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void contours_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sequence__point_8h.html#ac8d33cc5d31ba48098c4a44c074de20a">Liste_Contours</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche le nombre total de segments et de contours d'une liste de contours. </p>
+<p>Affiche les données des contours sur le terminal.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Liste des contours à analyser.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Calcule et affiche le nombre total de segments formés entre les points de chaque contour. </p>
+
+</div>
+</div>
+<a id="a5f502801351a75710377c916beba2771" name="a5f502801351a75710377c916beba2771"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f502801351a75710377c916beba2771">&#9670;&#160;</a></span>contours_data_bezier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void contours_data_bezier </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sequence__point_8h.html#ac8d33cc5d31ba48098c4a44c074de20a">Liste_Contours</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche le nombre de courbes de Bézier de degré 2 pour chaque contour. </p>
+<p>Affiche des informations sur les courbes de Bézier pour les contours sur le terminal.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Liste de contours à évaluer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Calcule et affiche le nombre de segments transformés en courbes de Bézier de degré 2. </p>
+
+</div>
+</div>
+<a id="aee0be2a0dbaf123f2d5210dc320ca1f4" name="aee0be2a0dbaf123f2d5210dc320ca1f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee0be2a0dbaf123f2d5210dc320ca1f4">&#9670;&#160;</a></span>contours_data_bezier3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void contours_data_bezier3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sequence__point_8h.html#ac8d33cc5d31ba48098c4a44c074de20a">Liste_Contours</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche le nombre de courbes de Bézier de degré 3 pour chaque contour. </p>
+<p>Affiche des informations sur les courbes de Bézier de degré 3 sur le terminal.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Liste de contours à évaluer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Calcule et affiche le nombre de segments transformés en courbes de Bézier de degré 3. </p>
+
+</div>
+</div>
+<a id="a46f086ad07f1ef7975ee6aa48b37b8c0" name="a46f086ad07f1ef7975ee6aa48b37b8c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46f086ad07f1ef7975ee6aa48b37b8c0">&#9670;&#160;</a></span>contours_data_simplification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void contours_data_simplification </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sequence__point_8h.html#ac8d33cc5d31ba48098c4a44c074de20a">Liste_Contours</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Simplifie les données de contours pour l'affichage ou l'analyse. </p>
+<p>Affiche les données des contours simplifiés sur le terminal.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Liste des contours à traiter.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Utilisé pour simplifier la représentation des contours, par exemple en réduisant le nombre de points. </p>
+
+</div>
+</div>
+<a id="a4b84b15b223c5b2850cf7cbe0f424bb2" name="a4b84b15b223c5b2850cf7cbe0f424bb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b84b15b223c5b2850cf7cbe0f424bb2">&#9670;&#160;</a></span>conversion_bezier2_to_bezier3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geometry_8h.html#a717d96a288caab330ebd020b0eee1b27">Bezier3</a> conversion_bezier2_to_bezier3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#a3feaa413238c7586ca3c2ee0b320fc34">Bezier2</a></td>          <td class="paramname"><span class="paramname"><em>b2</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convertit une courbe de Bézier de degré 2 en une courbe de Bézier de degré 3. </p>
+<p>Convertit une courbe de Bézier de degré 2 en une courbe de degré 3.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b2</td><td>Courbe de Bézier de degré 2. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Bezier3 Courbe de Bézier de degré 3 résultante. </dd></dl>
+
+</div>
+</div>
+<a id="a08f01839e37553dc10c64dcea21d65d2" name="a08f01839e37553dc10c64dcea21d65d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08f01839e37553dc10c64dcea21d65d2">&#9670;&#160;</a></span>create_postscript()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void create_postscript </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>file_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crée un file_input .eps représentant le contour donné en utilisant la méthode de simplification par segment (trait). </p>
+<p>Génère un file_input EPS contenant la représentation graphique d'un contour en mode trait.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Contour à représenter. </td></tr>
+    <tr><td class="paramname">file_name</td><td>Nom du file_input de sortie. </td></tr>
+    <tr><td class="paramname">height</td><td>Hauteur du file_input de sortie. </td></tr>
+    <tr><td class="paramname">width</td><td>Largeur du file_input de sortie.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Génère un file_input EPS avec les points du contour connectés par des lignes droites. </p>
+
+</div>
+</div>
+<a id="a18990f44eafc19b8e75e51c01d000b93" name="a18990f44eafc19b8e75e51c01d000b93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18990f44eafc19b8e75e51c01d000b93">&#9670;&#160;</a></span>create_postscript_contours()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void create_postscript_contours </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sequence__point_8h.html#ac8d33cc5d31ba48098c4a44c074de20a">Liste_Contours</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>file_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>repository</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Génère un file_input .eps pour chaque contour de la liste, en utilisant la méthode de remplissage. </p>
+<p>Génère un file_input EPS pour une liste de contours donnés.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Liste des contours. </td></tr>
+    <tr><td class="paramname">file_name</td><td>Nom de base pour les file_inputs de sortie. </td></tr>
+    <tr><td class="paramname">height</td><td>Hauteur des file_inputs de sortie. </td></tr>
+    <tr><td class="paramname">width</td><td>Largeur des file_inputs de sortie. </td></tr>
+    <tr><td class="paramname">repository</td><td>Chemin du répertoire de sortie.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Chaque contour de la liste est transformé en un file_input .eps indépendant. </p>
+
+</div>
+</div>
+<a id="a074348205e5bab0502f838d3769cf5c2" name="a074348205e5bab0502f838d3769cf5c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a074348205e5bab0502f838d3769cf5c2">&#9670;&#160;</a></span>create_postscript_contours_bezier2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void create_postscript_contours_bezier2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sequence__point_8h.html#ac8d33cc5d31ba48098c4a44c074de20a">Liste_Contours</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>file_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>repository</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Création d'un file_input PostScript pour les contours représentés par des courbes de Bézier de degré 2. Cette fonction génère un file_input .eps qui contient les instructions pour dessiner les contours avec des courbes de Bézier. </p>
+<p>Crée un file_input EPS pour des courbes de Bézier de degré 2.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Liste des contours à traiter. </td></tr>
+    <tr><td class="paramname">file_name</td><td>Nom du file_input de sortie sans l'extension. </td></tr>
+    <tr><td class="paramname">height</td><td>Hauteur de la zone de dessin. </td></tr>
+    <tr><td class="paramname">width</td><td>Largeur de la zone de dessin. </td></tr>
+    <tr><td class="paramname">repository</td><td>Chemin du répertoire où le file_input sera sauvegardé. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2942355386bc54eca8a9900650546955" name="a2942355386bc54eca8a9900650546955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2942355386bc54eca8a9900650546955">&#9670;&#160;</a></span>create_postscript_contours_bezier3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void create_postscript_contours_bezier3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sequence__point_8h.html#ac8d33cc5d31ba48098c4a44c074de20a">Liste_Contours</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>file_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>repository</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Création du file_input EPS pour liste des contours simplifiés par la méthode des courbes de Bézier de degré 3. </p>
+<p>Crée un file_input EPS pour des courbes de Bézier de degré 3.</p>
+<p>Cette fonction génère un file_input EPS qui contient la représentation des contours d'une image, simplifiés par des courbes de Bézier de degré 3. Elle sauvegarde chaque contour en utilisant les courbes de Bézier pour une représentation vectorielle précise.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Liste des contours à traiter. </td></tr>
+    <tr><td class="paramname">file_name</td><td>Nom du file_input pour la sauvegarde. </td></tr>
+    <tr><td class="paramname">height</td><td>Hauteur de l'image originale. </td></tr>
+    <tr><td class="paramname">width</td><td>Largeur de l'image originale. </td></tr>
+    <tr><td class="paramname">repository</td><td>Chemin du dossier où le file_input sera sauvegardé. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a431881000c50fe81a0cc2f019583e416" name="a431881000c50fe81a0cc2f019583e416"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a431881000c50fe81a0cc2f019583e416">&#9670;&#160;</a></span>create_postscript_fill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void create_postscript_fill </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>file_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crée un file_input .eps avec remplissage pour le contour donné. </p>
+<p>Génère un file_input EPS contenant la représentation graphique d'un contour en mode remplissage.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Contour à représenter. </td></tr>
+    <tr><td class="paramname">file_name</td><td>Nom du file_input de sortie. </td></tr>
+    <tr><td class="paramname">height</td><td>Hauteur du file_input de sortie. </td></tr>
+    <tr><td class="paramname">width</td><td>Largeur du file_input de sortie.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Génère un file_input EPS avec les points du contour connectés par des lignes droites et le contour rempli. </p>
+
+</div>
+</div>
+<a id="a91c1819c503f3659cd72d637c40e268e" name="a91c1819c503f3659cd72d637c40e268e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91c1819c503f3659cd72d637c40e268e">&#9670;&#160;</a></span>distance_point_bezier2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double distance_point_bezier2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a></td>          <td class="paramname"><span class="paramname"><em>P1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#a3feaa413238c7586ca3c2ee0b320fc34">Bezier2</a></td>          <td class="paramname"><span class="paramname"><em>b2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>ti</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcule la distance entre un point et une courbe de Bézier de degré 2 à un paramètre t spécifique. </p>
+<p>Calcule la distance entre un point et une courbe de Bézier de degré 2.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P1</td><td>Point à partir duquel mesurer la distance. </td></tr>
+    <tr><td class="paramname">b2</td><td>Courbe de Bézier de degré 2. </td></tr>
+    <tr><td class="paramname">ti</td><td>Paramètre de la courbe de Bézier indiquant le point spécifique à mesurer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>double Distance calculée. </dd></dl>
+
+</div>
+</div>
+<a id="a70db6a06f6866e1fde24b8a57bd96fa6" name="a70db6a06f6866e1fde24b8a57bd96fa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70db6a06f6866e1fde24b8a57bd96fa6">&#9670;&#160;</a></span>distance_point_bezier3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double distance_point_bezier3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a></td>          <td class="paramname"><span class="paramname"><em>P1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="geometry_8h.html#a717d96a288caab330ebd020b0eee1b27">Bezier3</a></td>          <td class="paramname"><span class="paramname"><em>b3</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>ti</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcule la distance entre un point donné et une courbe de Bézier de degré 3 à un paramètre t spécifique. </p>
+<p>Calcule la distance entre un point et une courbe de Bézier de degré 3.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P1</td><td>Point pour lequel calculer la distance. </td></tr>
+    <tr><td class="paramname">b3</td><td>Courbe de Bézier de degré 3. </td></tr>
+    <tr><td class="paramname">ti</td><td>Valeur du paramètre t. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>double Distance entre le point et la courbe. </dd></dl>
+
+</div>
+</div>
+<a id="a840e6150e16fc1fe5dab4cc3f00ecc1e" name="a840e6150e16fc1fe5dab4cc3f00ecc1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a840e6150e16fc1fe5dab4cc3f00ecc1e">&#9670;&#160;</a></span>find_departure_pixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a> find_departure_pixel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structImage.html">Image</a></td>          <td class="paramname"><span class="paramname"><em>I</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Identifie le pixel de départ pour le tracé de contours dans une image. </p>
+<p>Trouve les coordonnées du premier pixel noir avec un voisin blanc au-dessus.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">I</td><td><a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> à analyser. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Point Coordonnées du pixel de départ trouvé dans l'image.</dd></dl>
+<p>Cette fonction recherche le premier pixel noir ayant un voisin blanc dans l'image, ce qui indique le début d'un contour potentiel. </p>
+
+</div>
+</div>
+<a id="a96b033099b3af99dbd298ac3a60c0d89" name="a96b033099b3af99dbd298ac3a60c0d89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96b033099b3af99dbd298ac3a60c0d89">&#9670;&#160;</a></span>image_white()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool image_white </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structImage.html">Image</a></td>          <td class="paramname"><span class="paramname"><em>I</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérifie si une image est entièrement blanche. </p>
+<p>Vérifie si l'image est entièrement blanche.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">I</td><td><a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> à vérifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>bool Vrai si l'image est totalement blanche, faux sinon.</dd></dl>
+<p>Cette fonction parcourt chaque pixel de l'image pour déterminer si tous sont blancs. </p>
+
+</div>
+</div>
+<a id="a39e974836157aad9361600cdcb62786b" name="a39e974836157aad9361600cdcb62786b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39e974836157aad9361600cdcb62786b">&#9670;&#160;</a></span>init_robot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_robot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structRobot.html">Robot</a> *</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="contour_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a></td>          <td class="paramname"><span class="paramname"><em>o</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise un robot avec les coordonnées et l'orientation spécifiées. </p>
+<p>Initialise le robot à une position donnée avec une orientation spécifique.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>Pointeur vers la structure <a class="el" href="structRobot.html">Robot</a> à initialiser. </td></tr>
+    <tr><td class="paramname">x</td><td>Coordonnée x de départ du robot. </td></tr>
+    <tr><td class="paramname">y</td><td>Coordonnée y de départ du robot. </td></tr>
+    <tr><td class="paramname">o</td><td>Orientation initiale du robot.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Cette fonction assigne la position et l'orientation initiales au robot. Elle prépare le robot à naviguer dans l'image selon les consignes qui lui seront ultérieurement fournies. </p>
+
+</div>
+</div>
+<a id="a6e7d5dec007dbc17bdd569f4a17d4ead" name="a6e7d5dec007dbc17bdd569f4a17d4ead"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e7d5dec007dbc17bdd569f4a17d4ead">&#9670;&#160;</a></span>mask_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structImage.html">Image</a> mask_image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structImage.html">Image</a></td>          <td class="paramname"><span class="paramname"><em>I</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crée un masque de l'image identifiant le début des contours. </p>
+<p>Crée un masque de l'image mettant en évidence les pixels de départ pour les contours.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">I</td><td><a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> originale à masquer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> Masque de l'image indiquant les départs de contours.</dd></dl>
+<p>Cette fonction crée une image de masque indiquant les positions des pixels noirs qui sont des points de départ de contours. </p>
+
+</div>
+</div>
+<a id="af4f1c478ceb81827937dbf690c75e078" name="af4f1c478ceb81827937dbf690c75e078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f1c478ceb81827937dbf690c75e078">&#9670;&#160;</a></span>move_forward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void move_forward </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structRobot.html">Robot</a> *</td>          <td class="paramname"><span class="paramname"><em>r</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Déplace le robot d'une position en avant selon son orientation. </p>
+<p>Avance le robot d'une position dans la direction de son orientation actuelle.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>Pointeur vers la structure <a class="el" href="structRobot.html">Robot</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Cette fonction modifie les coordonnées du robot en fonction de son orientation actuelle. Elle permet au robot de progresser d'une unité dans la direction vers laquelle il est orienté. </p>
+
+</div>
+</div>
+<a id="a1bd06db7d4c8d0545ce091a8b9521a2e" name="a1bd06db7d4c8d0545ce091a8b9521a2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bd06db7d4c8d0545ce091a8b9521a2e">&#9670;&#160;</a></span>new_orientation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void new_orientation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structRobot.html">Robot</a> *</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structImage.html">Image</a></td>          <td class="paramname"><span class="paramname"><em>I</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détermine la nouvelle orientation du robot basée sur les pixels voisins. </p>
+<p>Calcule la nouvelle orientation du robot en fonction de son environnement immédiat.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>Pointeur vers le robot dont l'orientation doit être mise à jour. </td></tr>
+    <tr><td class="paramname">x</td><td>Coordonnée x du pixel actuel du robot. </td></tr>
+    <tr><td class="paramname">y</td><td>Coordonnée y du pixel actuel du robot. </td></tr>
+    <tr><td class="paramname">I</td><td><a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a> dans laquelle le robot opère.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Cette fonction ajuste l'orientation du robot en analysant les pixels voisins immédiats. Le robot pivote en fonction de la couleur des pixels adjacents pour suivre le contour dans l'image. </p>
+
+</div>
+</div>
+<a id="a6b21183db8bc4ec90deaa2741b8f5e08" name="a6b21183db8bc4ec90deaa2741b8f5e08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b21183db8bc4ec90deaa2741b8f5e08">&#9670;&#160;</a></span>ordinate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ordinate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structRobot.html">Robot</a> *</td>          <td class="paramname"><span class="paramname"><em>r</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renvoie la coordonnée y de la position actuelle du robot. </p>
+<p>Récupère la coordonnée y de la position actuelle du robot.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>Pointeur vers la structure <a class="el" href="structRobot.html">Robot</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La position y actuelle du robot. </dd></dl>
+
+</div>
+</div>
+<a id="a4df750409c6216a080f859603e276eea" name="a4df750409c6216a080f859603e276eea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4df750409c6216a080f859603e276eea">&#9670;&#160;</a></span>orient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="contour_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a> orient </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structRobot.html">Robot</a> *</td>          <td class="paramname"><span class="paramname"><em>r</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renvoie l'orientation actuelle du robot. </p>
+<p>Récupère l'orientation actuelle du robot.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>Pointeur vers la structure <a class="el" href="structRobot.html">Robot</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>L'orientation actuelle du robot sous forme de valeur énumérée. </dd></dl>
+
+</div>
+</div>
+<a id="a64a756e1432f2f14bbb1e44d13ecf268" name="a64a756e1432f2f14bbb1e44d13ecf268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64a756e1432f2f14bbb1e44d13ecf268">&#9670;&#160;</a></span>pbm_contour_to_txt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pbm_contour_to_txt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sequence__point_8h.html#ac8d33cc5d31ba48098c4a44c074de20a">Liste_Contours</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>file_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>repository</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enregistre les points de contour d'une image PBM dans un file_input texte. </p>
+<p>Sauvegarde les contours extraits dans un file_input texte.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Liste des contours à enregistrer. </td></tr>
+    <tr><td class="paramname">file_name</td><td>Nom du file_input de sortie. </td></tr>
+    <tr><td class="paramname">repository</td><td>Chemin du dossier où le file_input sera enregistré.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Crée un file_input texte pour chaque contour et y écrit les coordonnées des points. </p>
+
+</div>
+</div>
+<a id="a4885237c59db191095ba7676514ae63e" name="a4885237c59db191095ba7676514ae63e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4885237c59db191095ba7676514ae63e">&#9670;&#160;</a></span>position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void position </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structRobot.html">Robot</a> *</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Récupère et renvoie la position actuelle du robot. </p>
+<p>Récupère la position actuelle du robot.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>Pointeur vers la structure <a class="el" href="structRobot.html">Robot</a>. </td></tr>
+    <tr><td class="paramname">x</td><td>Pointeur vers la variable où sera stockée la position x actuelle. </td></tr>
+    <tr><td class="paramname">y</td><td>Pointeur vers la variable où sera stockée la position y actuelle.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Cette fonction permet d'accéder aux coordonnées actuelles du robot. </p>
+
+</div>
+</div>
+<a id="a8ad18dec5e76d10cfeb74407fc31189a" name="a8ad18dec5e76d10cfeb74407fc31189a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ad18dec5e76d10cfeb74407fc31189a">&#9670;&#160;</a></span>position_forward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void position_forward </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structRobot.html">Robot</a> *</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcule la position du pixel situé directement devant le robot. </p>
+<p>Récupère la position de la case directement devant le robot.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>Pointeur vers le robot dont on souhaite connaître la position devant. </td></tr>
+    <tr><td class="paramname">x</td><td>Pointeur vers l'entier où stocker la coordonnée x du pixel devant le robot. </td></tr>
+    <tr><td class="paramname">y</td><td>Pointeur vers l'entier où stocker la coordonnée y du pixel devant le robot.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Cette fonction calcule la position du pixel devant le robot en fonction de son orientation actuelle et met à jour les valeurs pointées par x et y avec les nouvelles coordonnées calculées. </p>
+
+</div>
+</div>
+<a id="aba7758ffe43ebb6fc09f93e011219213" name="aba7758ffe43ebb6fc09f93e011219213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba7758ffe43ebb6fc09f93e011219213">&#9670;&#160;</a></span>simplification_douglas_peucker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a> simplification_douglas_peucker </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sequence__point_8h.html#a9601594024dc9df56c0d60b189fc36c1">Tableau_Point</a></td>          <td class="paramname"><span class="paramname"><em>T</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>j1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>j2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>d</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Simplifie de manière récursive un contour en utilisant l'algorithme de Douglas Peucker. </p>
+<p>Simplifie un contour en utilisant la méthode de simplification des segments de Douglas-Peucker.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">T</td><td>Tableau de points du contour. </td></tr>
+    <tr><td class="paramname">j1</td><td>Index de début de l'intervalle à simplifier. </td></tr>
+    <tr><td class="paramname">j2</td><td>Index de fin de l'intervalle à simplifier. </td></tr>
+    <tr><td class="paramname">d</td><td>Distance seuil pour la simplification. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Contour Simplifié entre les indices j1 et j2.</dd></dl>
+<p>Cet algorithme réduit le nombre de points dans un contour en préservant sa forme générale. </p>
+
+</div>
+</div>
+<a id="a1f6447f9abb5f077dafb02f22ba60a74" name="a1f6447f9abb5f077dafb02f22ba60a74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f6447f9abb5f077dafb02f22ba60a74">&#9670;&#160;</a></span>simplification_douglas_peucker_bezier2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a> simplification_douglas_peucker_bezier2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a></td>          <td class="paramname"><span class="paramname"><em>C</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>j1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>j2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>d</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applique la méthode de simplification de Douglas-Peucker à une approximation de Bézier de degré 2. </p>
+<p>Simplifie un contour par la méthode des courbes de Bézier de degré 2.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">C</td><td>Contour à simplifier. </td></tr>
+    <tr><td class="paramname">j1</td><td>Indice de début de segment du contour. </td></tr>
+    <tr><td class="paramname">j2</td><td>Indice de fin de segment du contour. </td></tr>
+    <tr><td class="paramname">d</td><td>Distance seuil pour la simplification. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Contour Résultat de la simplification, potentiellement composé de plusieurs segments. </dd></dl>
+
+</div>
+</div>
+<a id="a989bb3161971a5db6a24d47501c81063" name="a989bb3161971a5db6a24d47501c81063"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a989bb3161971a5db6a24d47501c81063">&#9670;&#160;</a></span>simplification_douglas_peucker_bezier3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a> simplification_douglas_peucker_bezier3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a></td>          <td class="paramname"><span class="paramname"><em>C</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>j1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>j2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>d</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Simplification directe par approximation des contours vers courbes de Bézier de degré 3. </p>
+<p>Simplifie un contour par la méthode des courbes de Bézier de degré 3.</p>
+<p>Cette fonction simplifie un contour en utilisant une approximation par une courbe de Bézier de degré 3, en appliquant l'algorithme de Douglas-Peucker pour calculer la distance entre les points du contour et la courbe de Bézier. Elle vise à réduire le nombre de points tout en conservant la forme générale du contour.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">C</td><td>Contour à simplifier. </td></tr>
+    <tr><td class="paramname">j1</td><td>Indice de début du segment de contour à traiter. </td></tr>
+    <tr><td class="paramname">j2</td><td>Indice de fin du segment de contour à traiter. </td></tr>
+    <tr><td class="paramname">d</td><td>Seuil de distance pour la simplification. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Contour simplifié sous forme de points de Bézier de degré 3. </dd></dl>
+
+</div>
+</div>
+<a id="a07cb3b22afe6054b122d1d81acbb9bc2" name="a07cb3b22afe6054b122d1d81acbb9bc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07cb3b22afe6054b122d1d81acbb9bc2">&#9670;&#160;</a></span>turn_left()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void turn_left </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structRobot.html">Robot</a> *</td>          <td class="paramname"><span class="paramname"><em>r</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Oriente le robot de 90 degrés vers la gauche par rapport à sa direction actuelle. </p>
+<p>Tourne le robot à gauche (changement d'orientation).</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>Pointeur vers la structure <a class="el" href="structRobot.html">Robot</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Cette fonction ajuste l'orientation du robot en tournant à gauche, ce qui modifie son orientation de 90 degrés dans le sens antihoraire. </p>
+
+</div>
+</div>
+<a id="a61c1aff701461831af486a4b51843115" name="a61c1aff701461831af486a4b51843115"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c1aff701461831af486a4b51843115">&#9670;&#160;</a></span>turn_right()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void turn_right </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structRobot.html">Robot</a> *</td>          <td class="paramname"><span class="paramname"><em>r</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Oriente le robot de 90 degrés vers la droite par rapport à sa direction actuelle. </p>
+<p>Tourne le robot à droite (changement d'orientation).</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>Pointeur vers la structure <a class="el" href="structRobot.html">Robot</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Cette fonction ajuste l'orientation du robot en tournant à droite, ce qui modifie son orientation de 90 degrés dans le sens horaire. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+  Copyright (c) 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script><a href="https://imagepulser.dev.madebyvasilis.site/"> ImagePulser</a> | All rights reserved 
+</small>
+<br>
+<small>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun</small></address>
+</body>
+</html>

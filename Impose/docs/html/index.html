@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet Imposé: Projet Imposé - Suivre une couleur</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Projet Imposé<span id="projectnumber">&#160;V3.1.2</span>
+   </div>
+   <div id="projectbrief">Suivre une coleur via OpenCV</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Projet Imposé - Suivre une couleur </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__2Users_2vasilisskarleas_2Library_2Mobile_01Documents_2com_0iapple_0iCloudDocs_2Documents_2University_01Sorbonne_23rd_01year_2S6_2c-project-rob-3-eleves-gr-2-1_2Impose_2html"></a> </p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Introduction</h1>
+<p>Rédigé dans le cadre de l'unité "Projet en langage C" du semestre 6 en robotique, ce rapport présente notre méthode, les stratégies adoptées et les solutions techniques développées pour relever un défi stimulant : concevoir un algorithme qui permet à une caméra contrôlée par deux servomoteurs de détecter et suivre une couleur spécifique. L'objectif était de développer un système autonome qui, grâce à la programmation en C et au traitement d'image, maintient la couleur ciblée au centre de son champ de vision, illustrant ainsi notre capacité à créer des applications robotiques interactives.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Protocole de Communication</h1>
+<p>L'objectif de ce travail pratique est de contrôler des moteurs Arduino à partir d'un traitement externe au code Arduino, utilisant la communication via le port série.</p>
+<p>Dans les systèmes d'exploitation tels que Windows, Linux et Mac, les ports USB sont traités comme des file_inputs virtuels. On peut écrire des données sur ces file_inputs pour communiquer avec un appareil externe. Nous appliquons ce principe en envoyant des commandes de positionnement aux actionneurs via le port série. Le code Arduino est alors chargé de décoder ces informations pour les exécuter de manière adéquate.</p>
+<p>En termes de programmation en C/C++, cela se traduit par l'ouverture d'un file_input avec des droits d'écriture, où les coordonnées sont envoyées ligne par ligne pour être décodées par la carte Arduino. Voici l'implémentation :</p>
+<div class="fragment"><div class="line"><span class="comment">/* Envoie des coordonnées au port série */</span></div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="main_8cpp.html#a96adc6c102c5a1f1a96334aa88c13de3">send_coordinates</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)</div>
+<div class="line">{</div>
+<div class="line">    FILE *f;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Adapter selon le port Arduino utilisé</span></div>
+<div class="line">    f = fopen(<span class="stringliteral">&quot;/dev/ttyACM5&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>); <span class="comment">// À ajuster en fonction du port de votre Arduino</span></div>
+<div class="line">    <span class="keywordflow">if</span> (f == NULL)</div>
+<div class="line">    {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;Échec de l&#39;ouverture du file_input\n&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">    {</div>
+<div class="line">        fprintf(f, <span class="stringliteral">&quot;%d %d\n&quot;</span>, x, y); <span class="comment">// Écrit les données dans le file_input du port série [compatible Linux]</span></div>
+<div class="line">        printf(<span class="stringliteral">&quot;[%d] Coordonnées X = %d, Y = %d inscrites.\n&quot;</span>, <a class="code hl_variable" href="main_8cpp.html#a602fbf108f43ef640b45e1c038c5b1dd">time_id</a>, x, y);</div>
+<div class="line">        <a class="code hl_variable" href="main_8cpp.html#a602fbf108f43ef640b45e1c038c5b1dd">time_id</a>++;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    fclose(f); </div>
+<div class="line">}</div>
+<div class="ttc" id="amain_8cpp_html_a602fbf108f43ef640b45e1c038c5b1dd"><div class="ttname"><a href="main_8cpp.html#a602fbf108f43ef640b45e1c038c5b1dd">time_id</a></div><div class="ttdeci">int time_id</div><div class="ttdef"><b>Definition</b> main.cpp:39</div></div>
+<div class="ttc" id="amain_8cpp_html_a96adc6c102c5a1f1a96334aa88c13de3"><div class="ttname"><a href="main_8cpp.html#a96adc6c102c5a1f1a96334aa88c13de3">send_coordinates</a></div><div class="ttdeci">void send_coordinates(int x, int y)</div><div class="ttdoc">Envoie les coordonnées au port série.</div><div class="ttdef"><b>Definition</b> main.cpp:188</div></div>
+</div><!-- fragment --><p> Cette méthode assure une interaction fluide et efficace entre le système externe et les composants Arduino, permettant un contrôle précis des mouvements des servomoteurs en fonction des coordonnées reçues.</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Algorithme</h1>
+<p>L'algorithme décrit ci-dessous a été conçu pour réaliser l'objectif souhaité du projet . Voici les étapes:</p>
+<ol type="1">
+<li>Capture de la trame : Acquérir une trame en utilisant une Zone d'Intérêt (ROI, pour Region of Interest).</li>
+<li>Traitement de la trame : Appliquer un traitement et un filtrage à la trame capturée pour isoler la couleur ciblée.</li>
+<li>Vérification et calcul : Si la couleur ciblée dépasse le seuil de détection prédéfini, procéder au calcul de la position. Si le seuil n'est pas atteint, capturer une nouvelle trame et répéter le processus.</li>
+<li>Interruption utilisateur : Si une touche est pressée sur le clavier pendant la visualisation en direct (live feed), arrêter le programme.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md4"></a>
+ROI (Region of Interest)</h1>
+<p>Pour simplifier le calcul du centre de l'image contenant la couleur ciblée, nous utilisons la notion de ROI (Region of Interest). Dans notre cas spécifique, nous nous concentrons uniquement sur un carré de 450 x 450 pixels extrait de l'image complète capturée par la caméra.</p>
+<p>Dans notre code, la variable <code>roi_image</code> représente ce rectangle spécifique de l'image qui est utilisé pour le filtrage et la binarisation subséquente.</p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Calcul de la position</h1>
+<p>Grâce à notre expérience avec le robot Baxter, nous avons appris l'importance de déterminer la distance et la direction entre le point ciblé et le centre de l'image, une mesure que nous qualifions d'erreur.</p>
+<p>La question centrale est de savoir comment utiliser cette erreur pour ajuster la position des actionneurs. Pour répondre à cette interrogation, nous avons décomposé le problème en quatre sous-problèmes :</p>
+<ol type="1">
+<li><b>Considération de la position initiale du moteur :</b> Avant de demander à un moteur de se déplacer, il est crucial de prendre en compte sa position actuelle.</li>
+<li><b>Mapping des coordonnées virtuelles vers les coordonnées réelles :</b> Transformer les coordonnées obtenues à partir de l'image en coordonnées utilisables dans l'environnement physique.</li>
+<li><b>Adaptation de l'échelle des coordonnées :</b> Ajuster les coordonnées pour qu'elles correspondent à l'échelle utilisée par les actionneurs du système.</li>
+<li><b>Limitation des valeurs acceptées par les actionneurs :</b> S'assurer que les valeurs envoyées aux actionneurs restent dans leurs limites opérationnelles pour éviter les erreurs de dépassement.</li>
+</ol>
+<p>Cette approche nous permet de préciser comment les données de position sont utilisées pour contrôler de manière efficace et précise les mouvements des actionneurs.</p>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Prise en compte de la position initiale des moteurs</h2>
+<p>Pour gérer correctement les actionneurs, il est essentiel de les initialiser à une valeur par défaut au démarrage du système. Voici un code en C++ montrant l'initialisation des positions des servomoteurs :</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line"> </div>
+<div class="line">int servo1_position = 90;</div>
+<div class="line"><span class="keywordtype">int</span> servo2_position = 90;</div>
+<div class="line"> </div>
+<div class="line">...</div>
+<div class="line"> </div>
+<div class="line">while(<span class="keyword">true</span>)</div>
+<div class="line">{ ... }</div>
+</div><!-- fragment --><p>Cette configuration assure que chaque servo commence à partir d'une position neutre. Ensuite, la position est mise à jour continuellement à l'intérieur d'une boucle infinie qui capture l'image à intervalles réguliers (potentiellement avec un délai, détaillé ultérieurement dans la section sur le "Delay de processing"). L'ajustement des angles des servos en fonction de l'erreur calculée se fait comme suit :</p>
+<div class="fragment"><div class="line">angle_x = angle_x +- erreur_x</div>
+<div class="line">angle_y = angle_y +- erreur_y</div>
+</div><!-- fragment --><p>Il est important de choisir correctement le signe de l'opération (+ ou -) en fonction de la direction dans laquelle l'erreur doit corriger la position actuelle des servos.</p>
+<h3><a class="anchor" id="autotoc_md7"></a>
+Le plan virtuel</h3>
+<p>Dans le cadre de notre projet, nous définissons l'orientation des axes dans le plan virtuel où l'axe x s'étend de gauche à droite et l'axe y de haut en bas, comme illustré dans l'image ci-dessous. Cette configuration a été établie suite à une expérience simple que nous avons menée pour confirmer l'orientation des axes.</p>
+<div class="image">
+<img src="1714805654087.png" alt=""/>
+<div class="caption">
+1714805654087</div></div>
+    <p><b>L'experience:</b> Nous avons initié l'expérience en activant la caméra, configurée pour nous afficher les coordonnées du centre de la couleur suivie (pour plus de détails, voir la section sur le filtrage de l'image et le traitement). Au cours de cette expérience, le point situé en haut à gauche de l'image avait pour coordonnées (0,0). En déplaçant l'objet vers la droite, nous avons observé une augmentation de la valeur de x. De manière similaire, en déplaçant l'objet vers le bas, la valeur de y augmentait. Cette observation nous a permis de confirmer l'orientation des axes dans notre plan virtuel, où x augmente de gauche à droite et y de haut en bas.</p>
+<h3><a class="anchor" id="autotoc_md8"></a>
+Projection d'un point du plan virtuel au plan de la réalité</h3>
+<p>Considérons l'exemple illustré ci-dessous :</p>
+<div class="image">
+<img src="1714805880000.png" alt=""/>
+<div class="caption">
+1714805880000</div></div>
+    <p>Pour positionner le point A dans la réalité, nous devons déplacer le centre de l'image vers la droite. De manière similaire, pour atteindre le point B, le centre doit être déplacé vers le bas.</p>
+<p>Notre robot opère dans un cadre cartésien représenté par l'image suivante :</p>
+<div class="image">
+<img src="1714805887799.png" alt=""/>
+<div class="caption">
+1714805887799</div></div>
+    <p>Pour projeter les coordonnées obtenues sur le plan virtuel dans un cadre 1:1 vers le plan de la réalité, il est nécessaire d'inverser l'axe y. Cette inversion est essentielle pour aligner les mouvements du robot avec les coordonnées détectées dans notre système de suivi.</p>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Mapping des coordonnées correctes</h2>
+<p>Nous approchons de la solution, mais un détail important nécessite notre attention. Jusqu'à présent, nous avons envisagé le scénario où l'image théorique est déplacée vers le point souhaité. Cependant, en réalité, les actionneurs fonctionnent de manière inverse : ils déplacent le point souhaité vers le centre de l'image théorique.</p>
+<p>En conséquence, nous devons ajuster nos calculs pour refléter cette inversion. Ainsi, l'axe x doit être inversé par rapport à notre modèle théorique, tandis que l'axe y ne nécessite pas d'inversion.</p>
+<p>Selon ce principe, les ajustements des angles se font comme suit :</p>
+<div class="fragment"><div class="line">angle_x = angle_x - erreur_x  <span class="comment"># Compenser l&#39;erreur en \&zwj;(x\&zwj;) en inversant la direction</span></div>
+<div class="line">angle_y = angle_y + erreur_y  <span class="comment"># Ajouter l&#39;erreur en \&zwj;(y\&zwj;) pour ajuster la position</span></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md10"></a>
+Ajustement de l'échelle de l'erreur</h2>
+<p>Lors de l'implémentation de notre logique de contrôle sur le robot, nous avons observé que les déplacements effectués étaient plus importants que nécessaires. Cette surréaction découle de notre utilisation initiale d'une échelle de 1:1, où un pixel équivaut à un degré de rotation, ce qui ne reflète pas fidèlement la réalité. En effet, cette correspondance directe entre les pixels et les degrés de rotation n'est pas précise.</p>
+<p>Pour résoudre ce problème, il est essentiel de redimensionner l'amplitude de l'erreur afin qu'elle soit cohérente avec l'échelle réelle des degrés en pratique.</p>
+<p><b>La solution consiste à appliquer un asservissement proportionnel à l'erreur, réduisant ainsi son ampleur (en tant que nombre, et non en valeur absolue).</b></p>
+<p>Pour ce faire, nous introduisons une constante de proportionnalité par laquelle les erreurs sont multipliées, permettant ainsi d'ajuster finement la réponse du système. Les formules ajustées pour les positions en x et y deviennent :</p>
+<p>La solution est de faire un asservisement proportionel de l'erreur pour le reduire (comme nombre et pas comme valeur).</p>
+<p>Il suffit alors de declarer une constate par laquelle les erreurs vont etre multiplé. Ainsi on obtiens la version suivante des equations de la position en x et y.</p>
+<div class="fragment"><div class="line">angle_x = angle_x - erreur_x * a</div>
+<div class="line">angle_y = angle_y - erreur_y * a</div>
+<div class="line"> </div>
+<div class="line">avec a = 0.01 par exemple.</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md11"></a>
+Limitation des valeurs acceptables pour les moteurs</h2>
+<p>Nous avons constaté que les moteurs réagissent mal lorsqu'ils sont poussés à leurs extrêmes, comme à 0 ou 270 degrés. Il est également critique de ne jamais leur demander d'atteindre des valeurs au-delà de ces limites physiques.</p>
+<p>Pour pallier ce problème, nous avons mis en place un système de limitation virtuelle qui empêche d'atteindre de telles positions. Nous avons choisi de restreindre les mouvements entre 20 et 220 degrés. La logique appliquée est la suivante :</p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (position_x &gt; 220)</div>
+<div class="line">{</div>
+<div class="line">angle_x = 220</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span> if(position_x &lt;20)</div>
+<div class="line">{</div>
+<div class="line">angle_x = 20</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">{</div>
+<div class="line">angle_x = position_x</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>La même logique est appliquée pour la coordonnée y. Pour optimiser cette gestion en C++, nous utilisons :</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> servo1_position = std::min(std::max(position_first, 20), 220);</div>
+<div class="line"><span class="keywordtype">int</span> servo2_position = std::min(std::max(position_second, 20), 220);</div>
+</div><!-- fragment --><p>Dans ce code, <code>servo1_position</code> et <code>servo2_position</code> correspondent respectivement à <code>angle_x</code> et <code>angle_y</code>, assurant ainsi que les servomoteurs fonctionnent dans un intervalle sécurisé et efficace.</p>
+<h1><a class="anchor" id="autotoc_md12"></a>
+La notion de dead_zone</h1>
+<p>Notre algorithme de traitement d'images est extrêmement sensible et peut détecter même les plus infimes variations, souvent dues à des changements de luminosité, de petits mouvements de la caméra ou des vibrations. Cela peut entraîner des modifications fréquentes et mineures de la position du centre de l'objet coloré suivi, empêchant ainsi le système de se stabiliser.</p>
+<p>Pour remédier à cela, nous avons introduit une <code>dead_zone</code>. Il s'agit d'une zone tampon autour du centre théorique de l'image. Si le point cible se trouve à l'intérieur de cette zone, aucune correction n'est effectuée par les actionneurs. En dehors de cette zone, les corrections sont appliquées selon la logique décrite précédemment.</p>
+<p>Cette <code>dead_zone</code> permet au système d'ignorer les variations mineures et aide à maintenir la stabilité opérationnelle en évitant des ajustements excessifs et incessants.</p>
+<h2><a class="anchor" id="autotoc_md13"></a>
+Implémentation du test de la dead_zone</h2>
+<p>Voici comment nous avons programmé cette fonctionnalité : </p><div class="fragment"><div class="line">...</div>
+<div class="line">int dead_min = <a class="code hl_define" href="main_8cpp.html#a33ede4318e10442e338b9086c09f02d3">ROI_SIZE</a> / 2 - <a class="code hl_define" href="main_8cpp.html#a4e0d582a51849920d886a5380b470434">SEUIL</a>;</div>
+<div class="line"><span class="keywordtype">int</span> dead_max = <a class="code hl_define" href="main_8cpp.html#a33ede4318e10442e338b9086c09f02d3">ROI_SIZE</a> / 2 + <a class="code hl_define" href="main_8cpp.html#a4e0d582a51849920d886a5380b470434">SEUIL</a>;</div>
+<div class="line">...</div>
+<div class="line"> </div>
+<div class="line">...{</div>
+<div class="line"><span class="keywordflow">if</span> (!<a class="code hl_function" href="main_8cpp.html#aa0fe5745768ba65e81bf855149404cd3">in_dead_zone</a>(dead_min, dead_max, center))</div>
+<div class="line">    {</div>
+<div class="line">    ...</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="amain_8cpp_html_a33ede4318e10442e338b9086c09f02d3"><div class="ttname"><a href="main_8cpp.html#a33ede4318e10442e338b9086c09f02d3">ROI_SIZE</a></div><div class="ttdeci">#define ROI_SIZE</div><div class="ttdef"><b>Definition</b> main.cpp:27</div></div>
+<div class="ttc" id="amain_8cpp_html_a4e0d582a51849920d886a5380b470434"><div class="ttname"><a href="main_8cpp.html#a4e0d582a51849920d886a5380b470434">SEUIL</a></div><div class="ttdeci">#define SEUIL</div><div class="ttdef"><b>Definition</b> main.cpp:34</div></div>
+<div class="ttc" id="amain_8cpp_html_aa0fe5745768ba65e81bf855149404cd3"><div class="ttname"><a href="main_8cpp.html#aa0fe5745768ba65e81bf855149404cd3">in_dead_zone</a></div><div class="ttdeci">bool in_dead_zone(int min, int max, const std::pair&lt; int, int &gt; &amp;center)</div><div class="ttdoc">Vérifie si un point est dans la zone morte.</div><div class="ttdef"><b>Definition</b> main.cpp:168</div></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md14"></a>
+Fonction in_dead_zone</h2>
+<div class="fragment"><div class="line"><span class="comment">/* Retruns true if it&#39;s inside the dead_zone  */</span></div>
+<div class="line"><span class="keywordtype">bool</span> <a class="code hl_function" href="main_8cpp.html#aa0fe5745768ba65e81bf855149404cd3">in_dead_zone</a>(<span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max, <span class="keyword">const</span> std::pair&lt;int, int&gt; &amp;center)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> ((center.first &lt;= max &amp;&amp; center.first &gt;= min) &amp;&amp; (center.second &lt;= max &amp;&amp; center.second &gt;= min))</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md15"></a>
+Filtrage de l'image et processing</h1>
+<ol type="1">
+<li><b>Conversion de l'image en espace de couleur HSV</b></li>
+</ol>
+<p>Pour traiter l'image plus efficacement, nous la convertissons d'abord de l'espace de couleur BGR (Bleu-Vert-Rouge) en espace HSV (Hue, Saturation, Value), qui facilite la segmentation des couleurs spécifiques.</p>
+<div class="fragment"><div class="line">cv::Mat hsv_image;</div>
+<div class="line">cv::cvtColor(inputImage, hsv_image, cv::COLOR_BGR2HSV);</div>
+</div><!-- fragment --><p> La fonction cvtColor convertit l'image d'un espace de couleur à un autre. Dans ce cas, elle convertit l'image d'un espace de couleur BGR (Bleu-Vert-Rouge) à HSV.</p><ul>
+<li>inputImage est l'image d'entrée</li>
+<li>hsv_image est l'image résultante convertie en espace de couleur HSV</li>
+</ul>
+<p><b>Définition de la plage de valeurs de teinte pour le rouge</b></p>
+<p>La couleur rouge s'étend sur deux plages dans l'espace HSV. Le rouge pur est situé à l'extrémité inférieure (0) et à l'extrémité supérieure (180) de l'échelle des teintes, donc les valeurs de teinte de 0 à 10 et de 170 à 180 sont sélectionnées. Les valeurs de saturation sont ajustées par rapport à différents essais pour s'assurer que le filtre detecte bien le rouge que nous voulons.</p>
+<div class="fragment"><div class="line">cv::Mat redLowerRange, redUpperRange;</div>
+<div class="line">cv::inRange(hsv_image, cv::Scalar(0, 70, 50), cv::Scalar(10, 255, 255), redLowerRange);    <span class="comment">// Plage inférieure de rouge</span></div>
+<div class="line">cv::inRange(hsv_image, cv::Scalar(170, 70, 50), cv::Scalar(180, 255, 255), redUpperRange); <span class="comment">// Plage supérieure de rouge</span></div>
+</div><!-- fragment --><p> Chaque cv::Scalar spécifie les limites de Hue, Saturation, et Value. inRange crée un masque binaire où les pixels dans les plages spécifiées sont blancs, et les autres sont noirs.</p>
+<ol type="1">
+<li><b>Combinaison des plages de rouge</b></li>
+</ol>
+<p>Les deux masques binaires représentant les plages de rouge sont combinés pour former une image unique où tous les pixels rouges sont identifiés clairement.</p>
+<div class="fragment"><div class="line">cv::addWeighted(redLowerRange, 1.0, redUpperRange, 1.0, 0.0, binaryImage);</div>
+</div><!-- fragment --> <pre class="fragment">- cv::addWeighted fusionne les plages inférieure et supérieure de rouge obtenues précédemment.
+- binaryImage est l'image binaire résultante, où les zones rouges sont blanches et le reste est noir.
+</pre><h1><a class="anchor" id="autotoc_md16"></a>
+Calcul du centre des pixels colorisés</h1>
+<p>Pour déterminer le centre des zones colorisées dans une image binarisée, nous suivons les étapes suivantes :</p>
+<ol type="1">
+<li><b>Initialisation des variables</b> : Trois variables sont initialisées : <code>pos_X</code> et <code>pos_Y</code> pour stocker les positions cumulatives des pixels colorisés, et <code>counter</code> pour compter le nombre de ces pixels.</li>
+<li><p class="startli"><b>Parcours de l'image</b> : L'image est analysée ligne par ligne et colonne par colonne. À chaque fois qu'un pixel blanc (valeur de 255 dans l'image binarisée) est détecté, ses coordonnées sont ajoutées aux variables <code>pos_X</code> et <code>pos_Y</code>, et la variable <code>counter</code> est incrémentée.</p>
+<div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; binary_image.rows; i++) {</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; binary_image.cols; j++) {</div>
+<div class="line">        <span class="keywordflow">if</span> (binary_image.at&lt;uchar&gt;(i, j) == 255) { <span class="comment">// Vérifie si le pixel est blanc</span></div>
+<div class="line">            pos_X += j;</div>
+<div class="line">            pos_Y += i;</div>
+<div class="line">            counter++;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --></li>
+<li><p class="startli"><b>Calcul de la position moyenne</b> : Après avoir parcouru toute l'image, la position moyenne du centre des pixels blancs est calculée en divisant les sommes <code>pos_X</code> et <code>pos_Y</code> par le nombre de pixels détectés (<code>counter</code>).</p>
+<div class="fragment"><div class="line">pos_X /= counter; </div>
+<div class="line">pos_Y /= counter; </div>
+</div><!-- fragment --></li>
+<li><b>Gestion des cas où aucun pixel n'est détecté</b> : Si aucun pixel blanc n'est trouvé (<code>counter</code> est égal à zéro), des valeurs spécifiques sont retournées pour signaler l'absence de pixels colorisés.</li>
+</ol>
+<p>Cette méthode nous permet de calculer de manière efficace la position moyenne des pixels colorisés, séparant les composantes horizontales et verticales, et offre une indication claire lorsque aucun pixel pertinent n'est détecté.</p>
+<h1><a class="anchor" id="autotoc_md17"></a>
+Thresholding de l'image binarisée</h1>
+<p>Le thresholding permet de déterminer si le nombre de pixels détectés dans l'image binarisée justifie une action des actionneurs. Cette étape est essentielle pour prévenir les mouvements inutiles, en s'assurant que l'objet détecté est suffisamment significatif avant de procéder au test de la zone morte (dead zone).</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line"><span class="comment">/* Traitement de l&#39;image */</span></div>
+<div class="line">process_image(roi_image, binary_image);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* Thresholding */</span></div>
+<div class="line"><span class="keywordtype">int</span> num_red_pixels = cv::countNonZero(binary_image);</div>
+<div class="line"><span class="keywordflow">if</span> (num_red_pixels &gt; <a class="code hl_define" href="main_8cpp.html#a429830325decac55e6dd00d7b970e6fc">MIN_RED_PIXELS</a>)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (!<a class="code hl_function" href="main_8cpp.html#aa0fe5745768ba65e81bf855149404cd3">in_dead_zone</a>(dead_min, dead_max))</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// Actions à entreprendre si hors de la dead zone</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">...</div>
+<div class="ttc" id="amain_8cpp_html_a429830325decac55e6dd00d7b970e6fc"><div class="ttname"><a href="main_8cpp.html#a429830325decac55e6dd00d7b970e6fc">MIN_RED_PIXELS</a></div><div class="ttdeci">#define MIN_RED_PIXELS</div><div class="ttdef"><b>Definition</b> main.cpp:29</div></div>
+</div><!-- fragment --><p> Après le traitement de l'image, nous obtenons une image binarisée où les pixels blancs représentent les zones qui passent le filtre de couleur. Cependant, tous les pixels blancs détectés ne sont pas forcément indicatifs de la présence de l'objet de la couleur ciblée. Par exemple, lors de la détection de rouge, la caméra peut parfois confondre des nuances de peau ou d'autres éléments de couleur similaire avec l'objet rouge à suivre.</p>
+<p>Pour pallier ce problème, le thresholding compte le nombre de pixels blancs (points "test_passé"). Si ce nombre dépasse un seuil prédéfini, nous considérons qu'il y a suffisamment de preuves pour confirmer la présence de l'objet ciblé. Ce test est effectué avant la vérification de la dead zone et le calcul du centre des zones colorisées, évitant ainsi le suivi de points incorrectement détectés ou insignifiants.</p>
+<h1><a class="anchor" id="autotoc_md18"></a>
+Perspectives d'amélioration</h1>
+<p>À mesure que notre projet évolue, plusieurs améliorations notables se dessinent. Cependant, en raison de contraintes de temps, nous avons choisi de concentrer d'abord nos efforts sur le développement du projet libre. Voici néanmoins quelques améliorations que nous envisageons comme étant particulièrement intéressantes :</p>
+<ol type="1">
+<li><b>Sélection dynamique de la couleur à suivre</b> : Offrir à l'utilisateur la possibilité de sélectionner la couleur à traquer directement depuis l'interface utilisateur en utilisant un clic de souris pour choisir un objet à l'écran.</li>
+<li><b>Optimisation du filtrage</b> : Améliorer le processus de filtrage pour augmenter la précision et la réactivité du système de suivi, en réduisant les fausses détections et en améliorant la fidélité des couleurs suivies.</li>
+<li><b>Communication sans fil</b> : Développer un protocole de communication sans fil, potentiellement en utilisant la Frequency API d'Arduino, pour traiter les coordonnées de manière plus flexible et intégrée.</li>
+</ol>
+<p>Ces améliorations pourraient significativement augmenter la fonctionnalité et l'efficacité de notre système, et seront envisagées pour de futures itérations du projet.</p>
+<h1><a class="anchor" id="autotoc_md19"></a>
+Copyright</h1>
+<h5>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun | 2023 - 2024 All rights reserved</h5>
+</div></div><!-- PageDoc -->
+<a href="doxygen_crawl.html"/>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+  Copyright (c) 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script><a href="https://dev.madebyvasilis.site/image-pulser.html"> Projet Imposé</a> | All rights reserved 
+</small>
+<br>
+<small>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun</small></address>
+</body>
+</html>
