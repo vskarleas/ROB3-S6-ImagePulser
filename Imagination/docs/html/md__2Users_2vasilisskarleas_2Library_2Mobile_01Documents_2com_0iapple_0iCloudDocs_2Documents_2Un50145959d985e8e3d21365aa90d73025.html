@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ImagePulser: iManuel d&#39;Utilisateur - Installation</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ImagePulser<span id="projectnumber">&#160;V5.2.4</span>
+   </div>
+   <div id="projectbrief">Simplification des images prises avec une webcam</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">iManuel d'Utilisateur - Installation</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md81"></a></p>
+<h1><a class="anchor" id="autotoc_md82"></a>
+Prérequis</h1>
+<blockquote class="doxtable">
+<p>&zwj;Pour votre simplicité nous avons crée un script <code>bash installation.sh</code> qui vous permet d'installer toutes les librairies nécessaires à l'utilisation de notre projet et bien plus encore... </p>
+</blockquote>
+<p>Avant de procéder à l'installation du code source sur votre ordinateur, assurez-vous de disposer des librairies et outils suivants nécessaires à la compilation et à l'exécution du logiciel :</p>
+<ol type="1">
+<li><b>Gestionnaire de paquets Homebrew</b> :<ul>
+<li>Pour l'installer, exécutez la commande suivante dans votre terminal : <div class="fragment"><div class="line">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</div>
+</div><!-- fragment --></li>
+</ul>
+</li>
+<li><b>Python</b> :<ul>
+<li>Python est requis pour certains packages. Assurez-vous de l'avoir installé sur votre système.</li>
+</ul>
+</li>
+<li><b>Librairie OpenCV</b> :<ul>
+<li>Nécessaire pour le traitement des images. Installez-la via Homebrew en utilisant : <div class="fragment"><div class="line">brew install opencv</div>
+</div><!-- fragment --></li>
+</ul>
+</li>
+<li><b>Outil de construction CMake</b> :<ul>
+<li>Téléchargez et installez CMake pour la compilation des projets. Retrouvez plus d'informations et les liens de téléchargement sur <a href="https://cmake.org/download/">le site de CMake</a>.</li>
+</ul>
+</li>
+<li><b>Compilateurs C et C++</b> :<ul>
+<li>Assurez-vous que gcc et g++ sont installés, car ils sont essentiels pour compiler les programmes en C et C++.</li>
+</ul>
+</li>
+<li><b>Support de C++11 ou supérieur</b> :<ul>
+<li>Vérifiez que votre compilateur supporte au moins la norme C++11.</li>
+</ul>
+</li>
+<li><b>Evince</b> :<ul>
+<li>Installé via Homebrew, cet outil est indispensable pour ouvrir les file_inputs EPS générés par le programme : <div class="fragment"><div class="line">brew install evince</div>
+</div><!-- fragment --></li>
+</ul>
+</li>
+<li><b>GTK</b> :<ul>
+<li>GTK est nécessaire pour l'interface graphique du programme. Installez GTK en suivant les instructions spécifiques à votre système :<ul>
+<li><b>Mac/Linux</b> : <div class="fragment"><div class="line">brew install gtk+</div>
+</div><!-- fragment --></li>
+<li><b>Windows</b> : <div class="fragment"><div class="line">pacman -S mingw-w64-x86_64-gtk4</div>
+</div><!-- fragment --></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>Ces outils et librairies sont essentiels pour garantir une installation sans problème et le bon fonctionnement du logiciel sur votre ordinateur. Assurez-vous de les installer avant de continuer avec le processus d'installation du code source.</p>
+<h1><a class="anchor" id="autotoc_md83"></a>
+Exploration du Code Source avec VSCode</h1>
+<p>Pour les développeurs désirant explorer ou modifier le projet, il est recommandé d'utiliser Visual Studio Code (VSCode), un éditeur de code polyvalent et puissant. Vous pouvez télécharger VSCode à partir de <a href="https://code.visualstudio.com/download">ce lien</a>.</p>
+<p>Il est important de noter que l'installation de VSCode n'est pas nécessaire pour compiler le projet, mais elle peut enrichir votre expérience de développement grâce à diverses extensions disponibles.</p>
+<h3><a class="anchor" id="autotoc_md84"></a>
+Extensions Recommandées pour VSCode</h3>
+<p>Si vous choisissez d'utiliser VSCode, voici une sélection d'extensions qui peuvent améliorer votre flux de travail de développement :</p>
+<ol type="1">
+<li><b>C/C++ (ms-vscode.cpptools)</b> :<ul>
+<li>Fournit IntelliSense, débogage, et navigation dans le code C/C++.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools">Lien VS Marketplace</a></li>
+</ul>
+</li>
+<li><b>C/C++ Extension Pack (ms-vscode.cpptools-extension-pack)</b> :<ul>
+<li>Regroupe des extensions populaires pour le développement C/C++ sous VSCode.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools-extension-pack">Lien VS Marketplace</a></li>
+</ul>
+</li>
+<li><b>CMake (twxs.cmake)</b> :<ul>
+<li>Support pour CMake, un système de build essentiel pour les projets C++.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=twxs.cmake">Lien VS Marketplace</a></li>
+</ul>
+</li>
+<li><b>CodeLLDB (vadimcn.vscode-lldb)</b> :<ul>
+<li>Débogueur natif puissant, supportant C++, Rust, et d’autres langues compilées.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb">Lien VS Marketplace</a></li>
+</ul>
+</li>
+<li><b>HTML CSS Support (ecmel.vscode-html-css)</b> :<ul>
+<li>Fournit IntelliSense pour CSS dans les documents HTML.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css">Lien VS Marketplace</a></li>
+</ul>
+</li>
+<li><b>IntelliCode (VisualStudioExptTeam.vscodeintellicode)</b> :<ul>
+<li>Développement assisté par IA pour une programmation plus efficace.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode">Lien VS Marketplace</a></li>
+</ul>
+</li>
+<li><b>Make + LLDB Configuration (perelabat.make-lldb-config)</b> :<ul>
+<li>Fournit une configuration simple pour exécuter des builds et déboguer avec Make et LLDB.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=perelabat.make-lldb-config">Lien VS Marketplace</a></li>
+</ul>
+</li>
+<li><b>Tabnine (TabNine.tabnine-vscode)</b> :<ul>
+<li>Assistant de codage AI offrant des complétions de code et des discussions de code AI directement dans l'IDE, supportant une multitude de langages.</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode">Lien VS Marketplace</a></li>
+</ul>
+</li>
+</ol>
+<p>Ces extensions optimisent les fonctionnalités de VSCode, rendant le processus de développement plus intuitif et efficace.</p>
+<h2><a class="anchor" id="autotoc_md85"></a>
+À propos du Projet</h2>
+<p>Ce projet est écrit en C et C++. Pour faciliter la compilation et garantir la compatibilité sur différents systèmes d'exploitation, un Makefile est inclus avec le code source. Ce Makefile est conçu pour simplifier le processus de compilation et augmenter la portabilité du projet.</p>
+<h2><a class="anchor" id="autotoc_md86"></a>
+Guide d'Installation</h2>
+<p>Pour installer et lancer le programme, suivez ces étapes simples :</p>
+<ol type="1">
+<li><b>Téléchargement :</b><ul>
+<li>Téléchargez le dossier "Imagination" contenant le projet.</li>
+</ul>
+</li>
+<li><b>Préparation :</b><ul>
+<li>Ouvrez un terminal et naviguez jusqu'au dossier téléchargé.</li>
+</ul>
+</li>
+<li><p class="startli"><b>Installation des modules (Facultatif)</b></p>
+<p class="startli">Pour vous faciliter, on a integré un script qui permetra d'installer les modules que le program a besoin. Il faut noter qu'il utiliser Brew package manager. Dans les packages il y a une diversite des outils informatiques qui pouraient etre interessant pour vos projets. Ceux que vous avez besoin pour ce projet sont <code>"evince" "gtk+" "doxygen" "azure-cli" "opencv" "openexr" "libtiff" "libpng" "jpeg" "gnuplot"</code></p>
+<p class="startli">Dans le terminal, modifiez les permissions du script pour le rendre exécutable :</p>
+<div class="fragment"><div class="line">chmod 777 installation.sh</div>
+</div><!-- fragment --><p class="startli">Lancez le script avec la commande :</p>
+<div class="fragment"><div class="line">bash installation.sh</div>
+</div><!-- fragment --></li>
+<li><p class="startli"><b>Exécution du Script :</b></p>
+<p class="startli">Dans le terminal, modifiez les permissions du script pour le rendre exécutable :</p>
+<div class="fragment"><div class="line">chmod 777 program.sh</div>
+</div><!-- fragment --><p class="startli">Lancez le script avec la commande :</p>
+<div class="fragment"><div class="line">bash program.sh</div>
+</div><!-- fragment --><p class="startli">Le script compile automatiquement l'application et démarre son exécution.</p>
+</li>
+<li><b>Gestion des file_inputs :</b><ul>
+<li>Consultez le file_input <em>"RepSimplification des images prise avec un webcamertoires"</em> pour voir les données stockées. Ce file_input vous permet également de charger directement des images PNG ou PBM si nécessaire.</li>
+</ul>
+</li>
+<li><b>Options de Configuration :</b><ul>
+<li>Lorsque le script <code>program.sh</code> est exécuté, plusieurs configurations vous sont proposées :<ol type="a">
+<li><b>Mode Automatique :</b> Lance automatiquement le flux de travail principal utilisant la webcam.</li>
+<li><b>Mode Manuel :</b> Permet de sélectionner manuellement les fonctionnalités à utiliser, offrant une flexibilité accrue pour répondre à vos besoins spécifiques.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<p>Ces instructions facilitent la mise en place rapide du programme et vous permettent de personnaliser l'expérience utilisateur selon vos préférences. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+  Copyright (c) 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script><a href="https://imagepulser.dev.madebyvasilis.site/"> ImagePulser</a> | All rights reserved 
+</small>
+<br>
+<small>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun</small></address>
+</body>
+</html>

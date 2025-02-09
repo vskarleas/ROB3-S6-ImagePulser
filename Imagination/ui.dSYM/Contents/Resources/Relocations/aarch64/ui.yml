@@ -1,20 +1,5 @@
 ---
 triple:          'arm64-apple-darwin'
 binary-path:     ui
-relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: __Z15tmp_image_foundPKc, symObjAddr: 0x0, symBinAddr: 0x1000023E4, symSize: 0x8C }
-  - { offsetInCU: 0x623, offset: 0x623, size: 0x8, addend: 0x0, symName: __Z15tmp_image_foundPKc, symObjAddr: 0x0, symBinAddr: 0x1000023E4, symSize: 0x8C }
-  - { offsetInCU: 0x708, offset: 0x708, size: 0x8, addend: 0x0, symName: __Z34execute_command_and_display_outputPKcP10_GtkWidget, symObjAddr: 0x8C, symBinAddr: 0x100002470, symSize: 0x64C }
-  - { offsetInCU: 0x866, offset: 0x866, size: 0x8, addend: 0x0, symName: __Z17show_input_dialogP10_GtkWidgetPv, symObjAddr: 0x6D8, symBinAddr: 0x100002ABC, symSize: 0x2F8 }
-  - { offsetInCU: 0x96D, offset: 0x96D, size: 0x8, addend: 0x0, symName: __ZL17on_entry_activateP9_GtkEntryP10_GtkDialog, symObjAddr: 0x9D0, symBinAddr: 0x100002DB4, symSize: 0x2C }
-  - { offsetInCU: 0x9A3, offset: 0x9A3, size: 0x8, addend: 0x0, symName: __Z16segments_clickedP10_GtkWidgetPv, symObjAddr: 0x9FC, symBinAddr: 0x100002DE0, symSize: 0x74 }
-  - { offsetInCU: 0x9E7, offset: 0x9E7, size: 0x8, addend: 0x0, symName: __Z15bezier2_clickedP10_GtkWidgetPv, symObjAddr: 0xA70, symBinAddr: 0x100002E54, symSize: 0x74 }
-  - { offsetInCU: 0xA2B, offset: 0xA2B, size: 0x8, addend: 0x0, symName: __Z15bezier3_clickedP10_GtkWidgetPv, symObjAddr: 0xAE4, symBinAddr: 0x100002EC8, symSize: 0x74 }
-  - { offsetInCU: 0xA6F, offset: 0xA6F, size: 0x8, addend: 0x0, symName: __Z18cartoonize_clickedP10_GtkWidgetPv, symObjAddr: 0xB58, symBinAddr: 0x100002F3C, symSize: 0xB8 }
-  - { offsetInCU: 0xAB3, offset: 0xAB3, size: 0x8, addend: 0x0, symName: __Z25check_image_and_update_uiP10_GtkWidget, symObjAddr: 0xC10, symBinAddr: 0x100002FF4, symSize: 0x108 }
-  - { offsetInCU: 0xB18, offset: 0xB18, size: 0x8, addend: 0x0, symName: __Z24show_image_found_optionsP10_GtkWidget, symObjAddr: 0xD18, symBinAddr: 0x1000030FC, symSize: 0x340 }
-  - { offsetInCU: 0xBC0, offset: 0xBC0, size: 0x8, addend: 0x0, symName: __Z21image_capture_clickedP10_GtkWidgetPv, symObjAddr: 0x1058, symBinAddr: 0x10000343C, symSize: 0xA8 }
-  - { offsetInCU: 0xC17, offset: 0xC17, size: 0x8, addend: 0x0, symName: __Z27show_no_image_found_optionsP10_GtkWidget, symObjAddr: 0x1100, symBinAddr: 0x1000034E4, symSize: 0x174 }
-  - { offsetInCU: 0xC7D, offset: 0xC7D, size: 0x8, addend: 0x0, symName: __Z17show_default_pageP10_GtkWidget, symObjAddr: 0x1274, symBinAddr: 0x100003658, symSize: 0x104 }
-  - { offsetInCU: 0xCD4, offset: 0xCD4, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1378, symBinAddr: 0x10000375C, symSize: 0x168 }
+relocations:     []
 ...

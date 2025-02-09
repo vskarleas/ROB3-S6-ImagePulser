@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ImagePulser: Tâche 7 : Simplification par Courbes de Bézier de Degré 1 ou 2</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ImagePulser<span id="projectnumber">&#160;V5.2.4</span>
+   </div>
+   <div id="projectbrief">Simplification des images prises avec une webcam</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">Tâche 7 : Simplification par Courbes de Bézier de Degré 1 ou 2</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md67"></a></p>
+<h1><a class="anchor" id="autotoc_md68"></a>
+Introduction aux Courbes de Bézier</h1>
+<p>Les courbes de Bézier sont des outils essentiels en infographie pour modéliser des formes lisses et continues. Elles sont définies par des polynômes paramétriques, où chaque courbe est contrôlée par plusieurs points appelés points de contrôle. Ces points influencent la forme de la courbe mais ne sont pas nécessairement traversés par celle-ci, sauf pour les points aux extrémités.</p>
+<h1><a class="anchor" id="autotoc_md69"></a>
+Courbes de Bézier de Degré 1 et 2</h1>
+<h2><a class="anchor" id="autotoc_md70"></a>
+Definitions</h2>
+<ul>
+<li><b>Courbes de Bézier de degré 1 :</b><ul>
+<li>Ce sont essentiellement des lignes droites entre deux points de contrôle C0 et C1 .</li>
+<li>La formule pour une courbe de Bézier de degré 1 est donnée par C(t) = (1 - t)C0 + tC1 pour t dans [0, 1].</li>
+<li>Dans le contexte de simplification, utiliser une courbe de Bézier de degré 1 revient à remplacer une séquence de points par un simple segment de droite, réduisant ainsi la complexité sans perdre les informations critiques.</li>
+</ul>
+</li>
+<li><b>Courbes de Bézier de degré 2 (quadratiques) :</b><ul>
+<li>Ces courbes introduisent un point de contrôle supplémentaire C2 , permettant la formation d'arcs de parabole.</li>
+<li>La formule est C(t) = (1 - t)^2C0 + 2t(1 - t)C1 + t^2 C2 .</li>
+<li>Le second degré offre une plus grande flexibilité pour modéliser les courbures, permettant de mieux approximer des formes complexes avec moins de points que la linéarisation simple.</li>
+</ul>
+</li>
+<li><b>Courbes de Bézier de degré 3 (Bézier Cubique)</b><ul>
+<li>Une courbe de Bézier cubique présente (au plus) un point d’inflexion.</li>
+<li>La formule est C(t)=(1−t)^3 * C0 + 3t(1−t)^2 * C1+3t 2(1−t)C2+t^3 * C3</li>
+</ul>
+</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md71"></a>
+Courbes de Bézier de degré 2 et 3</h1>
+<p>Notre projet se concentre sur l'utilisation des courbes de Bézier de degré 2 et de degré 3. Les courbes de Bézier sont des courbes paramétriques polynomiales définies par un ensemble de points de contrôle. Voici comment ces courbes sont calculées pour chaque degré :</p>
+<ul>
+<li><b>Cas de degré 2 (d=2)</b> : La courbe C est définie par trois points de contrôle C0, C1, et C2. La représentation de cette courbe est illustrée ci-dessous : <img src="image/tache7/1717362530096.png" alt="1717362530096" class="inline"/></li>
+<li><b>Cas de degré 3 (d=3)</b> : La courbe C est définie par quatre points de contrôle C0, C1, C2, et C3. La représentation de cette courbe est illustrée ci-dessous : <img src="image/tache7/1717362538035.png" alt="1717362538035" class="inline"/></li>
+</ul>
+<blockquote class="doxtable">
+<p>&zwj;c(t) est le point courant sur une courbe de Bézier qu;on utilisera ci-dessous pour la calcul de la distance entre un point et une courbe de Bézier. Voir paragraphe "Méthode de Calcul de la distance entre un point et une courbe de Bézier de Degré 2" </p>
+</blockquote>
+<p>Les courbes de Bézier sont exprimées à l'aide de la base de Bernstein plutôt que la base des monômes traditionnelle {1, t, t2, . . . , td} . Ci-dessous, vous trouverez une illustration montrant comment les points de contrôle sont calculés selon cette base :</p>
+<p><img src="image/tache7/1717362565980.png" alt="1717362565980" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md72"></a>
+Utilisation des Courbes de Bézier dans le Projet</h1>
+<p>Dans notre projet, nous utilisons les courbes de Bézier pour simplifier les contours en réduisant le nombre de points nécessaires tout en préservant une approximation fidèle de la forme originale. Le degré de la courbe de Bézier choisi (degré 2 ou degré 3) est déterminé par la complexité de la forme à modéliser et la précision exigée pour l'application finale.</p>
+<ul>
+<li><b>Degré 2</b> : Ce degré est choisi pour traiter les contours qui sont relativement droits ou présentent de légères courbes. Dans ce cas, la priorité est donnée à la simplicité plutôt qu'à une précision absolue de la courbe.</li>
+<li><b>Degré 3</b> : Ce degré est utilisé pour les formes plus complexes nécessitant une modélisation précise des virages et des boucles. Le degré 3 permet de capturer ces détails sans nécessiter l'ajout de nombreux points supplémentaires, optimisant ainsi le rendu et la performance.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md73"></a>
+Simplification par courbe de Bézier de Degré 2</h1>
+<p>L'adaptation de l'algorithme de Douglas-Peucker pour la simplification par courbes de Bézier de degré 2 présente plusieurs différences clés :</p>
+<ol type="1">
+<li><b>Remplacement des Segments par des Courbes de Bézier</b> : Au lieu de simplifier les contours en utilisant des séquences de segments droits, notre méthode emploie des séquences de courbes de Bézier de degré 2.</li>
+<li><b>Approximation des Contours Initiaux</b> : Pour un contour initial CONT = P_{j1}, ..., P_{j2} </li>
+</ol>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+  Copyright (c) 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script><a href="https://imagepulser.dev.madebyvasilis.site/"> ImagePulser</a> | All rights reserved 
+</small>
+<br>
+<small>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun</small></address>
+</body>
+</html>

@@ -1,18 +1,18 @@
-<map id="/Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c&#45;project&#45;rob&#45;3&#45;eleves&#45;gr&#45;2&#45;1/Imagination/image.c" name="/Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c&#45;project&#45;rob&#45;3&#45;eleves&#45;gr&#45;2&#45;1/Imagination/image.c">
-<area shape="rect" id="Node000001" title="Déclarations de fonctions pour le module Image." alt="" coords="91,5,324,106"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,301,66,327"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,98,56,123,28,155,17,188,15,223,20,257,28,286,23,288,15,258,10,223,12,187,24,153,53,119,89,94"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="219,301,282,327"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="289,105,311,127,327,153,333,172,333,192,322,230,300,264,276,292,272,288,296,261,317,228,328,191,328,173,322,155,306,130,285,108"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="129,154,193,180"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="189,107,174,141,170,138,184,105"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="217,154,291,180"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="231,105,245,138,241,141,226,107"/>
-<area shape="rect" id="Node000006" href="$error_8h.html" title="UINT et FATAL_ERROR déclaration." alt="" coords="132,228,190,253"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="283,105,299,122,310,141,313,161,306,181,285,203,260,219,232,230,205,236,204,231,230,225,257,214,282,199,301,178,308,161,305,143,295,125,279,108"/>
-<area shape="rect" id="Node000007" href="$image_8h.html" title="Déclaration des fonctions pour image.c." alt="" coords="38,154,105,180"/>
-<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="147,109,100,146,97,142,144,104"/>
-<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="141,256,71,296,69,291,138,252"/>
-<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="178,252,225,289,222,294,174,256"/>
-<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="88,178,136,216,132,220,85,182"/>
+<map id="/Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/ImagePulser/Imagination/image.c" name="/Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/ImagePulser/Imagination/image.c">
+<area shape="rect" id="Node000001" title="Déclarations de fonctions pour le module Image." alt="" coords="88,5,327,91"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,286,66,312"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,88,55,110,28,140,16,173,15,208,20,242,28,271,23,272,15,243,9,208,11,172,24,138,51,106,86,83"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="218,286,282,312"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="285,89,309,111,327,138,333,157,334,177,322,215,300,249,276,277,272,274,296,246,317,213,329,176,328,158,322,140,305,115,282,93"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="129,139,193,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="191,92,175,126,170,124,186,90"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="217,139,291,165"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="229,90,245,124,240,126,224,92"/>
+<area shape="rect" id="Node000006" href="$error_8h.html" title="UINT et FATAL_ERROR déclaration." alt="" coords="132,213,190,238"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="278,90,295,107,308,125,313,146,306,166,285,188,260,204,232,215,205,221,204,216,230,210,257,199,282,184,301,163,307,145,303,127,291,110,274,93"/>
+<area shape="rect" id="Node000007" href="$image_8h.html" title="Déclaration des fonctions pour image.c." alt="" coords="38,139,105,165"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="153,94,101,132,98,128,149,89"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="141,241,71,281,69,276,138,237"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="178,237,225,274,222,279,174,241"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="88,163,136,201,132,205,85,167"/>
 </map>

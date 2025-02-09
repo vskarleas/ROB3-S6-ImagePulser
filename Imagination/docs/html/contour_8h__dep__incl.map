@@ -1,29 +1,29 @@
-<map id="/Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c&#45;project&#45;rob&#45;3&#45;eleves&#45;gr&#45;2&#45;1/Imagination/contour.h" name="/Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c&#45;project&#45;rob&#45;3&#45;eleves&#45;gr&#45;2&#45;1/Imagination/contour.h">
-<area shape="rect" id="Node000001" title="Déclaration des fonctions pour contour.c." alt="" coords="1731,5,1964,106"/>
-<area shape="rect" id="Node000002" href="$bezier2__simplification_8c.html" title="Application de bezier2 sur codec&#45;V1.pbm." alt="" coords="5,154,260,255"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1715,63,1390,74,973,92,567,120,399,137,272,157,261,159,260,154,271,151,398,132,566,114,973,87,1390,68,1715,58"/>
-<area shape="rect" id="Node000003" href="$bezier2__simplification__manual_8c.html" title="Utilisation de bezier2_simplification en manuel." alt="" coords="284,154,587,255"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1715,61,1500,67,1222,82,911,111,753,131,600,157,588,159,587,154,599,151,753,126,910,105,1222,77,1500,62,1715,55"/>
-<area shape="rect" id="Node000004" href="$bezier3__simplification_8c.html" title="Application de bezier3 sur codec&#45;V1.pbm." alt="" coords="611,154,865,255"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1715,63,1546,71,1336,88,1106,115,990,134,877,157,866,159,865,154,876,151,989,129,1105,110,1335,82,1546,66,1715,58"/>
-<area shape="rect" id="Node000005" href="$bezier3__simplification__manual_8c.html" title="Utilisation de bezier3_simplification en manuel." alt="" coords="889,154,1192,255"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1715,74,1476,106,1339,129,1204,157,1193,159,1192,154,1203,151,1338,124,1475,101,1714,69"/>
-<area shape="rect" id="Node000006" href="$contour_8c.html" title="Implémentation des fonctions de gestion d&#39;un robot pour le tracé de contours dans une image." alt="" coords="1216,154,1449,255"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1716,88,1592,119,1461,157,1450,160,1449,155,1460,151,1591,114,1715,83"/>
-<area shape="rect" id="Node000007" href="$contours__multiple_8c.html" title="Test pour la détection de multiples de contours." alt="" coords="1473,154,1707,255"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1748,117,1678,156,1676,151,1745,112"/>
-<area shape="rect" id="Node000008" href="$contours__simple_8c.html" title="Test pour la détection d&#39;un seul contour." alt="" coords="1731,154,1964,255"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1850,121,1850,154,1845,154,1845,121"/>
-<area shape="rect" id="Node000009" href="$mask_8c.html" title="Test pour l&#39;image masque." alt="" coords="1988,154,2221,255"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1949,112,2019,151,2016,156,1947,117"/>
-<area shape="rect" id="Node000010" href="$segments__simplification_8c.html" title="Application de segments_simplification sur codec&#45;V1.pbm." alt="" coords="2246,154,2515,255"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1980,85,2235,151,2246,155,2244,160,2233,157,1978,90"/>
-<area shape="rect" id="Node000011" href="$segments__simplification__manual_8c.html" title="Application de la simplification par segments sur codec&#45;V1.pbm." alt="" coords="2539,154,2857,255"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1980,68,2235,100,2382,123,2528,151,2539,154,2538,159,2527,157,2381,129,2234,105,1979,73"/>
-<area shape="rect" id="Node000012" href="$test__approx_8c.html" title="Test pour l&#39;approximation d&#39;un segment pour une courbe de Bézier de degré 2." alt="" coords="2881,154,3115,255"/>
-<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="1980,56,2157,62,2380,78,2625,106,2749,127,2869,151,2881,154,2880,160,2868,157,2748,132,2625,112,2380,83,2157,68,1979,61"/>
-<area shape="rect" id="Node000013" href="$test__approx3_8c.html" title="Test pour l&#39;approximation d&#39;un segment pour une courbe de Bézier de degré 3." alt="" coords="3139,154,3372,255"/>
-<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="1979,59,2247,72,2578,92,2897,118,3028,134,3128,151,3139,154,3137,159,3127,157,3027,139,2896,124,2578,97,2247,77,1979,65"/>
-<area shape="rect" id="Node000014" href="$test__postscript_8c.html" title="Test pour la vérification des l&#39;ecriture des images en postscript (.eps)" alt="" coords="3396,154,3629,255"/>
-<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="1979,58,2297,68,2703,86,3098,113,3261,131,3385,151,3396,154,3395,159,3384,157,3260,136,3098,119,2702,91,2297,73,1979,63"/>
+<map id="/Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/ImagePulser/Imagination/contour.h" name="/Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/ImagePulser/Imagination/contour.h">
+<area shape="rect" id="Node000001" title="Déclaration des fonctions pour contour.c." alt="" coords="1610,5,1857,91"/>
+<area shape="rect" id="Node000002" href="$bezier2__simplification_8c.html" title="Application de bezier2 sur codec&#45;V1.pbm." alt="" coords="5,139,241,240"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1595,55,1287,65,900,81,526,107,371,123,254,142,242,145,241,139,253,136,371,117,525,101,900,76,1287,59,1595,50"/>
+<area shape="rect" id="Node000003" href="$bezier2__simplification__manual_8c.html" title="Utilisation de bezier2_simplification en manuel." alt="" coords="265,139,501,240"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1595,57,1338,69,1027,87,730,111,607,126,514,142,502,145,501,139,513,136,607,120,729,106,1027,82,1338,64,1595,52"/>
+<area shape="rect" id="Node000004" href="$bezier3__simplification_8c.html" title="Application de bezier3 sur codec&#45;V1.pbm." alt="" coords="525,139,761,240"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1595,54,1428,60,1222,75,997,101,884,119,774,142,762,145,761,140,773,136,883,114,996,95,1221,69,1428,55,1595,48"/>
+<area shape="rect" id="Node000005" href="$bezier3__simplification__manual_8c.html" title="Utilisation de bezier3_simplification en manuel." alt="" coords="785,139,1021,240"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1595,60,1474,71,1333,87,1183,110,1034,142,1022,145,1021,140,1033,136,1182,105,1332,82,1474,66,1595,55"/>
+<area shape="rect" id="Node000006" href="$contour_8c.html" title="Implémentation des fonctions de gestion d&#39;un robot pour le tracé de contours dans une image." alt="" coords="1045,146,1292,232"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1596,76,1454,104,1305,142,1282,148,1281,143,1304,136,1453,99,1594,71"/>
+<area shape="rect" id="Node000007" href="$contours__multiple_8c.html" title="Test pour la détection de multiples de contours." alt="" coords="1316,139,1559,240"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1631,100,1545,141,1542,136,1629,96"/>
+<area shape="rect" id="Node000008" href="$contours__simple_8c.html" title="Test pour la détection d&#39;un seul contour." alt="" coords="1584,146,1883,232"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1736,107,1736,146,1731,146,1731,107"/>
+<area shape="rect" id="Node000009" href="$mask_8c.html" title="Test pour l&#39;image masque." alt="" coords="1908,146,2144,232"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1837,96,1938,143,1936,148,1835,101"/>
+<area shape="rect" id="Node000010" href="$segments__simplification_8c.html" title="Application de segments_simplification sur codec&#45;V1.pbm." alt="" coords="2168,139,2419,240"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1872,71,2011,100,2157,136,2169,140,2167,145,2156,142,2010,105,1871,77"/>
+<area shape="rect" id="Node000011" href="$segments__simplification__manual_8c.html" title="Application de la simplification par segments sur codec&#45;V1.pbm." alt="" coords="2443,139,2694,240"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1873,56,1993,67,2134,83,2284,106,2432,136,2443,139,2442,145,2430,142,2283,111,2133,88,1993,72,1872,61"/>
+<area shape="rect" id="Node000012" href="$test__approx_8c.html" title="Test pour l&#39;approximation d&#39;un segment pour une courbe de Bézier de degré 2." alt="" coords="2718,146,2990,232"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="1873,50,2042,57,2251,72,2479,98,2594,115,2706,136,2735,143,2734,149,2705,142,2593,121,2478,103,2250,78,2041,63,1872,55"/>
+<area shape="rect" id="Node000013" href="$test__approx3_8c.html" title="Test pour l&#39;approximation d&#39;un segment pour une courbe de Bézier de degré 3." alt="" coords="3014,139,3248,240"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="1873,52,2139,63,2464,80,2776,105,2904,120,3002,136,3014,139,3013,145,3001,142,2904,125,2775,110,2463,86,2138,68,1872,57"/>
+<area shape="rect" id="Node000014" href="$test__postscript_8c.html" title="Test pour la vérification des l&#39;ecriture des images en postscript (.eps)" alt="" coords="3272,139,3505,240"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="1872,50,2189,58,2590,74,2979,100,3139,117,3261,136,3272,139,3271,144,3260,142,3138,122,2978,105,2589,80,2189,64,1872,55"/>
 </map>

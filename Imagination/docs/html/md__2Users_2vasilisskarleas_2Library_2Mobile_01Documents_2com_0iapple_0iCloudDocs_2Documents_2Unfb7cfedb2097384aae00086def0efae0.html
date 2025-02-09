@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ImagePulser: Tâche 1 : Vectorisation d&#39;image bitmap (PBM)</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ImagePulser<span id="projectnumber">&#160;V5.2.4</span>
+   </div>
+   <div id="projectbrief">Simplification des images prises avec une webcam</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">Tâche 1 : Vectorisation d'image bitmap (PBM)</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md31"></a></p>
+<h1><a class="anchor" id="autotoc_md32"></a>
+Structures de données</h1>
+<p>Dans ce projet, nous utilisons principalement un objet nommé <code><a class="el" href="structImage.html" title="Structure représentant une image PBM.">Image</a></code>. La définition de cet objet varie en fonction du langage de programmation utilisé, certaines bibliothèques étant plus adaptées à C++ qu'à C, comme OpenCV. Pour les programmes écrits en C++, cet objet est défini via la classe <code>Mat</code> de la bibliothèque OpenCV. Pour ceux écrits en C, nous avons défini la structure nous-mêmes comme suit :</p>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structImage__.html">Image_</a> {</div>
+<div class="line">    <a class="code hl_typedef" href="error_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec">UINT</a> <a class="code hl_variable" href="structImage__.html#a4bc99b5059255dcf234ba3c78a3ec87f">the_height_of_the_image</a>; <span class="comment">// Hauteur de l&#39;image</span></div>
+<div class="line">    <a class="code hl_enumeration" href="image_8h.html#a535e59456e3e633842529cfa8ea103c4">Pixel</a>* <a class="code hl_variable" href="structImage__.html#a1b36114bfd3bb31d15dc4090967dded0">pointer_to_pixel_array</a>; <span class="comment">// Pointeur vers le tableau de pixels</span></div>
+<div class="line">} <a class="code hl_typedef" href="image_8h.html#a5b1da0495b6504545d03bd459b44cd82">Image</a>;</div>
+<div class="ttc" id="aerror_8h_html_a36cb3b01d81ffd844bbbfb54003e06ec"><div class="ttname"><a href="error_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec">UINT</a></div><div class="ttdeci">unsigned int UINT</div><div class="ttdef"><b>Definition</b> error.h:20</div></div>
+<div class="ttc" id="aimage_8h_html_a535e59456e3e633842529cfa8ea103c4"><div class="ttname"><a href="image_8h.html#a535e59456e3e633842529cfa8ea103c4">Pixel</a></div><div class="ttdeci">Pixel</div><div class="ttdoc">Type énuméré représentant la couleur d'un pixel.</div><div class="ttdef"><b>Definition</b> image.h:24</div></div>
+<div class="ttc" id="aimage_8h_html_a5b1da0495b6504545d03bd459b44cd82"><div class="ttname"><a href="image_8h.html#a5b1da0495b6504545d03bd459b44cd82">Image</a></div><div class="ttdeci">struct Image_ Image</div></div>
+<div class="ttc" id="astructImage___html"><div class="ttname"><a href="structImage__.html">Image_</a></div><div class="ttdef"><b>Definition</b> image.h:33</div></div>
+<div class="ttc" id="astructImage___html_a1b36114bfd3bb31d15dc4090967dded0"><div class="ttname"><a href="structImage__.html#a1b36114bfd3bb31d15dc4090967dded0">Image_::pointer_to_pixel_array</a></div><div class="ttdeci">Pixel * pointer_to_pixel_array</div><div class="ttdef"><b>Definition</b> image.h:36</div></div>
+<div class="ttc" id="astructImage___html_a4bc99b5059255dcf234ba3c78a3ec87f"><div class="ttname"><a href="structImage__.html#a4bc99b5059255dcf234ba3c78a3ec87f">Image_::the_height_of_the_image</a></div><div class="ttdeci">UINT the_height_of_the_image</div><div class="ttdef"><b>Definition</b> image.h:34</div></div>
+</div><!-- fragment --><p>Cette structure est basée sur un type énuméré associé à la propriété <code>Pixel</code>. Voici sa déclaration :</p>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">enum</span> {<a class="code hl_enumvalue" href="image_8h.html#a535e59456e3e633842529cfa8ea103c4a35653913ced93d8199f0378ec538a0c7">BLANC</a>=0, <a class="code hl_enumvalue" href="image_8h.html#a535e59456e3e633842529cfa8ea103c4a59e3323a198f0162330111165caaf367">NOIR</a>=1} <a class="code hl_enumeration" href="image_8h.html#a535e59456e3e633842529cfa8ea103c4">Pixel</a>;</div>
+<div class="ttc" id="aimage_8h_html_a535e59456e3e633842529cfa8ea103c4a35653913ced93d8199f0378ec538a0c7"><div class="ttname"><a href="image_8h.html#a535e59456e3e633842529cfa8ea103c4a35653913ced93d8199f0378ec538a0c7">BLANC</a></div><div class="ttdeci">@ BLANC</div><div class="ttdef"><b>Definition</b> image.h:24</div></div>
+<div class="ttc" id="aimage_8h_html_a535e59456e3e633842529cfa8ea103c4a59e3323a198f0162330111165caaf367"><div class="ttname"><a href="image_8h.html#a535e59456e3e633842529cfa8ea103c4a59e3323a198f0162330111165caaf367">NOIR</a></div><div class="ttdeci">@ NOIR</div><div class="ttdef"><b>Definition</b> image.h:24</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md33"></a>
+Gestion des file_inputs images</h1>
+<p>La manipulation de file_inputs images dans des formats tels que JPEG, JPG, PNG, WEBP, SVG, etc., peut être complexe. Pour simplifier notre approche, nous avons choisi d'utiliser le format PBM, un format de bitmap monochrome simple et universel.</p>
+<h1><a class="anchor" id="autotoc_md34"></a>
+Bitmap (PBM)</h1>
+<p>Un bitmap monochrome (PBM) est une grille rectangulaire de pixels noirs ou blancs. Chaque pixel est défini par un couple de coordonnées (x, y) où x varie de 1 à L (de gauche à droite) et y de 1 à H (de haut en bas). L représente la largeur de l'image et H sa hauteur.</p>
+<p>Dans notre système, tout pixel situé à l'extérieur des dimensions définies de l'image est considéré comme blanc. Par exemple, pour une image de dimensions 7 x 9, les positions (0,3) ou (4, 10) correspondraient à des pixels blancs en dehors de l'image.</p>
+<div class="image">
+<img src="1717362972435.png" alt=""/>
+<div class="caption">
+1717362972435</div></div>
+     </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+  Copyright (c) 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script><a href="https://imagepulser.dev.madebyvasilis.site/"> ImagePulser</a> | All rights reserved 
+</small>
+<br>
+<small>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun</small></address>
+</body>
+</html>

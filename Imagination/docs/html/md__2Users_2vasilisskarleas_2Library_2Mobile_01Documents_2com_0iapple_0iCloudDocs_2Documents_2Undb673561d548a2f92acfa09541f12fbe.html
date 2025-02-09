@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ImagePulser: Yanis Sadoun Rapport</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ImagePulser<span id="projectnumber">&#160;V5.2.4</span>
+   </div>
+   <div id="projectbrief">Simplification des images prises avec une webcam</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">Yanis Sadoun Rapport</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md97"></a></p>
+<h1><a class="anchor" id="autotoc_md98"></a>
+Introduction</h1>
+<p>Participer à la conception et au développement d'un système de pilotage pour une machine inspirée par l'innovation et la créativité de Pixar a été une expérience enrichissante et stimulante. Ce projet complexe avait pour objectif de mettre en œuvre une interaction dynamique avec l'environnement à travers une machine capable de suivre automatiquement une couleur spécifique ( figure imposée) et de simplifier les images capturées par une webcam ( projet libre ). Ma contribution a couvert des aspects importants de programmation et de conception systémique, me permettant de mettre en pratique mes compétences en informatique et en robotique .</p>
+<h1><a class="anchor" id="autotoc_md99"></a>
+Pilotage des Moteurs de Caméra : Intégration du Code C et Arduino</h1>
+<h2><a class="anchor" id="autotoc_md100"></a>
+Contexte et Déroulement du Projet</h2>
+<p>Dans le cadre de notre projet imposé, j'ai été chargé de développer le système de contrôle des moteurs de notre caméra en utilisant le langage C et Arduino. Cette responsabilité a représenté ma première approche pratique de l'utilisation du code C pour la commande directe de moteurs, un défi à la fois innovant et technique.</p>
+<h2><a class="anchor" id="autotoc_md101"></a>
+Principe de Fonctionnement</h2>
+<p>Le processus impliquait d'abord la capture d'images en temps réel à l'aide d'une caméra contrôlée par des servomoteurs. Le contrôle de ces servomoteurs se faisait via des commandes issues d'un clavier, transformées en coordonnées que nous utilisions pour ajuster l'orientation de la caméra en temps réel.</p>
+<ol type="1">
+<li><b>Capture et Traitement des Images :</b> Nous commencions par capturer des images en couleur, que nous traitions ensuite pour en extraire des éléments spécifiques en fonction de leur couleur à l'aide de la bibliothèque OpenCV. Ce traitement consistait à filtrer l'image par couleur pour isoler des éléments de l'image qui étaient ensuite utilisés pour déterminer la direction dans laquelle orienter la caméra.</li>
+<li><b>Détection de Position :</b> À partir de l'image traitée, nous déterminions le centre des éléments filtrés pour comprendre où la caméra devait pointer. Cette position était cruciale pour diriger les servomoteurs de manière précise.</li>
+<li><b>Transmission de Commandes via Arduino :</b> Les coordonnées obtenues étaient ensuite envoyées à un Arduino via une connexion série. L'Arduino, programmé pour interpréter ces commandes, ajustait les positions des servomoteurs en fonction des coordonnées reçues.</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md102"></a>
+Défis Techniques et Solutions</h2>
+<p>La complexité de ce projet résidait dans la nécessité de synchroniser parfaitement le traitement d'image avec le contrôle moteur pour obtenir une réponse fluide et précise. Parmi les défis rencontrés :</p>
+<ul>
+<li><b>Latence dans la transmission des commandes :</b> L'un des principaux problèmes était le délai entre la détection d'une position dans l'image et l'ajustement correspondant des servomoteurs. Pour minimiser cette latence, j’ai optimisé le code Arduino et ajusté les paramètres de communication série pour accélérer le transfert des données.</li>
+<li><b>Précision de la détection de position :</b> Assurer la précision de la détection de position dans l'image traitée était essentiel. J’ai expérimenté avec différents seuils et paramètres de filtrage HSV pour améliorer la fiabilité de la détection des objets.</li>
+<li><b>Calibration des servomoteurs :</b> La calibration précise des servomoteurs était nécessaire pour que les mouvements de la caméra correspondent exactement aux coordonnées calculées. J’ai passé plusieurs heures à ajuster les angles et les limites de mouvement des servomoteurs pour garantir un contrôle fluide et précis.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md103"></a>
+Impact Personnel et Professionnel</h2>
+<p>Ce projet a été l'occasion parfaite de combiner mes compétences en programmation avec des applications pratiques de robotique. Il m'a permis de voir directement l'impact de mon travail sur les opérations physiques d'un dispositif, renforçant mon intérêt pour le domaine de la robotique et me donnant des bases spour de futurs projets où logiciel et matériel interagissent étroitement.</p>
+<h1><a class="anchor" id="autotoc_md104"></a>
+Résolution de Problèmes Techniques avec les Moteurs de la Caméra</h1>
+<h2><a class="anchor" id="autotoc_md105"></a>
+Contexte et Problématique</h2>
+<p>Lors du développement de notre système de pilotage de notre c améra, nous avons rencontré un problème majeur : malgré un code apparemment correct, les moteurs ne répondaient pas comme prévu. Après une série de tests, il est apparu que le problème n'était pas lié au code, mais à des moteurs défectueux.</p>
+<h2><a class="anchor" id="autotoc_md106"></a>
+Intervention et Réparation</h2>
+<p>La découverte des moteurs défectueux nous a orientés vers un défi inattendu de robotique pratique. Remplacer les moteurs a impliqué de démonter la caméra, de sélectionner et installer de nouveaux moteurs adaptés. Ce processus, bien que laborieux, m’a permis de combiner compétences mécaniques et connaissances techniques.</p>
+<h2><a class="anchor" id="autotoc_md107"></a>
+Impact et Réflexion Personnelle</h2>
+<p>Cette expérience m'a marqué car elle a souligné l'importance de l'interaction entre le logiciel et le matériel. J'ai trouvé particulièrement gratifiant de résoudre un problème concret qui impactait directement le succès de notre projet.</p>
+<h1><a class="anchor" id="autotoc_md108"></a>
+Défi de la Liberté et Simplification par Segments</h1>
+<h2><a class="anchor" id="autotoc_md109"></a>
+La Paradoxe de la Liberté</h2>
+<p>Un des défis les plus intrigants de ce projet résidait dans l'immense liberté qui nous était donnée. Ce niveau de liberté, bien que potentiellement libérateur, impliquait également la difficulté de définir un cadre précis et efficace pour notre approche. Inspirés par les avancées présentées lors de la Google IO 2023, notamment la technique de prétraitement des images en valeurs binaires pour leur analyse par des réseaux neuronaux, nous avons choisi de concentrer nos efforts sur la simplification d'images. Cependant, déterminer la méthode optimale pour atteindre cet objectif s'est avéré complexe, nécessitant de vastes recherches et un tri minutieux des techniques disponibles.</p>
+<h2><a class="anchor" id="autotoc_md110"></a>
+Choix de la Simplification par Segments</h2>
+<p>Personnellement, j'ai été attiré par la simplification par segments utilisant l'algorithme de Douglas-Peucker. Cette méthode m'a fasciné non seulement par sa capacité à réduire la complexité des données tout en préservant les détails visuels essentiels, mais aussi par les défis mathématiques qu'elle représentait. L'algorithme de Douglas-Peucker est particulièrement adapté pour distiller l'essence des formes dans les images, en éliminant les informations superflues tout en conservant les caractéristiques structurales importantes.</p>
+<h2><a class="anchor" id="autotoc_md111"></a>
+Processus de Simplification</h2>
+<ol type="1">
+<li><b>Initialisation :</b> Nous commençons par identifier un segment initial reliant les points extrêmes du contour de l'objet à simplifier.</li>
+<li><b>Détermination du Point Critique :</b> La distance entre chaque point du contour et le segment est calculée. Le point avec la distance maximale est identifié comme le point critique.</li>
+<li><b>Division et Répétition :</b> Si la distance maximale dépasse un seuil prédéfini, le segment est divisé en deux nouveaux segments au niveau de ce point critique. Le processus est ensuite répété pour chaque nouveau segment, affinant progressivement la représentation jusqu'à atteindre le niveau de simplification souhaité.</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md112"></a>
+Défis et Réalisations</h2>
+<p>Le développement de cet algorithme a été un véritable test pour mes compétences en programmation et en gestion de données complexes. Chaque étape, que ce soit le calcul des distances ou la segmentation, demandait une grande précision et une rigueur mathématique.</p>
+<p>Intégrer les mathématiques dans ce projet m'a beaucoup apporté personnellement, renforçant mon intérêt pour les mathématiques et démontrant leur valeur pratique dans le monde de la technologie.</p>
+<h1><a class="anchor" id="autotoc_md113"></a>
+Binarisation de l'Image: Application Pratique des Concepts Théoriques</h1>
+<h2><a class="anchor" id="autotoc_md114"></a>
+Contexte et Intérêt Personnel</h2>
+<p>Dans la partie libre de notre projet, j'ai également eu l'opportunité d'appliquer un concept que j'avais étudié lors de mon projet de robotique expérimentale sur le robot Baxter : la binarisation d'image. Ce processus, bien que conceptuel dans le cadre académique, a pris une dimension tout à fait concrète dans ce projet. La binarisation d'image est une étape de prétraitement essentielle dans de nombreux algorithmes de vision par ordinateur.</p>
+<h2><a class="anchor" id="autotoc_md115"></a>
+Principe de la Binarisation de l'Image</h2>
+<p>La binarisation transforme une image en niveaux de gris en une image nettement plus simple en noir et blanc, où chaque pixel devient soit noir soit blanc. Cette simplification est cruciale non seulement pour des raisons de traitement ultérieur, comme la détection de contours, mais aussi pour améliorer la clarté visuelle et réduire la complexité des données manipulées.</p>
+<h2><a class="anchor" id="autotoc_md116"></a>
+Processus de Binarisation</h2>
+<p>Dans notre projet, la binarisation a été réalisée par le seuillage des pixels. Chaque pixel de l'image en niveaux de gris est comparé à un seuil fixe : ceux ayant une intensité supérieure sont définis comme blancs, et les autres comme noirs. Cette approche réduit significativement la quantité d'information contenue dans l'image originale, permettant une analyse plus rapide et plus efficace dans les étapes subséquentes du traitement.</p>
+<p>Importance du Format PBM P4</p>
+<p>Pour enregistrer efficacement les images binarisées, nous avons utilisé le format PBM P4. Ce format offre une méthode de stockage compacte, chaque octet du fichier représentant huit pixels de l'image, ce qui est nettement plus efficace que le format texte P1 où chaque pixel est représenté individuellement par un caractère. Cela a permis de réduire la taille des fichiers et d'accélérer leur traitement.</p>
+<h2><a class="anchor" id="autotoc_md117"></a>
+Réflexions Personnelles et Professionnelles</h2>
+<p>La binarisation, bien que simple en théorie, requiert une attention minutieuse aux détails lors de sa mise en œuvre, en particulier concernant le choix du seuil et la gestion des formats de fichiers. Cela m'a appris l'importance de la précision et de la rigueur dans la programmation en contexte réel.</p>
+<h1><a class="anchor" id="autotoc_md118"></a>
+Conclusion</h1>
+<p>Ce projet a marqué ma première immersion dans l'utilisation d'OpenCV, un outil puissant pour le traitement d'images et la vision par ordinateur. L'exploration d'OpenCV a ouvert un vaste champ de possibilités et m'a permis de découvrir de nombreuses fonctionnalités de cette bibliothèque. Parmi celles-ci, la manipulation d'images, la détection de couleurs, et l'implémentation d'algorithmes de simplification d'images ont été particulièrement captivantes. Chacune de ces fonctionnalités a apporté un éclairage sur la manière dont les concepts théoriques sont appliqués dans des solutions technologiques concrètes.</p>
+<p>L'aspect le plus valorisant de ce projet a été la liberté de rechercher et d'explorer ces fonctionnalités par moi-même. Cette démarche autonome m'a non seulement permis de découvrir les vastes capacités d'OpenCV, mais a également posé des bases pour mes futures études, en particulier pour l'unité d'enseignement sur le traitement du signal que je prévois de suivre l'année prochaine.</p>
+<p>Au-delà de l'aspect technique, ce projet m'a fait apprécier la connexion entre le codage informatique et ses applications physiques, comme piloter un mouvement de caméra dans le monde réel. Il est très gratifiant de voir le code non seulement fonctionner sur un ordinateur, mais aussi actionner concrètement des dispositifs mécaniques. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+  Copyright (c) 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script><a href="https://imagepulser.dev.madebyvasilis.site/"> ImagePulser</a> | All rights reserved 
+</small>
+<br>
+<small>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun</small></address>
+</body>
+</html>

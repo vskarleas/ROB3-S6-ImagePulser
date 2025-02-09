@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ImagePulser: Tâche 3 : Extraction d&#39;un contour d&#39;une image</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ImagePulser<span id="projectnumber">&#160;V5.2.4</span>
+   </div>
+   <div id="projectbrief">Simplification des images prises avec une webcam</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">Tâche 3 : Extraction d'un contour d'une image</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md41"></a></p>
+<h1><a class="anchor" id="autotoc_md42"></a>
+3.1 - Un contour c'est quoi ?</h1>
+<p>Un <b>contour</b> dans une image en Noir &amp; Blanc est défini comme la démarcation qui sépare les zones de pixels noirs des zones de pixels blancs. Pour les images traitées dans ce projet, tout ce qui se trouve à l'extérieur de l'image est considéré comme blanc. L'extraction de contour consiste donc à identifier et à suivre le bord qui marque la transition entre les zones noires et blanches, y compris celles adjacentes à l'espace "hors image".</p>
+<p>Le processus d'extraction génère un polygone formé par une série de points qui décrivent ce contour. Ces points sont reliés par des segments qui tracent précisément le chemin du contour.</p>
+<h1><a class="anchor" id="autotoc_md43"></a>
+Exemple d'extraction de contour</h1>
+<p>L'image suivante illustre un exemple de grille d'image et la représentation correspondante des contours extraits :</p>
+<p><img src="image/tache3/1717436366323.png" alt="1717436366323" class="inline"/></p>
+<p>Dans cet exemple, en partant du point (1.0, 0.0), le contour identifié est un polygone composé de 19 points (formant 18 segments). Ceux-ci décrivent le contour complet autour des blocs noirs comme suit :</p>
+<ul>
+<li>(1.0, 0.0) → (2.0, 0.0) → (2.0, 1.0) → (3.0, 1.0) → (4.0, 1.0)</li>
+<li>(4.0, 2.0) → (3.0, 2.0) → (3.0, 3.0) → (3.0, 4.0) → (2.0, 4.0)</li>
+<li>(1.0, 4.0) → (1.0, 3.0) → (2.0, 3.0) → (2.0, 2.0) → (1.0, 2.0)</li>
+<li>(0.0, 2.0) → (0.0, 1.0) → (1.0, 1.0) → (1.0, 0.0)</li>
+</ul>
+<p>Cette série de points et de segments crée une frontière précise qui encapsule les zones noires, essentielle pour des analyses plus avancées comme la vectorisation ou d'autres formes de traitement d'image.</p>
+<h1><a class="anchor" id="autotoc_md44"></a>
+3.2 - Détermination du Contour</h1>
+<h2><a class="anchor" id="autotoc_md45"></a>
+Fonctionnement de l'Algorithme</h2>
+<p>La tâche de détermination du contour dans une image en Noir &amp; Blanc utilise un automate, que nous appellerons "robot", pour suivre le contour polygonal qui sépare les pixels noirs de l'image des pixels blancs. Le robot se déplace de manière à garder un pixel noir à sa droite et un pixel blanc à sa gauche, poursuivant ainsi son chemin jusqu'à ce qu'il revienne à son point de départ et retrouve son orientation initiale.</p>
+<h2><a class="anchor" id="autotoc_md46"></a>
+Définition des Orientations</h2>
+<p>Le robot peut se déplacer dans quatre directions cardinales, qui correspondent aux orientations suivantes :</p>
+<div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">enum</span> {<a class="code hl_enumvalue" href="contour_8h.html#a871118a09520247c78a71ecd7b0abd58aca11d512a31ff9d5cd1c3cecc5595d2d">Nord</a>, <a class="code hl_enumvalue" href="contour_8h.html#a871118a09520247c78a71ecd7b0abd58a85b2918e55a712eb2ba11b1a0b4b06f0">Est</a>, <a class="code hl_enumvalue" href="contour_8h.html#a871118a09520247c78a71ecd7b0abd58acd27941d85bb38a80f6b4606af668b95">Sud</a>, <a class="code hl_enumvalue" href="contour_8h.html#a871118a09520247c78a71ecd7b0abd58ad4fc38b8fdd575951487a1bd4aaa7b75">Ouest</a>} <a class="code hl_enumeration" href="contour_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a>;</div>
+<div class="ttc" id="acontour_8h_html_a871118a09520247c78a71ecd7b0abd58"><div class="ttname"><a href="contour_8h.html#a871118a09520247c78a71ecd7b0abd58">Orientation</a></div><div class="ttdeci">Orientation</div><div class="ttdef"><b>Definition</b> contour.h:21</div></div>
+<div class="ttc" id="acontour_8h_html_a871118a09520247c78a71ecd7b0abd58a85b2918e55a712eb2ba11b1a0b4b06f0"><div class="ttname"><a href="contour_8h.html#a871118a09520247c78a71ecd7b0abd58a85b2918e55a712eb2ba11b1a0b4b06f0">Est</a></div><div class="ttdeci">@ Est</div><div class="ttdef"><b>Definition</b> contour.h:21</div></div>
+<div class="ttc" id="acontour_8h_html_a871118a09520247c78a71ecd7b0abd58aca11d512a31ff9d5cd1c3cecc5595d2d"><div class="ttname"><a href="contour_8h.html#a871118a09520247c78a71ecd7b0abd58aca11d512a31ff9d5cd1c3cecc5595d2d">Nord</a></div><div class="ttdeci">@ Nord</div><div class="ttdef"><b>Definition</b> contour.h:21</div></div>
+<div class="ttc" id="acontour_8h_html_a871118a09520247c78a71ecd7b0abd58acd27941d85bb38a80f6b4606af668b95"><div class="ttname"><a href="contour_8h.html#a871118a09520247c78a71ecd7b0abd58acd27941d85bb38a80f6b4606af668b95">Sud</a></div><div class="ttdeci">@ Sud</div><div class="ttdef"><b>Definition</b> contour.h:21</div></div>
+<div class="ttc" id="acontour_8h_html_a871118a09520247c78a71ecd7b0abd58ad4fc38b8fdd575951487a1bd4aaa7b75"><div class="ttname"><a href="contour_8h.html#a871118a09520247c78a71ecd7b0abd58ad4fc38b8fdd575951487a1bd4aaa7b75">Ouest</a></div><div class="ttdeci">@ Ouest</div><div class="ttdef"><b>Definition</b> contour.h:21</div></div>
+</div><!-- fragment --><p>Cette énumération en C permet de définir clairement les orientations possibles pour le robot lorsqu'il navigue le long du contour de l'image.</p>
+<h2><a class="anchor" id="autotoc_md47"></a>
+Algorithme de Suivi du Contour</h2>
+<p>L'algorithme pour suivre le contour est décrit étape par étape ci-dessous :</p>
+<ol type="1">
+<li><b>Trouver le Pixel de Départ</b> :<ul>
+<li>Identifier un pixel de départ ((x, y)) qui est sur le bord du contour entre les pixels noirs et blancs.</li>
+</ul>
+</li>
+<li><b>Initialiser les Paramètres</b> :<ul>
+<li>Définir la position initiale à ((x_0, y_0) = (x - 1, y - 1)).</li>
+<li>Initialiser l'orientation à Est.</li>
+</ul>
+</li>
+<li><b>Exécuter la Boucle de Suivi</b> :<ul>
+<li>Commencer une boucle pour suivre le contour.</li>
+<li>À chaque itération de la boucle :<ul>
+<li><b>Mémoriser la Position</b> : Enregistrer la position actuelle pour tracer le contour.</li>
+<li><b>Avancer</b> : Déplacer le robot d'une unité dans la direction actuelle.</li>
+<li><b>Calculer la Nouvelle Orientation</b> : Ajuster l'orientation basée sur les pixels adjacents pour maintenir le pixel noir à droite et le blanc à gauche.</li>
+<li><b>Vérifier la Condition de Fin</b> : Si le robot revient à la position initiale ((x_0, y_0)) avec l'orientation Est, terminer la boucle.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><b>Fin de la Boucle</b> :<ul>
+<li>Le robot termine son parcours lorsque la condition de fin est satisfaite, signifiant que le contour complet a été suivi.</li>
+</ul>
+</li>
+</ol>
+<div class="fragment"><div class="line"><span class="comment">// Initialisation</span></div>
+<div class="line">(x, y) ← trouver_pixel_depart(I); <span class="comment">// Trouver un pixel de départ sur le contour</span></div>
+<div class="line">(x0, y0) ← (x − 1, y − 1);       <span class="comment">// Définir la position initiale</span></div>
+<div class="line">orientation ← EST;               <span class="comment">// Définir l&#39;orientation initiale à Est</span></div>
+<div class="line">boucle ← VRAI;                   <span class="comment">// Initialiser la boucle de suivi</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Exécuter la boucle de suivi du contour</span></div>
+<div class="line"><span class="keywordflow">while</span> (boucle) {</div>
+<div class="line">    memoriser_position();        <span class="comment">// Mémoriser la position actuelle du robot</span></div>
+<div class="line">    avancer();                   <span class="comment">// Faire avancer le robot d&#39;une unité</span></div>
+<div class="line">    nouvelle_orientation();      <span class="comment">// Calculer la nouvelle orientation basée sur les pixels adjacents</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Vérifier si le robot est revenu à sa position et orientation initiales</span></div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_function" href="contour_8c.html#a4885237c59db191095ba7676514ae63e">position</a> == (x0, y0) &amp;&amp; orientation == EST) {</div>
+<div class="line">        boucle ← FAUX;           <span class="comment">// Arrêter la boucle si le robot est revenu à son point de départ</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Mémoriser la dernière position après la fin de la boucle</span></div>
+<div class="line">memoriser_position();            <span class="comment">// Enregistrer la position finale pour compléter le tracé du contour</span></div>
+<div class="ttc" id="acontour_8c_html_a4885237c59db191095ba7676514ae63e"><div class="ttname"><a href="contour_8c.html#a4885237c59db191095ba7676514ae63e">position</a></div><div class="ttdeci">void position(Robot *r, int *x, int *y)</div><div class="ttdoc">Récupère et renvoie la position actuelle du robot.</div><div class="ttdef"><b>Definition</b> contour.c:136</div></div>
+</div><!-- fragment --><p><img src="image/tache3/1717436444901.png" alt="1717436444901" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md48"></a>
+3.3 - Contour sous forme d’une séquence</h1>
+<p>Le contour calculé doit être stocké sous forme d’une séquence de points. Cependant, la taille de cette séquence n’est pas connue à l’avance, ce qui implique des considérations spécifiques pour son stockage.</p>
+<h3><a class="anchor" id="autotoc_md49"></a>
+Solutions pour le stockage d'un contour</h3>
+<p><b>A - Stockage sous forme de file_input</b> Les points du contour peuvent être stockés progressivement dans un file_input. Cependant, cette méthode présente un inconvénient majeur : l'accès aux file_inputs est généralement beaucoup plus lent que l'accès à la mémoire vive.</p>
+<p><b>B - Stockage en mémoire</b></p>
+<p><b>B-1) Structure de taille fixe de type tableau</b> Une option est d'utiliser une structure de taille fixe pour stocker les points du contour. Cette structure est définie comme suit :</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#define DIMMAX ...</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structPoint__.html">Point</a> {</div>
+<div class="line">    <span class="keywordtype">double</span> x, y;</div>
+<div class="line">} <a class="code hl_typedef" href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structListe__Point__.html">Contour</a> {</div>
+<div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> np;          <span class="comment">// Nombre de points de la séquence</span></div>
+<div class="line">    <a class="code hl_struct" href="structPoint__.html">Point</a> tab[DIMMAX];        <span class="comment">// Tableau pour stocker les points</span></div>
+<div class="line">} <a class="code hl_typedef" href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a>;</div>
+<div class="ttc" id="ageometry_8h_html_a2d41c49ce7fca2b1e381145e7d1802c7"><div class="ttname"><a href="geometry_8h.html#a2d41c49ce7fca2b1e381145e7d1802c7">Point</a></div><div class="ttdeci">struct Point_ Point</div><div class="ttdoc">Type Point.</div></div>
+<div class="ttc" id="asequence__point_8h_html_ad952b3798ee06a8aeb0e98daac44e3cc"><div class="ttname"><a href="sequence__point_8h.html#ad952b3798ee06a8aeb0e98daac44e3cc">Contour</a></div><div class="ttdeci">Liste_Point Contour</div><div class="ttdef"><b>Definition</b> sequence_point.h:50</div></div>
+<div class="ttc" id="astructListe__Point___html"><div class="ttname"><a href="structListe__Point__.html">Liste_Point_</a></div><div class="ttdef"><b>Definition</b> sequence_point.h:27</div></div>
+<div class="ttc" id="astructPoint___html"><div class="ttname"><a href="structPoint__.html">Point_</a></div><div class="ttdoc">Type Point.</div><div class="ttdef"><b>Definition</b> geometry.h:34</div></div>
+</div><!-- fragment --><p><b>Inconvénients :</b></p>
+<ul>
+<li>Si <code>DIMMAX</code> est trop grand, il peut être difficile de calculer plusieurs contours ou même un seul, en raison de la saturation de la mémoire.</li>
+<li>Si <code>DIMMAX</code> est trop petit, il sera impossible de stocker certains contours plus grands.</li>
+</ul>
+<p><b>B-2) Structure adaptable à la taille du contour</b> Une meilleure solution peut être d'utiliser une structure permettant d’adapter la taille de la mémoire en fonction du contour. Le contour est ainsi "construit" progressivement, à partir d'une séquence vide, en ajoutant au fur et à mesure les points à la fin de la séquence.</p>
+<p><b>Structures recommandées :</b> Les listes chaînées sont idéales pour ces opérations, car elles permettent :</p>
+<ul>
+<li>D'initialiser avec une séquence vide.</li>
+<li>D'ajouter un élément supplémentaire à la fin d’une séquence.</li>
+<li>De maintenir une séquence ordonnée.</li>
+<li>D'effacer une séquence (la vider).</li>
+</ul>
+<p>Pour les tâches d'extraction de contour (tâches 3 et 5), les listes chaînées sont suffisantes. Cependant, pour les tâches de simplification de contour (tâches 6 et 7), une structure de données de type tableau est nécessaire pour pouvoir accéder à un élément d’un contour à l’aide d’un indice. En outre, l'opération de concaténation de deux listes chaînées peut être utile pour ces tâches.</p>
+<h3><a class="anchor" id="autotoc_md50"></a>
+Nos Solutions pour le stockage d'un contour</h3>
+<div class="fragment"><div class="line"><span class="preprocessor">#include&lt;stdio.h&gt;</span>  <span class="comment">/* Fonctions d&#39;entrée/sortie standard de C */</span></div>
+<div class="line"><span class="preprocessor">#include&lt;stdlib.h&gt;</span> <span class="comment">/* Fonctions de gestion de mémoire dynamique */</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="geometry_8h.html">geometry.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="sequence__point_8h.html">sequence_point.h</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* Crée une nouvelle cellule de liste avec le point &#39;v&#39;</span></div>
+<div class="line"><span class="comment">   Retourne un pointeur vers la nouvelle cellule de liste créée</span></div>
+<div class="line"><span class="comment">   Le programme se termine si l&#39;allocation de mémoire échoue */</span></div>
+<div class="line"><a class="code hl_struct" href="structCellule__Liste__Point__.html">Cellule_Liste_Point</a> *<a class="code hl_function" href="sequence__point_8c.html#a9e6e950b424eb1fc9b33ee8548e9cbc3">creer_element_liste_Point</a>(<a class="code hl_struct" href="structPoint__.html">Point</a> v) {</div>
+<div class="line">    <a class="code hl_struct" href="structCellule__Liste__Point__.html">Cellule_Liste_Point</a> *el = (<a class="code hl_struct" href="structCellule__Liste__Point__.html">Cellule_Liste_Point</a> *)malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="structCellule__Liste__Point__.html">Cellule_Liste_Point</a>));</div>
+<div class="line">    <span class="keywordflow">if</span> (el == NULL) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Échec de l&#39;allocation mémoire pour la création d&#39;un nouvel élément de point\n&quot;</span>);</div>
+<div class="line">        exit(-40);</div>
+<div class="line">    }</div>
+<div class="line">    el-&gt;<a class="code hl_variable" href="structCellule__Liste__Point__.html#afd52887d5f66a5eead6bb76a83f1aa2f">data</a> = v;</div>
+<div class="line">    el-&gt;<a class="code hl_variable" href="structCellule__Liste__Point__.html#afe1b0ffc0bdbd7c039c60fff8105fa02">suiv</a> = NULL;</div>
+<div class="line">    <span class="keywordflow">return</span> el;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* Crée une nouvelle cellule de liste pour la liste des contours */</span></div>
+<div class="line"><a class="code hl_struct" href="structCellule__Liste__Contours__.html">Cellule_Liste_Contours</a> *<a class="code hl_function" href="sequence__point_8c.html#ac0c22b1257284633879b6532fc2e72de">creer_element_liste_Contours</a>(<a class="code hl_struct" href="structListe__Point__.html">Liste_Point</a> v) {</div>
+<div class="line">    <a class="code hl_struct" href="structCellule__Liste__Contours__.html">Cellule_Liste_Contours</a> *el = (<a class="code hl_struct" href="structCellule__Liste__Contours__.html">Cellule_Liste_Contours</a> *)malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="structCellule__Liste__Contours__.html">Cellule_Liste_Contours</a>));</div>
+<div class="line">    <span class="keywordflow">if</span> (el == NULL) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Échec de l&#39;allocation mémoire pour la création d&#39;un nouvel élément de contour\n&quot;</span>);</div>
+<div class="line">        exit(-50);</div>
+<div class="line">    }</div>
+<div class="line">    el-&gt;<a class="code hl_variable" href="structCellule__Liste__Contours__.html#a2f261f78a4a9e13223f6df8df85721bb">data</a> = v;</div>
+<div class="line">    el-&gt;<a class="code hl_variable" href="structCellule__Liste__Contours__.html#a8a0cf23b3c22183f87cba3b1a64a54dc">suiv</a> = NULL;</div>
+<div class="line">    <span class="keywordflow">return</span> el;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* Crée une liste de points vide */</span></div>
+<div class="line"><a class="code hl_struct" href="structListe__Point__.html">Liste_Point</a> <a class="code hl_function" href="sequence__point_8c.html#a0e907ca073ebd8f97ae69dd50e9fd8b6">creer_liste_Point_vide</a>() {</div>
+<div class="line">    <span class="keywordflow">return</span> (<a class="code hl_struct" href="structListe__Point__.html">Liste_Point</a>) {0, NULL, NULL};</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* Crée une liste de contours vide */</span></div>
+<div class="line"><a class="code hl_struct" href="structListe__Contours__.html">Liste_Contours</a> <a class="code hl_function" href="sequence__point_8c.html#a32671b75d2996b0e351a85c91639782b">creer_liste_Contours_vide</a>() {</div>
+<div class="line">    <span class="keywordflow">return</span> (<a class="code hl_struct" href="structListe__Contours__.html">Liste_Contours</a>) {0, NULL, NULL};</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* Ajoute l&#39;élément &#39;e&#39; à la fin de la liste &#39;L&#39;, retourne la liste modifiée */</span></div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="sequence__point_8c.html#a7bc19b94f69851836520018bc1557321">ajouter_element_liste_Point</a>(<a class="code hl_struct" href="structListe__Point__.html">Liste_Point</a> *L, <a class="code hl_struct" href="structPoint__.html">Point</a> e) {</div>
+<div class="line">    <a class="code hl_struct" href="structCellule__Liste__Point__.html">Cellule_Liste_Point</a> *el = <a class="code hl_function" href="sequence__point_8c.html#a9e6e950b424eb1fc9b33ee8548e9cbc3">creer_element_liste_Point</a>(e);</div>
+<div class="line">    <span class="keywordflow">if</span> (L-&gt;<a class="code hl_variable" href="structListe__Point__.html#a2a9e625e40231c7b04a84fc10287e8c7">taille</a> == 0) { <span class="comment">// Premier élément de la liste</span></div>
+<div class="line">        L-&gt;<a class="code hl_variable" href="structListe__Point__.html#a57e27afe8a65c78f1d71d74cd5bdeff0">first</a> = L-&gt;<a class="code hl_variable" href="structListe__Point__.html#a78f2e407ae560431ac0a6cc1bbc4d0d8">last</a> = el;</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">        L-&gt;<a class="code hl_variable" href="structListe__Point__.html#a78f2e407ae560431ac0a6cc1bbc4d0d8">last</a>-&gt;<a class="code hl_variable" href="structCellule__Liste__Point__.html#afe1b0ffc0bdbd7c039c60fff8105fa02">suiv</a> = el;</div>
+<div class="line">        L-&gt;<a class="code hl_variable" href="structListe__Point__.html#a78f2e407ae560431ac0a6cc1bbc4d0d8">last</a> = el;</div>
+<div class="line">    }</div>
+<div class="line">    L-&gt;<a class="code hl_variable" href="structListe__Point__.html#a2a9e625e40231c7b04a84fc10287e8c7">taille</a>++;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* Ajoute un élément de contour à une liste de contours */</span></div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="sequence__point_8c.html#afe147b015929707ebc9c2e0dae5298d1">ajouter_element_liste_Contours</a>(<a class="code hl_struct" href="structListe__Contours__.html">Liste_Contours</a> *L, <a class="code hl_struct" href="structListe__Point__.html">Liste_Point</a> e) {</div>
+<div class="line">    <a class="code hl_struct" href="structCellule__Liste__Contours__.html">Cellule_Liste_Contours</a> *el = <a class="code hl_function" href="sequence__point_8c.html#ac0c22b1257284633879b6532fc2e72de">creer_element_liste_Contours</a>(e);</div>
+<div class="line">    <span class="keywordflow">if</span> (L-&gt;<a class="code hl_variable" href="structListe__Contours__.html#a2e7d1c7fbda511742a9b11f26f998358">taille</a> == 0) { <span class="comment">// Premier élément de la liste de contours</span></div>
+<div class="line">        L-&gt;<a class="code hl_variable" href="structListe__Contours__.html#a688e538d09d0190ecbf1e51b32864351">first</a> = L-&gt;<a class="code hl_variable" href="structListe__Contours__.html#a9df8e41c16d65a0507b65cb7b93a3a8c">last</a> = el;</div>
+<div class="line">    } <span class="keywordflow">else</span> {</div>
+<div class="line">        L-&gt;<a class="code hl_variable" href="structListe__Contours__.html#a9df8e41c16d65a0507b65cb7b93a3a8c">last</a>-&gt;<a class="code hl_variable" href="structCellule__Liste__Contours__.html#a8a0cf23b3c22183f87cba3b1a64a54dc">suiv</a> = el;</div>
+<div class="line">        L-&gt;<a class="code hl_variable" href="structListe__Contours__.html#a9df8e41c16d65a0507b65cb7b93a3a8c">last</a> = el;</div>
+<div class="line">    }</div>
+<div class="line">    L-&gt;<a class="code hl_variable" href="structListe__Contours__.html#a2e7d1c7fbda511742a9b11f26f998358">taille</a>++;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* Supprime tous les éléments de la liste, retourne une liste vide */</span></div>
+<div class="line"><a class="code hl_struct" href="structListe__Point__.html">Liste_Point</a> <a class="code hl_function" href="sequence__point_8c.html#a556afc54de74898cc11d679f70adae34">supprimer_liste_Point</a>(<a class="code hl_struct" href="structListe__Point__.html">Liste_Point</a> L) {</div>
+<div class="line">    <a class="code hl_struct" href="structCellule__Liste__Point__.html">Cellule_Liste_Point</a> *el = L.<a class="code hl_variable" href="structListe__Point__.html#a57e27afe8a65c78f1d71d74cd5bdeff0">first</a>;</div>
+<div class="line">    <span class="keywordflow">while</span> (el) {</div>
+<div class="line">        <a class="code hl_struct" href="structCellule__Liste__Point__.html">Cellule_Liste_Point</a> *suiv = el-&gt;<a class="code hl_variable" href="structCellule__Liste__Point__.html#afe1b0ffc0bdbd7c039c60fff8105fa02">suiv</a>;</div>
+<div class="line">        free(el);</div>
+<div class="line">        el = suiv;</div>
+<div class="line">    }</div>
+<div class="line">    L.<a class="code hl_variable" href="structListe__Point__.html#a57e27afe8a65c78f1d71d74cd5bdeff0">first</a> = L.<a class="code hl_variable" href="structListe__Point__.html#a78f2e407ae560431ac0a6cc1bbc4d0d8">last</a> = NULL;</div>
+<div class="line">    L.<a class="code hl_variable" href="structListe__Point__.html#a2a9e625e40231c7b04a84fc10287e8c7">taille</a> = 0;</div>
+<div class="line">    <span class="keywordflow">return</span> L;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* Concatène la liste &#39;L2&#39; à la fin de la liste &#39;L1&#39;, retourne la liste modifiée */</span></div>
+<div class="line"><a class="code hl_struct" href="structListe__Point__.html">Liste_Point</a> <a class="code hl_function" href="sequence__point_8c.html#a64f27c3934b048635a84d621111b29dd">concatener_liste_Point</a>(<a class="code hl_struct" href="structListe__Point__.html">Liste_Point</a> L1, <a class="code hl_struct" href="structListe__Point__.html">Liste_Point</a> L2) {</div>
+<div class="line">    <span class="keywordflow">if</span> (L1.<a class="code hl_variable" href="structListe__Point__.html#a2a9e625e40231c7b04a84fc10287e8c7">taille</a> == 0) <span class="keywordflow">return</span> L2; <span class="comment">// Si L1 est vide</span></div>
+<div class="line">    <span class="keywordflow">if</span> (L2.<a class="code hl_variable" href="structListe__Point__.html#a2a9e625e40231c7b04a84fc10287e8c7">taille</a> == 0) <span class="keywordflow">return</span> L1; <span class="comment">// Si L2 est vide</span></div>
+<div class="line">    L1.<a class="code hl_variable" href="structListe__Point__.html#a78f2e407ae560431ac0a6cc1bbc4d0d8">last</a>-&gt;<a class="code hl_variable" href="structCellule__Liste__Point__.html#afe1b0ffc0bdbd7c039c60fff8105fa02">suiv</a> = L2.<a class="code hl_variable" href="structListe__Point__.html#a57e27afe8a65c78f1d71d74cd5bdeff0">first</a>; <span class="comment">// Lie le dernier élément de L1 au premier de L2</span></div>
+<div class="line">    L1.<a class="code hl_variable" href="structListe__Point__.html#a78f2e407ae560431ac0a6cc1bbc4d0d8">last</a> = L2.<a class="code hl_variable" href="structListe__Point__.html#a78f2e407ae560431ac0a6cc1bbc4d0d8">last</a>;        <span class="comment">// Met à jour le dernier élément de L1 pour qu&#39;il soit celui de L2</span></div>
+<div class="line">    L1.<a class="code hl_variable" href="structListe__Point__.html#a2a9e625e40231c7b04a84fc10287e8c7">taille</a> += L2.<a class="code hl_variable" href="structListe__Point__.html#a2a9e625e40231c7b04a84fc10287e8c7">taille</a>;   <span class="comment">// Met à jour la taille de L1</span></div>
+<div class="line">    <span class="keywordflow">return</span> L1;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* Convertit une liste de points en un tableau de points */</span></div>
+<div class="line"><a class="code hl_struct" href="structTableau__Point__.html">Tableau_Point</a> <a class="code hl_function" href="sequence__point_8c.html#aa3f0cd25ec855fce7a6429c4addc8d76">sequence_points_liste_vers_tableau</a>(<a class="code hl_struct" href="structListe__Point__.html">Liste_Point</a> L) {</div>
+<div class="line">    <a class="code hl_struct" href="structTableau__Point__.html">Tableau_Point</a> T;</div>
+<div class="line">    T.<a class="code hl_variable" href="structTableau__Point__.html#aff7e21c60d205c344eb1d814a311e3c6">taille</a> = L.<a class="code hl_variable" href="structListe__Point__.html#a2a9e625e40231c7b04a84fc10287e8c7">taille</a>;</div>
+<div class="line">    T.<a class="code hl_variable" href="structTableau__Point__.html#aff7b56ae5437a2fa0f86bace011bba52">tab</a> = malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="structPoint__.html">Point</a>) * T.<a class="code hl_variable" href="structTableau__Point__.html#aff7e21c60d205c344eb1d814a311e3c6">taille</a>);</div>
+<div class="line">    <span class="keywordflow">if</span> (T.<a class="code hl_variable" href="structTableau__Point__.html#aff7b56ae5437a2fa0f86bace011bba52">tab</a> == NULL) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Éch</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral">ec de l&#39;allocation mémoire pour la conversion de la liste en tableau\n&quot;</span>);</div>
+<div class="line">        exit(-60);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0, <a class="code hl_struct" href="structCellule__Liste__Point__.html">Cellule_Liste_Point</a> *el = L.<a class="code hl_variable" href="structListe__Point__.html#a57e27afe8a65c78f1d71d74cd5bdeff0">first</a>; el != NULL; el = el-&gt;<a class="code hl_variable" href="structCellule__Liste__Point__.html#afe1b0ffc0bdbd7c039c60fff8105fa02">suiv</a>, k++) {</div>
+<div class="line">        T.<a class="code hl_variable" href="structTableau__Point__.html#aff7b56ae5437a2fa0f86bace011bba52">tab</a>[k] = el-&gt;<a class="code hl_variable" href="structCellule__Liste__Point__.html#afd52887d5f66a5eead6bb76a83f1aa2f">data</a>; <span class="comment">// Remplir le tableau avec les données de la liste</span></div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> T;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">/* Affiche le contour */</span></div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="sequence__point_8c.html#ad43ceb19f9e3b96569556710ceca70ad">ecrire_contour</a>(<a class="code hl_struct" href="structListe__Point__.html">Liste_Point</a> L) {</div>
+<div class="line">    <a class="code hl_struct" href="structTableau__Point__.html">Tableau_Point</a> TP = <a class="code hl_function" href="sequence__point_8c.html#aa3f0cd25ec855fce7a6429c4addc8d76">sequence_points_liste_vers_tableau</a>(L);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%d segments\n&quot;</span>, TP.<a class="code hl_variable" href="structTableau__Point__.html#aff7e21c60d205c344eb1d814a311e3c6">taille</a> - 1);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%d points: [&quot;</span>, TP.<a class="code hl_variable" href="structTableau__Point__.html#aff7e21c60d205c344eb1d814a311e3c6">taille</a>);</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; TP.<a class="code hl_variable" href="structTableau__Point__.html#aff7e21c60d205c344eb1d814a311e3c6">taille</a>; k++) {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;(%5.1f,%5.1f)&quot;</span>, TP.<a class="code hl_variable" href="structTableau__Point__.html#aff7b56ae5437a2fa0f86bace011bba52">tab</a>[k].<a class="code hl_variable" href="structPoint__.html#ae160205040c808f795d9031bc8a935a3">x</a>, TP.<a class="code hl_variable" href="structTableau__Point__.html#aff7b56ae5437a2fa0f86bace011bba52">tab</a>[k].<a class="code hl_variable" href="structPoint__.html#a0f93974eb1d902c250effd9e3bf32563">y</a>);</div>
+<div class="line">    }</div>
+<div class="line">    printf(<span class="stringliteral">&quot;]\n&quot;</span>);</div>
+<div class="line">    free(TP.<a class="code hl_variable" href="structTableau__Point__.html#aff7b56ae5437a2fa0f86bace011bba52">tab</a>); <span class="comment">// Libère le tableau après utilisation</span></div>
+<div class="line">}</div>
+<div class="ttc" id="ageometry_8h_html"><div class="ttname"><a href="geometry_8h.html">geometry.h</a></div><div class="ttdoc">Déclaration des fonctions pour geometry.c.</div></div>
+<div class="ttc" id="asequence__point_8c_html_a0e907ca073ebd8f97ae69dd50e9fd8b6"><div class="ttname"><a href="sequence__point_8c.html#a0e907ca073ebd8f97ae69dd50e9fd8b6">creer_liste_Point_vide</a></div><div class="ttdeci">Liste_Point creer_liste_Point_vide()</div><div class="ttdoc">Crée une liste de points vide.</div><div class="ttdef"><b>Definition</b> sequence_point.c:66</div></div>
+<div class="ttc" id="asequence__point_8c_html_a32671b75d2996b0e351a85c91639782b"><div class="ttname"><a href="sequence__point_8c.html#a32671b75d2996b0e351a85c91639782b">creer_liste_Contours_vide</a></div><div class="ttdeci">Liste_Contours creer_liste_Contours_vide()</div><div class="ttdoc">Crée une liste de contours vide.</div><div class="ttdef"><b>Definition</b> sequence_point.c:77</div></div>
+<div class="ttc" id="asequence__point_8c_html_a556afc54de74898cc11d679f70adae34"><div class="ttname"><a href="sequence__point_8c.html#a556afc54de74898cc11d679f70adae34">supprimer_liste_Point</a></div><div class="ttdeci">Liste_Point supprimer_liste_Point(Liste_Point L)</div><div class="ttdoc">Supprime tous les éléments de la liste de points et renvoie la liste vide.</div><div class="ttdef"><b>Definition</b> sequence_point.c:137</div></div>
+<div class="ttc" id="asequence__point_8c_html_a64f27c3934b048635a84d621111b29dd"><div class="ttname"><a href="sequence__point_8c.html#a64f27c3934b048635a84d621111b29dd">concatener_liste_Point</a></div><div class="ttdeci">Liste_Point concatener_liste_Point(Liste_Point L1, Liste_Point L2)</div><div class="ttdoc">Concatène la liste L2 à la suite de la liste L1 et renvoie la liste L1 modifiée.</div><div class="ttdef"><b>Definition</b> sequence_point.c:157</div></div>
+<div class="ttc" id="asequence__point_8c_html_a7bc19b94f69851836520018bc1557321"><div class="ttname"><a href="sequence__point_8c.html#a7bc19b94f69851836520018bc1557321">ajouter_element_liste_Point</a></div><div class="ttdeci">void ajouter_element_liste_Point(Liste_Point *L, Point e)</div><div class="ttdoc">Ajoute l'élément e à la fin de la liste de points L.</div><div class="ttdef"><b>Definition</b> sequence_point.c:89</div></div>
+<div class="ttc" id="asequence__point_8c_html_a9e6e950b424eb1fc9b33ee8548e9cbc3"><div class="ttname"><a href="sequence__point_8c.html#a9e6e950b424eb1fc9b33ee8548e9cbc3">creer_element_liste_Point</a></div><div class="ttdeci">Cellule_Liste_Point * creer_element_liste_Point(Point v)</div><div class="ttdoc">Crée une cellule de liste avec l'élément v.</div><div class="ttdef"><b>Definition</b> sequence_point.c:26</div></div>
+<div class="ttc" id="asequence__point_8c_html_aa3f0cd25ec855fce7a6429c4addc8d76"><div class="ttname"><a href="sequence__point_8c.html#aa3f0cd25ec855fce7a6429c4addc8d76">sequence_points_liste_vers_tableau</a></div><div class="ttdeci">Tableau_Point sequence_points_liste_vers_tableau(Liste_Point L)</div><div class="ttdoc">Crée une séquence de points sous forme d'un tableau de points à partir de la liste de points L.</div><div class="ttdef"><b>Definition</b> sequence_point.c:176</div></div>
+<div class="ttc" id="asequence__point_8c_html_ac0c22b1257284633879b6532fc2e72de"><div class="ttname"><a href="sequence__point_8c.html#ac0c22b1257284633879b6532fc2e72de">creer_element_liste_Contours</a></div><div class="ttdeci">Cellule_Liste_Contours * creer_element_liste_Contours(Liste_Point v)</div><div class="ttdoc">Crée une cellule de liste des contours avec la liste de points v.</div><div class="ttdef"><b>Definition</b> sequence_point.c:47</div></div>
+<div class="ttc" id="asequence__point_8c_html_ad43ceb19f9e3b96569556710ceca70ad"><div class="ttname"><a href="sequence__point_8c.html#ad43ceb19f9e3b96569556710ceca70ad">ecrire_contour</a></div><div class="ttdeci">void ecrire_contour(Liste_Point L)</div><div class="ttdoc">Écrit le contour L à l'écran.</div><div class="ttdef"><b>Definition</b> sequence_point.c:209</div></div>
+<div class="ttc" id="asequence__point_8c_html_afe147b015929707ebc9c2e0dae5298d1"><div class="ttname"><a href="sequence__point_8c.html#afe147b015929707ebc9c2e0dae5298d1">ajouter_element_liste_Contours</a></div><div class="ttdeci">void ajouter_element_liste_Contours(Liste_Contours *L, Liste_Point e)</div><div class="ttdoc">Ajoute un contour à la liste de contours L.</div><div class="ttdef"><b>Definition</b> sequence_point.c:113</div></div>
+<div class="ttc" id="asequence__point_8h_html"><div class="ttname"><a href="sequence__point_8h.html">sequence_point.h</a></div><div class="ttdoc">Déclaration des fonctions pour sequence_point.c.</div></div>
+<div class="ttc" id="astructCellule__Liste__Contours___html"><div class="ttname"><a href="structCellule__Liste__Contours__.html">Cellule_Liste_Contours_</a></div><div class="ttdef"><b>Definition</b> sequence_point.h:36</div></div>
+<div class="ttc" id="astructCellule__Liste__Contours___html_a2f261f78a4a9e13223f6df8df85721bb"><div class="ttname"><a href="structCellule__Liste__Contours__.html#a2f261f78a4a9e13223f6df8df85721bb">Cellule_Liste_Contours_::data</a></div><div class="ttdeci">Liste_Point data</div><div class="ttdef"><b>Definition</b> sequence_point.h:37</div></div>
+<div class="ttc" id="astructCellule__Liste__Contours___html_a8a0cf23b3c22183f87cba3b1a64a54dc"><div class="ttname"><a href="structCellule__Liste__Contours__.html#a8a0cf23b3c22183f87cba3b1a64a54dc">Cellule_Liste_Contours_::suiv</a></div><div class="ttdeci">struct Cellule_Liste_Contours_ * suiv</div><div class="ttdef"><b>Definition</b> sequence_point.h:38</div></div>
+<div class="ttc" id="astructCellule__Liste__Point___html"><div class="ttname"><a href="structCellule__Liste__Point__.html">Cellule_Liste_Point_</a></div><div class="ttdef"><b>Definition</b> sequence_point.h:20</div></div>
+<div class="ttc" id="astructCellule__Liste__Point___html_afd52887d5f66a5eead6bb76a83f1aa2f"><div class="ttname"><a href="structCellule__Liste__Point__.html#afd52887d5f66a5eead6bb76a83f1aa2f">Cellule_Liste_Point_::data</a></div><div class="ttdeci">Point data</div><div class="ttdef"><b>Definition</b> sequence_point.h:21</div></div>
+<div class="ttc" id="astructCellule__Liste__Point___html_afe1b0ffc0bdbd7c039c60fff8105fa02"><div class="ttname"><a href="structCellule__Liste__Point__.html#afe1b0ffc0bdbd7c039c60fff8105fa02">Cellule_Liste_Point_::suiv</a></div><div class="ttdeci">struct Cellule_Liste_Point_ * suiv</div><div class="ttdef"><b>Definition</b> sequence_point.h:22</div></div>
+<div class="ttc" id="astructListe__Contours___html"><div class="ttname"><a href="structListe__Contours__.html">Liste_Contours_</a></div><div class="ttdef"><b>Definition</b> sequence_point.h:43</div></div>
+<div class="ttc" id="astructListe__Contours___html_a2e7d1c7fbda511742a9b11f26f998358"><div class="ttname"><a href="structListe__Contours__.html#a2e7d1c7fbda511742a9b11f26f998358">Liste_Contours_::taille</a></div><div class="ttdeci">unsigned int taille</div><div class="ttdef"><b>Definition</b> sequence_point.h:44</div></div>
+<div class="ttc" id="astructListe__Contours___html_a688e538d09d0190ecbf1e51b32864351"><div class="ttname"><a href="structListe__Contours__.html#a688e538d09d0190ecbf1e51b32864351">Liste_Contours_::first</a></div><div class="ttdeci">Cellule_Liste_Contours * first</div><div class="ttdef"><b>Definition</b> sequence_point.h:45</div></div>
+<div class="ttc" id="astructListe__Contours___html_a9df8e41c16d65a0507b65cb7b93a3a8c"><div class="ttname"><a href="structListe__Contours__.html#a9df8e41c16d65a0507b65cb7b93a3a8c">Liste_Contours_::last</a></div><div class="ttdeci">Cellule_Liste_Contours * last</div><div class="ttdef"><b>Definition</b> sequence_point.h:46</div></div>
+<div class="ttc" id="astructListe__Point___html_a2a9e625e40231c7b04a84fc10287e8c7"><div class="ttname"><a href="structListe__Point__.html#a2a9e625e40231c7b04a84fc10287e8c7">Liste_Point_::taille</a></div><div class="ttdeci">unsigned int taille</div><div class="ttdef"><b>Definition</b> sequence_point.h:28</div></div>
+<div class="ttc" id="astructListe__Point___html_a57e27afe8a65c78f1d71d74cd5bdeff0"><div class="ttname"><a href="structListe__Point__.html#a57e27afe8a65c78f1d71d74cd5bdeff0">Liste_Point_::first</a></div><div class="ttdeci">Cellule_Liste_Point * first</div><div class="ttdef"><b>Definition</b> sequence_point.h:29</div></div>
+<div class="ttc" id="astructListe__Point___html_a78f2e407ae560431ac0a6cc1bbc4d0d8"><div class="ttname"><a href="structListe__Point__.html#a78f2e407ae560431ac0a6cc1bbc4d0d8">Liste_Point_::last</a></div><div class="ttdeci">Cellule_Liste_Point * last</div><div class="ttdef"><b>Definition</b> sequence_point.h:30</div></div>
+<div class="ttc" id="astructPoint___html_a0f93974eb1d902c250effd9e3bf32563"><div class="ttname"><a href="structPoint__.html#a0f93974eb1d902c250effd9e3bf32563">Point_::y</a></div><div class="ttdeci">double y</div><div class="ttdef"><b>Definition</b> geometry.h:35</div></div>
+<div class="ttc" id="astructPoint___html_ae160205040c808f795d9031bc8a935a3"><div class="ttname"><a href="structPoint__.html#ae160205040c808f795d9031bc8a935a3">Point_::x</a></div><div class="ttdeci">double x</div><div class="ttdef"><b>Definition</b> geometry.h:35</div></div>
+<div class="ttc" id="astructTableau__Point___html"><div class="ttname"><a href="structTableau__Point__.html">Tableau_Point_</a></div><div class="ttdef"><b>Definition</b> sequence_point.h:55</div></div>
+<div class="ttc" id="astructTableau__Point___html_aff7b56ae5437a2fa0f86bace011bba52"><div class="ttname"><a href="structTableau__Point__.html#aff7b56ae5437a2fa0f86bace011bba52">Tableau_Point_::tab</a></div><div class="ttdeci">Point * tab</div><div class="ttdef"><b>Definition</b> sequence_point.h:57</div></div>
+<div class="ttc" id="astructTableau__Point___html_aff7e21c60d205c344eb1d814a311e3c6"><div class="ttname"><a href="structTableau__Point__.html#aff7e21c60d205c344eb1d814a311e3c6">Tableau_Point_::taille</a></div><div class="ttdeci">unsigned int taille</div><div class="ttdef"><b>Definition</b> sequence_point.h:56</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md51"></a>
+Pourquoi Convertir une Liste en Tableau?</h1>
+<p>Dans le contexte de notre projet, où les contours des objets sont fréquemment accédés et manipulés pour diverses analyses et transformations, utiliser un tableau offre une efficacité nettement supérieure. Une fois que les contours sont stockés dans un tableau, il est beaucoup plus efficace de rechercher, d'accéder, et de modifier les points selon les besoins, comparativement à une structure dynamique comme une liste chaînée où chaque accès nécessite de traverser les liens de la liste depuis le début jusqu'à l'élément ciblé. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+  Copyright (c) 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script><a href="https://imagepulser.dev.madebyvasilis.site/"> ImagePulser</a> | All rights reserved 
+</small>
+<br>
+<small>Vasileios Filippos Skarleas, Evanthia Virginia Anastasopoulou, Yanis Sadoun</small></address>
+</body>
+</html>

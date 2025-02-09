@@ -1,11 +1,11 @@
-<map id="/Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c&#45;project&#45;rob&#45;3&#45;eleves&#45;gr&#45;2&#45;1/Imagination/ui.cpp" name="/Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/c&#45;project&#45;rob&#45;3&#45;eleves&#45;gr&#45;2&#45;1/Imagination/ui.cpp">
-<area shape="rect" id="Node000001" title="L&#39;interface graphique." alt="" coords="61,5,294,106"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,154,78,180"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,109,70,146,67,142,114,104"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="102,154,165,180"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="160,107,147,140,142,138,155,105"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="189,154,254,180"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="200,105,213,138,208,140,195,107"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="278,154,338,180"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="239,104,284,142,280,146,235,109"/>
+<map id="/Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/ImagePulser/Imagination/ui.cpp" name="/Users/vasilisskarleas/Library/Mobile Documents/com~apple~CloudDocs/Documents/University Sorbonne/3rd year/S6/ImagePulser/Imagination/ui.cpp">
+<area shape="rect" id="Node000001" title="L&#39;interface graphique." alt="" coords="61,5,294,91"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,139,78,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,94,71,132,68,128,119,89"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="102,139,165,165"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,92,147,126,142,124,157,90"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="189,139,254,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="198,90,213,124,208,126,193,92"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="278,139,338,165"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="233,89,283,127,279,132,230,94"/>
 </map>
