@@ -26,13 +26,13 @@ The main objective of this project is to vectorize and simplify images obtained 
 
 ## Projet Libre
 
-Vous trouverez ici le lien qui mène au website de notre projet libre: [https://imagepulser.dev.madebyvasilis.site/](https://imagepulser.dev.madebyvasilis.site/) (documentation)
+Vous trouverez ici le lien qui mène au website de notre projet libre: [https://imagepulser.dev.vskarleas.com/](https://imagepulser.dev.vskarleas.com/) (documentation)
 
 Le source code est disponible dans le répertoire **`Imagination`**
 
 ## Projet Imposé
 
-Vous trouverez ici le lien qui mène au website de notre projet imposé: [https://impose.dev.madebyvasilis.site](https://impose.dev.madebyvasilis.site) (documentation)
+Vous trouverez ici le lien qui mène au website de notre projet imposé: [https://impose.dev.vskarleas.com](https://impose.dev.vskarleas.com) (documentation)
 
 Le source code est disponible dans le répertoire **`Impose`**
 
