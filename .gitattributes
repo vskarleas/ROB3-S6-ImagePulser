@@ -3,3 +3,4 @@
 *.html linguist-detectable=false
 *.pbm linguist-detectable=false
 *.txt linguist-detectable=false
+*.js linguist-detectable=false
