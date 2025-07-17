@@ -4,3 +4,4 @@
 *.pbm linguist-detectable=false
 *.txt linguist-detectable=false
 *.js linguist-detectable=false
+*.eps linguist-detectable=false
