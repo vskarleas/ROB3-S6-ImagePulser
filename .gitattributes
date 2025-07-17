@@ -5,3 +5,4 @@
 *.txt linguist-detectable=false
 *.js linguist-detectable=false
 *.eps linguist-detectable=false
+*.css linguist-detectable=false
